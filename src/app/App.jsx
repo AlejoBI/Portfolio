@@ -7,7 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 
-import Home from "./home/home";
+import Home from "./home/Home";
 import NotFoundPage from "./notFoundPage/NotFoundPage";
 
 import Header from "../components/header/Header";
