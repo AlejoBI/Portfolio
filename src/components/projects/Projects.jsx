@@ -37,7 +37,7 @@ const Projects = () => {
     },
     {
       title: "RAG System",
-      description: "",
+      description: "A RAG (Retrieval-Augmented Generation) system that uses OpenAI AI together with vectorization techniques to process and analyze documents provided by the user. The system allows generating precise responses based on the information provided, integrating an interactive dashboard for document management, query monitoring and results visualization, thus optimizing access to personalized and relevant knowledge.",
       image: projecto4,
       tags: [
         "Python",
