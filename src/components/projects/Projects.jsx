@@ -74,8 +74,8 @@ const Projects = () => {
     <div className="projects-slider">
       <Slider {...settings}>
         {projectsList.map((project, index) => (
-          <div key={index} className="project-card p-4 duration-1000">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+          <div key={index} className="project-card p-4">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-1000">
               <img
                 src={project.image}
                 alt={project.title}
