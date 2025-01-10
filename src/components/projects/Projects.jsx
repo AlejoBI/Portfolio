@@ -6,16 +6,16 @@ import projecto1 from "../../assets/images/projects/FrelancersPage.png";
 const Projects = () => {
   const projectsList = [
     {
-      title: "Freelancers web page",
+      title: "Freelancers Web Page",
       description:
         "A web page for freelancers to offer their services and clients to hire them",
-      image: { projecto1 },
+      image: projecto1,
       tags: ["React", "Node.js", "Firebase"],
       link: "https://github.com/AlejoBI/Proyecto-EDA2",
       deploy: "https://freelancers-eda2.web.app/",
     },
     {
-      title: "Project 2",
+      title: "Responsive Dashboard",
       description: "A responsive dashboard with real-time data visualization",
       image: "/placeholder.svg?height=200&width=300",
       tags: ["React", "D3.js", "TypeScript"],
@@ -23,7 +23,7 @@ const Projects = () => {
       deploy: "#",
     },
     {
-      title: "Project 3",
+      title: "Task Management App",
       description: "A mobile app for task management with offline capabilities",
       image: "/placeholder.svg?height=200&width=300",
       tags: ["React Native", "SQLite"],
@@ -38,9 +38,12 @@ const Projects = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
+    centerMode: false,
+    focusOnSelect: false,
+    edgeFriction: 0.1,
   };
 
   return (
@@ -48,39 +51,43 @@ const Projects = () => {
       <Slider {...settings}>
         {projectsList.map((project, index) => (
           <div key={index} className="project-card p-4">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-60 object-cover shadow-md"
               />
-              <div className="p-4">
-                <h3 className="text-lg font-semibold">{project.title}</h3>
-                <p className="text-gray-600 mt-2">{project.description}</p>
-                <div className="flex flex-wrap mt-4 gap-2">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-blue-100 text-blue-700 text-sm px-2 py-1 rounded-md"
+                      className="bg-blue-100 text-blue-700 dark:bg-blue-600 dark:text-white text-sm px-3 py-1 rounded-full"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="mt-4">
+                <div className="flex flex-col md:flex-row md:justify-between items-center gap-4">
                   <Link
                     to={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
                   >
                     View Project
                   </Link>
-                </div>
-                <div className="mt-2">
                   <a
                     href={project.deploy}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:underline"
+                    className="text-blue-600 dark:text-blue-400 hover:underline"
                   >
                     Deployed Link
                   </a>

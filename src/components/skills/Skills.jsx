@@ -70,7 +70,7 @@ const Skills = () => {
   return (
     <div className="space-y-4">
       {skills.map((skillCategory) => (
-        <details key={skillCategory.category} className="border p-2 rounded">
+        <details key={skillCategory.category} className="border p-2 rounded hover:shadow-xl">
           <summary className="text-xl font-semibold cursor-pointer">
             {skillCategory.category}
           </summary>
