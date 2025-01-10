@@ -2,33 +2,57 @@ import React from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import projecto1 from "../../assets/images/projects/FrelancersPage.png";
+import projecto2 from "../../assets/images/projects/ScoreBoardApp.png";
+import projecto3 from "../../assets/images/projects/CosasEcommerce.png";
+import projecto4 from "../../assets/images/projects/SistemaRag.png";
 
 const Projects = () => {
   const projectsList = [
     {
       title: "Freelancers Web Page",
       description:
-        "A web page for freelancers to offer their services and clients to hire them",
+        "A web page for freelancers to offer their services and clients to hire them. (No responsive design yet).",
       image: projecto1,
-      tags: ["React", "Node.js", "Firebase"],
+      tags: ["React", "Node.js", "Firebase", "Bootstrap"],
       link: "https://github.com/AlejoBI/Proyecto-EDA2",
       deploy: "https://freelancers-eda2.web.app/",
     },
     {
-      title: "Responsive Dashboard",
-      description: "A responsive dashboard with real-time data visualization",
-      image: "/placeholder.svg?height=200&width=300",
-      tags: ["React", "D3.js", "TypeScript"],
-      link: "#",
-      deploy: "#",
+      title: "ScoreBoard App",
+      description:
+        "An application for recording and organizing equipment, designed to simplify the organization and presentation of results efficiently.",
+      image: projecto2,
+      tags: ["HTML", "CSS", "JavaScript"],
+      link: "https://github.com/JuanJaramillo12004/ScoreBoard",
+      deploy: "Deployed Link",
     },
     {
-      title: "Task Management App",
-      description: "A mobile app for task management with offline capabilities",
-      image: "/placeholder.svg?height=200&width=300",
-      tags: ["React Native", "SQLite"],
-      link: "#",
-      deploy: "#",
+      title: "E-commerce",
+      description:
+        "An e-commerce platform designed to facilitate the purchase and sale of products, offering an intuitive experience for users, with functionalities such as inventory management, product search, and an efficient purchase flow.",
+      image: projecto3,
+      tags: ["HTML", "CSS", "JavaScript", "SQL", "Bootstrap", "Spring Boot"],
+      link: "https://github.com/JuanDiegoCortes/E-commerce",
+      deploy: "Deployed Link",
+    },
+    {
+      title: "RAG System",
+      description: "A RAG (Retrieval-Augmented Generation) system that uses OpenAI AI together with vectorization techniques to process and analyze documents provided by the user. The system allows generating precise responses based on the information provided, integrating an interactive dashboard for document management, query monitoring and results visualization, thus optimizing access to personalized and relevant knowledge.",
+      image: projecto4,
+      tags: [
+        "Python",
+        "FastApi",
+        "React",
+        "JavaScript",
+        "Bootstrap",
+        "ApiRest",
+        "MongoDB",
+        "ChromaDB",
+        "CI/CD",
+        "Code Coverage",
+      ],
+      link: "https://github.com/AlejoBI/Proyecto-IS2",
+      deploy: "Deployed Link",
     },
   ];
 
@@ -83,14 +107,16 @@ const Projects = () => {
                   >
                     View Project
                   </Link>
-                  <a
-                    href={project.deploy}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-1000"
-                  >
-                    Deployed Link
-                  </a>
+                  {project.deploy !== "Deployed Link" && (
+                    <a
+                      href={project.deploy}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-1000"
+                    >
+                      Deployed Link
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
