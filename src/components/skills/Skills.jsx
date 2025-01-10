@@ -68,7 +68,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 text-gray-800 dark:text-white transition-colors duration-1000"> 
       {skills.map((skillCategory) => (
         <details key={skillCategory.category} className="border p-2 rounded hover:shadow-xl">
           <summary className="text-xl font-semibold cursor-pointer">
