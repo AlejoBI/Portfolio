@@ -1,5 +1,4 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 import {
   BrowserRouter as Router,
@@ -8,8 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 
-import Home from "./home/Home";
-import Contact from "./contact/Contact";
+import Home from "./home/home";
 import NotFoundPage from "./notFoundPage/NotFoundPage";
 
 import Header from "../components/header/Header";
@@ -38,14 +36,6 @@ const App = () => {
           element={
             <Layout>
               <Home />
-            </Layout>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <Layout>
-              <Contact />
             </Layout>
           }
         />

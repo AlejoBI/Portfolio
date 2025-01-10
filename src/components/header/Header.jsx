@@ -1,31 +1,41 @@
 import React from "react";
-
-import { Link } from "react-router-dom";
-
-import { Nav, Navbar } from "react-bootstrap";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/images/dev.png";
 
 const Header = () => {
+  const location = useLocation();
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "Contact", href: "/contact" },
   ];
 
   return (
-      <Navbar bg="dark" variant="dark" expand="lg" className="px-5">
-        <Navbar.Brand as={Link} to="/">
-          My Portfolio
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            {navigation.map((item) => (
-              <Nav.Link key={item.name} as={Link} to={item.href}>
-                {item.name}
-              </Nav.Link>
-            ))}
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+    <header className="bg-gray-900 text-white shadow-md">
+      <div className="container mx-auto flex items-center justify-between p-5">
+        <div className="flex items-center space-x-3">
+          <Link
+            to="/"
+            className="text-xl font-bold hover:text-gray-400 flex items-center"
+          >
+            <img src={logo} alt="Dev Logo" className="h-10 w-10 rounded-full" />
+            <span className="ml-2">My Portfolio</span>
+          </Link>
+        </div>
+        <nav className="flex space-x-6">
+          {navigation.map(
+            (item) =>
+              location.pathname !== item.href && ( 
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-lg font-medium hover:text-gray-400"
+                >
+                  {item.name}
+                </Link>
+              )
+          )}
+        </nav>
+      </div>
+    </header>
   );
 };
 
