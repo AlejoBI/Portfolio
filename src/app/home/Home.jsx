@@ -55,80 +55,19 @@ const Home = () => {
         </div>
       </div>
 
-      {/* ABOUT ME */}
-      <div className="mt-20 shadow-lg rounded-lg p-6 bg-white dark:bg-gray-800 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition-colors duration-1000">
-          About Me
-        </h2>
-        <p className="mt-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-1000">
-          I'm a passionate developer with X years of experience in building web
-          applications. I specialize in creating user-friendly interfaces and
-          solving complex problems through clean, efficient code. When I'm not
-          coding, you can find me exploring technology, playing sports, or
-          enjoying time with family and friends.
-        </p>
-      </div>
-
-      {/* SKILLS */}
-      <div className="mt-20 shadow-lg rounded-lg p-6 bg-white dark:bg-gray-800 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition-colors duration-1000">
-          Skills
-        </h2>
-        <div className="mt-8">
-          <Skills />
-        </div>
-      </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
-        {/* EXPERIENCE */}
-        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition-colors duration-1000">
-            Experience
+        {/* ABOUT ME */}
+        <div className="shadow-lg rounded-lg p-6 bg-white dark:bg-gray-800 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition-colors duration-1000">
+            About Me
           </h2>
-          <div className="mt-4">
-            <p className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
-              No experience yet. Stay tuned! 😉
-            </p>
-          </div>
-        </div>
-
-        {/* EDUCATION */}
-        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition-colors duration-1000">
-            Education
-          </h2>
-          <div className="mt-4">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white transition-colors duration-1000">
-              Bachelor's in Computer Engineering
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
-              Universidad Autonoma de Occidente - 2022 to 2026
-            </p>
-            <p className="text-gray-600 dark:text-gray-400 mt-2 transition-colors duration-1000">
-              Focused on software development, data structures, and algorithms,
-              with hands-on experience in collaborative projects.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-        {/* ROLES */}
-        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition-colors duration-1000">
-            Roles Performed
-          </h2>
-          <ul className="mt-4 space-y-2 list-disc list-inside">
-            <li className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
-              Backend Developer
-            </li>
-            <li className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
-              Full Stack Developer
-            </li>
-            <li className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
-              Team Lead (Small Projects)
-            </li>
-          </ul>
+          <p className="mt-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-1000">
+            I'm a passionate developer with X years of experience in building
+            web applications. I specialize in creating user-friendly interfaces
+            and solving complex problems through clean, efficient code. When I'm
+            not coding, you can find me exploring technology, playing sports, or
+            enjoying time with family and friends.
+          </p>
         </div>
 
         {/* DOWNLOAD CV */}
@@ -148,6 +87,67 @@ const Home = () => {
               </a>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* EXPERIENCE */}
+      <div className="mt-12 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition-colors duration-1000">
+          Experience
+        </h2>
+        <div className="mt-4">
+          <p className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
+            No experience yet. Stay tuned! 😉
+          </p>
+        </div>
+      </div>
+
+      {/* SKILLS */}
+      <div className="mt-20 shadow-lg rounded-lg p-6 bg-white dark:bg-gray-800 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition-colors duration-1000">
+          Skills
+        </h2>
+        <div className="mt-8">
+          <Skills />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
+        {/* EDUCATION */}
+        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition-colors duration-1000">
+            Education
+          </h2>
+          <div className="mt-4">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white transition-colors duration-1000">
+              Bachelor's in Computer Engineering
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
+              Universidad Autonoma de Occidente - 2022 to 2026
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 mt-2 transition-colors duration-1000">
+              Focused on software development, data structures, and algorithms,
+              with hands-on experience in collaborative projects.
+            </p>
+          </div>
+        </div>
+
+        {/* ROLES */}
+        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition-colors duration-1000">
+            Roles Performed
+          </h2>
+          <ul className="mt-4 space-y-2 list-disc list-inside">
+            <li className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
+              Backend Developer
+            </li>
+            <li className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
+              Full Stack Developer
+            </li>
+            <li className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
+              Team Lead (Small Projects)
+            </li>
+          </ul>
         </div>
       </div>
 
