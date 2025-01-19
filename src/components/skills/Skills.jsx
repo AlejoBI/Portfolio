@@ -1,3 +1,6 @@
+import es from "../../assets/images/es.png";
+import gb from "../../assets/images/gb.png";
+
 const Skills = () => {
   const skills = [
     {
@@ -102,8 +105,8 @@ const Skills = () => {
     {
       category: "Languages",
       items: [
-        { name: "Spanish (Native)", icon: "https://flagcdn.com/w320/es.png" },
-        { name: "English (B2)", icon: "https://flagcdn.com/w320/gb.png" },
+        { name: "Spanish (Native)", icon: es },
+        { name: "English (B2)", icon: gb },
       ],
     },
   ];
