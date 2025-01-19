@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import projecto1 from "../../assets/images/projects/FrelancersPage.png";
