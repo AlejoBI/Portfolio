@@ -1,5 +1,3 @@
-import React from "react";
-
 import Skills from "../../components/skills/Skills";
 import Projects from "../../components/projects/Projects";
 
@@ -13,7 +11,7 @@ const Home = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center shadow-lg rounded-lg p-6 bg-white dark:bg-gray-800 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
         <div>
           <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white leading-tight transition-colors duration-1000">
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="text-blue-600 dark:text-blue-400 transition-colors duration-1000 hover:underline">
               Alejandro Bravo Isajar
             </span>
@@ -62,11 +60,13 @@ const Home = () => {
             About Me
           </h2>
           <p className="mt-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-1000">
-            I'm a passionate developer with X years of experience in building
-            web applications. I specialize in creating user-friendly interfaces
-            and solving complex problems through clean, efficient code. When I'm
-            not coding, you can find me exploring technology, playing sports, or
-            enjoying time with family and friends.
+            I am passionate about technology and the development of innovative
+            solutions, with skills in programming, web development, and
+            algorithm optimization. I have worked on academic projects such as
+            e-commerce platforms and analysis systems for electrical circuits,
+            applying my knowledge practically and in teams. I stand out for my
+            capacity for innovation, critical thinking, and problem-solving, and
+            I seek to contribute and grow professionally in a dynamic team.
           </p>
         </div>
 
@@ -97,13 +97,33 @@ const Home = () => {
         </h2>
         <div className="mt-4">
           <p className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
-            No experience yet. Stay tuned! 😉
+            <strong>Highlighted University Projects</strong>
+          </p>
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
+            <li>
+              <strong>Freelancer Application:</strong> Design and development of
+              a platform to connect independent professionals with potential
+              clients.
+            </li>
+            <li>
+              <strong>Online Store:</strong> Implementation of an e-commerce
+              system for a local store, optimizing its digital presence.
+            </li>
+            <li>
+              <strong>Algorithm Optimization for Circuits:</strong> Improvement
+              in the design and analysis of electrical circuits.
+            </li>
+          </ul>
+          <p className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000 mt-4">
+            These experiences allowed me to apply theoretical knowledge in
+            practical contexts, foster teamwork, and develop innovative
+            solutions.
           </p>
         </div>
       </div>
 
       {/* SKILLS */}
-      <div className="mt-20 shadow-lg rounded-lg p-6 bg-white dark:bg-gray-800 transition-colors duration-1000 hover:scale-105 hover:shadow-xl">
+      <div className="mt-20 shadow-lg rounded-lg p-6 bg-white dark:bg-gray-800 transition-colors duration-1000">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition-colors duration-1000">
           Skills
         </h2>
@@ -120,7 +140,7 @@ const Home = () => {
           </h2>
           <div className="mt-4">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white transition-colors duration-1000">
-              Bachelor's in Computer Engineering
+              Bachelor&apos;s in Computer Engineering
             </h3>
             <p className="text-gray-700 dark:text-gray-300 text-lg transition-colors duration-1000">
               Universidad Autonoma de Occidente - 2022 to 2026

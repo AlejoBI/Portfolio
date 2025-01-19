@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   BrowserRouter as Router,
   Route,
@@ -14,6 +12,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import DarkModeToggle from "../components/darkModeToggle/DarkModeToggle";
 
+// eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => {
   const location = useLocation();
 
