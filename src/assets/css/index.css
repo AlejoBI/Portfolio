@@ -7,14 +7,18 @@ body,
 #root {
   margin: 0;
   padding: 0;
-
-  /* Fuente de google fonts */
   font-family: "Roboto", serif;
   font-weight: 700;
   font-style: normal;
-
-  /* Fondo */
   background-size: cover;
   background-position: center;
   height: 100vh;
+}
+
+header.translate-y-0 {
+  transform: translateY(0);
+}
+
+header.-translate-y-full {
+  transform: translateY(-100%);
 }
