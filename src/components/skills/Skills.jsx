@@ -116,18 +116,18 @@ const Skills = () => {
       {skills.map((skillCategory) => (
         <div
           key={skillCategory.category}
-          className="border p-4 rounded shadow-md bg-gray-50 dark:bg-gray-800 transition-colors duration-1000 hover:scale-105 hover:shadow-xl"
+          className="border p-4 rounded shadow-md bg-gray-50 dark:bg-gray-800 transition duration-1000 hover:scale-105 hover:shadow-xl"
         >
-          <h3 className="text-lg font-bold mb-3 text-gray-900 dark:text-white transition-colors duration-1000">
+          <h3 className="text-lg font-bold mb-3 text-gray-900 dark:text-white transition duration-1000">
             {skillCategory.category}
           </h3>
           <ul className="space-y-2">
             {skillCategory.items.map((skill) => (
               <li
                 key={skill.name}
-                className="flex items-center space-x-3 text-gray-700 dark:text-gray-200 transition-colors duration-1000"
+                className="flex items-center space-x-3 text-gray-700 dark:text-gray-200 transition duration-1000"
               >
-                <div className="w-6 h-6 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-1000">
+                <div className="w-6 h-6 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center transition duration-1000">
                   {skill.icon && <img src={skill.icon} alt={skill.name} />}
                 </div>
                 <span>{skill.name}</span>

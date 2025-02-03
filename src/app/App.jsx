@@ -35,7 +35,7 @@ Layout.propTypes = {
 const App = () => {
   return (
     <>
-      <div className="m-0 p-0 h-auto bg-gray-100 dark:bg-gray-900 dark:text-white min-h-screen transition-all duration-1000">
+      <div className="m-0 p-0 h-auto bg-gray-100 dark:bg-gray-900 dark:text-white min-h-screen transition duration-1000">
         <DarkModeToggle />
         <Router>
           <Routes>

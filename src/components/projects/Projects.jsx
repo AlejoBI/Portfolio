@@ -74,24 +74,24 @@ const Projects = () => {
       <Slider {...settings}>
         {projectsList.map((project, index) => (
           <div key={index} className="project-card p-4">
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-colors duration-1000">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition duration-1000">
               <img
                 src={project.image}
                 alt={project.title}
                 className="w-full h-60 object-cover shadow-md"
               />
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 transition-colors duration-1000">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 transition duration-1000">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 transition-colors duration-1000">
+                <p className="text-gray-600 dark:text-gray-400 mb-4 transition duration-1000">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-blue-100 text-blue-700 dark:bg-blue-600 dark:text-white text-sm px-3 py-1 rounded-full transition-colors duration-1000"
+                      className="bg-blue-100 text-blue-700 dark:bg-blue-600 dark:text-white text-sm px-3 py-1 rounded-full transition duration-1000"
                     >
                       {tag}
                     </span>
@@ -102,7 +102,7 @@ const Projects = () => {
                     to={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-1000"
+                    className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-1000"
                   >
                     View Project
                   </Link>
@@ -111,7 +111,7 @@ const Projects = () => {
                       href={project.deploy}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-1000"
+                      className="text-blue-600 dark:text-blue-400 hover:underline transition duration-1000"
                     >
                       Deployed Link
                     </a>
