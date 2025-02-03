@@ -1,5 +1,5 @@
-import es from "../../assets/images/es.png";
-import gb from "../../assets/images/gb.png";
+import es from "../../assets/images/es.webp";
+import gb from "../../assets/images/gb.webp";
 
 const Skills = () => {
   const skills = [
