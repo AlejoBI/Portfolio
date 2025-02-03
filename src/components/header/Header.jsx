@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <header
       id="home"
-      className={`bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-400 transition-all duration-1000 fixed top-0 w-full z-10 ${
+      className={`bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-400 transition duration-1000 fixed top-0 w-full z-10 ${
         show ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       }`}
     >
@@ -47,7 +47,7 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           <Link
             to="/"
-            className="text-xl font-bold text-gray-700 dark:text-white hover:text-gray-400 dark:hover:text-gray-300 flex items-center transition-colors duration-1000"
+            className="text-xl font-bold text-gray-700 dark:text-white hover:text-gray-400 dark:hover:text-gray-300 flex items-center transition duration-1000"
             onClick={scrollToTop}
           >
             <img src={logo} alt="Dev Logo" className="h-10 w-10 rounded-full" />
