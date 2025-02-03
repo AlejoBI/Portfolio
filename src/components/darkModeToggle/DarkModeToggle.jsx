@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 
 const DarkModeToggle = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const theme = localStorage.getItem("theme");
+    return (
+      theme === "dark" ||
+      (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    );
+  });
 
   useEffect(() => {
-    const userPrefersDark =
-      localStorage.getItem("theme") === "dark" ||
-      (!localStorage.getItem("theme") &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-    setDarkMode(userPrefersDark);
-    document.documentElement.classList.toggle("dark", userPrefersDark);
-  }, []);
+    document.documentElement.classList.toggle("dark", darkMode); // Add or remove the dark class from the html element
+  }, [darkMode]);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);

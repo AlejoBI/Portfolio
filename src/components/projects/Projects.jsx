@@ -67,6 +67,14 @@ const Projects = () => {
     centerMode: false,
     focusOnSelect: false,
     edgeFriction: 0.1,
+    appendDots: (dots) => (
+      <div>
+        <ul className="flex justify-center">{dots}</ul>
+      </div>
+    ),
+    customPaging: () => (
+      <div className="w-2 h-2 rounded-full bg-gray-800 dark:bg-white transition duration-500"></div>
+    ),
   };
 
   return (
