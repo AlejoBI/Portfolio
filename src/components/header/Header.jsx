@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/dev.png";
+import logo from "../../assets/images/dev.webp";
 import { scrollToTop } from "../utils/scrollToTop";
 
 const Header = () => {

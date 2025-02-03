@@ -12,7 +12,8 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import DarkModeToggle from "../components/darkModeToggle/DarkModeToggle";
 
-// eslint-disable-next-line react/prop-types
+import PropTypes from "prop-types";
+
 const Layout = ({ children }) => {
   const location = useLocation();
 
@@ -25,6 +26,10 @@ const Layout = ({ children }) => {
       {showHeaderAndFooter && <Footer />}
     </>
   );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 const App = () => {

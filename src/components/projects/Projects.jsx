@@ -1,9 +1,9 @@
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import projecto1 from "../../assets/images/projects/FrelancersPage.png";
-import projecto2 from "../../assets/images/projects/ScoreBoardApp.png";
-import projecto3 from "../../assets/images/projects/CosasEcommerce.png";
-import projecto4 from "../../assets/images/projects/SistemaRag.png";
+import projecto1 from "../../assets/images/projects/FrelancersPage.webp";
+import projecto2 from "../../assets/images/projects/ScoreBoardApp.webp";
+import projecto3 from "../../assets/images/projects/CosasEcommerce.webp";
+import projecto4 from "../../assets/images/projects/SistemaRag.webp";
 
 const Projects = () => {
   const projectsList = [

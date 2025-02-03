@@ -1,10 +1,10 @@
 import Skills from "../../components/skills/Skills";
 import Projects from "../../components/projects/Projects";
 
-import ImagePortfolio from "../../assets/images/Foto.jpg";
+import ImagePortfolio from "../../assets/images/Foto.webp";
 import cv from "../../assets/docs/CV.pdf";
-import github from "../../assets/images/github2.png";
-import linkedin from "../../assets/images/logotipo_de_linkedin2.png";
+import github from "../../assets/images/github2.webp";
+import linkedin from "../../assets/images/logotipo_de_linkedin2.webp";
 
 const Home = () => {
   return (
