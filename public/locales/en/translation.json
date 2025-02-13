@@ -24,6 +24,14 @@
       {
         "name": "Algorithm Optimization for Circuits",
         "description": "Improvement in the design and analysis of electrical circuits."
+      },
+      {
+        "name": "Document Analysis System",
+        "description": "Development of a system to process and analyze documents, using vectorization and machine learning techniques to extract relevant information and generate precise responses."
+      },
+      {
+        "name": "Team Management Application",
+        "description": "Development of an application to record and organize teams, designed to simplify the organization and presentation of results efficiently."
       }
     ],
     "conclusion": "These experiences allowed me to apply theoretical knowledge in practical contexts, foster teamwork, and develop innovative solutions."
