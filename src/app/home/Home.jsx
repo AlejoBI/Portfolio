@@ -6,27 +6,34 @@ import cv from "../../assets/docs/CV.pdf";
 import github from "../../assets/images/github2.webp";
 import linkedin from "../../assets/images/logotipo_de_linkedin2.webp";
 
+import { useTranslation } from "react-i18next";
+
 const Home = () => {
+  const { t } = useTranslation();
+
+  const projects = t("experience.projects", { returnObjects: true });
+  const rolesList = t("roles.list", { returnObjects: true });
+
   return (
     <div className="container mx-auto px-6 py-40 lg:px-20 dark:bg-gray-900 dark:text-white transition duration-1000">
       {/* PRESENTATION */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center shadow-lg rounded-lg p-6 bg-white dark:bg-gray-800 transition duration-1000 hover:scale-105 hover:shadow-xl">
         <div>
           <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white leading-tight transition duration-1000">
-            Hi, I&apos;m{" "}
+            {t("presentation.greeting")}{" "}
             <span className="text-blue-600 dark:text-blue-400 transition duration-1000 hover:underline">
               Alejandro Bravo Isajar
             </span>
           </h1>
           <p className="mt-4 text-gray-700 dark:text-gray-300 text-lg transition duration-1000">
-            Developer specializing in building exceptional digital experiences.
+            {t("presentation.description")}
           </p>
           <div className="flex mt-6 space-x-4">
             <a
               href="mailto:alejandrobravoisajar1@gmail.com"
               className="bg-blue-600 text-white px-5 py-3 rounded-md shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 hover:scale-105 hover:shadow-xl transition duration-1000"
             >
-              Contact Me
+              {t("presentation.contact")}
             </a>
             <a
               href="https://github.com/AlejoBI"
@@ -61,16 +68,10 @@ const Home = () => {
         {/* ABOUT ME */}
         <div className="shadow-lg rounded-lg p-6 bg-white dark:bg-gray-800 transition duration-1000 hover:scale-105 hover:shadow-xl">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition duration-1000">
-            About Me
+            {t("about.title")}
           </h2>
           <p className="mt-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed transition duration-1000">
-            I am passionate about technology and the development of innovative
-            solutions, with skills in programming, web development, and
-            algorithm optimization. I have worked on academic projects such as
-            e-commerce platforms and analysis systems for electrical circuits,
-            applying my knowledge practically and in teams. I stand out for my
-            capacity for innovation, critical thinking, and problem-solving, and
-            I seek to contribute and grow professionally in a dynamic team.
+            {t("about.description")}
           </p>
         </div>
 
@@ -81,7 +82,7 @@ const Home = () => {
         >
           <div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition duration-1000">
-              Download My CV
+              {t("presentation.download_cv")}
             </h2>
             <div className="mt-6 text-center">
               <a
@@ -90,44 +91,33 @@ const Home = () => {
                 rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-5 py-3 rounded-md shadow-md hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-1000"
               >
-                Download CV
+                {t("presentation.download_cv")}
               </a>
             </div>
           </div>
         </div>
       </div>
 
+      <div id="experience"></div>
+
       {/* EXPERIENCE */}
-      <div
-        id="experience"
-        className="mt-12 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition duration-1000 hover:scale-105 hover:shadow-xl"
-      >
+      <div className="mt-12 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition duration-1000 hover:scale-105 hover:shadow-xl">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition duration-1000">
-          Experience
+          {t("experience.title")}
         </h2>
         <div className="mt-4">
           <p className="text-gray-700 dark:text-gray-300 text-lg transition duration-1000">
-            <strong>Highlighted University Projects</strong>
+            <strong>{t("experience.university_projects")}</strong>
           </p>
           <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-lg transition duration-1000">
-            <li>
-              <strong>Freelancer Application:</strong> Design and development of
-              a platform to connect independent professionals with potential
-              clients.
-            </li>
-            <li>
-              <strong>Online Store:</strong> Implementation of an e-commerce
-              system for a local store, optimizing its digital presence.
-            </li>
-            <li>
-              <strong>Algorithm Optimization for Circuits:</strong> Improvement
-              in the design and analysis of electrical circuits.
-            </li>
+            {projects.map((project, index) => (
+              <li key={index}>
+                <strong>{project.name}:</strong> {project.description}
+              </li>
+            ))}
           </ul>
           <p className="text-gray-700 dark:text-gray-300 text-lg transition duration-1000 mt-4">
-            These experiences allowed me to apply theoretical knowledge in
-            practical contexts, foster teamwork, and develop innovative
-            solutions.
+            {t("experience.conclusion")}
           </p>
         </div>
       </div>
@@ -138,7 +128,7 @@ const Home = () => {
         className="mt-20 shadow-lg rounded-lg p-6 bg-white dark:bg-gray-800 transition duration-1000"
       >
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition duration-1000">
-          Skills
+          {t("skills.title")}
         </h2>
         <div className="mt-8">
           <Skills />
@@ -152,18 +142,17 @@ const Home = () => {
         {/* EDUCATION */}
         <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition duration-1000 hover:scale-105 hover:shadow-xl">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition duration-1000">
-            Education
+            {t("education.title")}
           </h2>
           <div className="mt-4">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white transition duration-1000">
-              Bachelor&apos;s in Computer Engineering
+              {t("education.degree")}
             </h3>
             <p className="text-gray-700 dark:text-gray-300 text-lg transition duration-1000">
-              Universidad Autonoma de Occidente - 2022 to 2026
+              {t("education.institution")} | {t("education.years")}
             </p>
             <p className="text-gray-600 dark:text-gray-400 mt-2 transition duration-1000">
-              Focused on software development, data structures, and algorithms,
-              with hands-on experience in collaborative projects.
+              {t("education.focus")}
             </p>
           </div>
         </div>
@@ -174,15 +163,14 @@ const Home = () => {
             Roles Performed
           </h2>
           <ul className="mt-4 space-y-2 list-disc list-inside">
-            <li className="text-gray-700 dark:text-gray-300 text-lg transition duration-1000">
-              Backend Developer
-            </li>
-            <li className="text-gray-700 dark:text-gray-300 text-lg transition duration-1000">
-              Full Stack Developer
-            </li>
-            <li className="text-gray-700 dark:text-gray-300 text-lg transition duration-1000">
-              Team Lead (Small Projects)
-            </li>
+            {rolesList.map((role, index) => (
+              <li
+                key={index}
+                className="text-gray-700 dark:text-gray-300 text-lg transition duration-1000"
+              >
+                {role}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
@@ -192,7 +180,7 @@ const Home = () => {
       {/* PROJECTS */}
       <div className="mt-20 shadow-lg rounded-lg p-6 bg-white dark:bg-gray-800 transition duration-1000 hover:scale-105 hover:shadow-xl">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white border-b-4 border-blue-600 dark:border-blue-400 inline-block transition duration-1000">
-          Projects
+          {t("projects.title")}
         </h2>
         <div className="mt-8">
           <Projects />

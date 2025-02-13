@@ -3,15 +3,20 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/dev.webp";
 import { scrollToTop } from "../utils/scrollToTop";
 
+import LanguageSwitcher from "../langSwitcher/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
+
 const Header = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0); // Mantener la última posición del scroll
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const navigation = [
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
+    { name: t("header.navigation.about"), href: "#about" },
+    { name: t("header.navigation.skills"), href: "#skills" },
+    { name: t("header.navigation.projects"), href: "#projects" },
+    { name: t("header.navigation.experience"), href: "#experience" },
   ];
 
   useEffect(() => {
@@ -51,7 +56,7 @@ const Header = () => {
             onClick={scrollToTop}
           >
             <img src={logo} alt="Dev Logo" className="h-10 w-10 rounded-full" />
-            <span className="ml-2">Portfolio</span>
+            <span className="ml-2">Alejandro{t("header.ti")}</span>
           </Link>
         </div>
 

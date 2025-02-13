@@ -1,0 +1,114 @@
+{
+  "presentation": {
+    "greeting": "Hola, soy",
+    "description": "Desarrollador especializado en la creación de experiencias digitales excepcionales.",
+    "contact": "Contáctame",
+    "download_cv": "Descargar CV"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Soy apasionado por la tecnología y el desarrollo de soluciones innovadoras, con habilidades en programación, desarrollo web y optimización de algoritmos. He trabajado en proyectos académicos como plataformas de comercio electrónico y sistemas de análisis de circuitos eléctricos, aplicando mis conocimientos en la práctica y en equipo. Me destaco por mi capacidad de innovación, pensamiento crítico y resolución de problemas, y busco contribuir y crecer profesionalmente en un equipo dinámico."
+  },
+  "experience": {
+    "title": "Experiencia",
+    "university_projects": "Proyectos Universitarios Destacados",
+    "projects": [
+      {
+        "name": "Aplicación Freelancer",
+        "description": "Diseño y desarrollo de una plataforma para conectar profesionales independientes con clientes potenciales."
+      },
+      {
+        "name": "Tienda en Línea",
+        "description": "Implementación de un sistema de comercio electrónico para una tienda local, optimizando su presencia digital."
+      },
+      {
+        "name": "Optimización de Algoritmos para Circuitos",
+        "description": "Mejora en el diseño y análisis de circuitos eléctricos."
+      }
+    ],
+    "conclusion": "Estas experiencias me permitieron aplicar conocimientos teóricos en contextos prácticos, fomentar el trabajo en equipo y desarrollar soluciones innovadoras."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "programmingLanguages": "Lenguajes de Programación",
+    "frontendDevelopment": "Desarrollo Frontend",
+    "backendDevelopment": "Desarrollo Backend",
+    "databasesAndServers": "Bases de Datos y Servidores",
+    "toolsAndDevOps": "Herramientas y DevOps",
+    "softSkills": "Habilidades Blandas",
+    "languages": "Idiomas",
+    "items": {
+      "javascript": "JavaScript (Principal)",
+      "restApis": "APIs RESTful",
+      "problemSolving": "Resolución de Problemas",
+      "innovation": "Innovación",
+      "teamwork": "Trabajo en Equipo",
+      "communication": "Comunicación",
+      "spanish": "Español (Nativo)",
+      "english": "Inglés (B2)"
+    }
+  },
+  "education": {
+    "title": "Educación",
+    "degree": "Licenciatura en Ingeniería Informática",
+    "institution": "Universidad Autónoma de Occidente",
+    "years": "2022 - 2026",
+    "focus": "Enfocado en desarrollo de software, estructuras de datos y algoritmos, con experiencia práctica en proyectos colaborativos."
+  },
+  "roles": {
+    "title": "Roles Desempeñados",
+    "list": [
+      "Desarrollador Backend",
+      "Desarrollador Full Stack",
+      "Líder de Equipo (Proyectos Pequeños)"
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "list": [
+      {
+        "title": "Página Web de Freelancers",
+        "description": "Una página web para que los freelancers ofrezcan sus servicios y los clientes los contraten. (Aún sin diseño responsivo)."
+      },
+      {
+        "title": "Aplicación ScoreBoard",
+        "description": "Una aplicación para registrar y organizar equipos, diseñada para simplificar la organización y presentación de resultados de manera eficiente."
+      },
+      {
+        "title": "E-commerce",
+        "description": "Una plataforma de comercio electrónico diseñada para facilitar la compra y venta de productos, ofreciendo una experiencia intuitiva para los usuarios, con funcionalidades como gestión de inventario, búsqueda de productos y un flujo de compra eficiente."
+      },
+      {
+        "title": "Sistema RAG",
+        "description": "Un sistema RAG (Generación Aumentada por Recuperación) que utiliza la IA de OpenAI junto con técnicas de vectorización para procesar y analizar documentos proporcionados por el usuario. El sistema permite generar respuestas precisas basadas en la información proporcionada, integrando un panel interactivo para la gestión de documentos, monitoreo de consultas y visualización de resultados, optimizando así el acceso a conocimiento personalizado y relevante."
+      }
+    ],
+    "buttons": {
+      "view_project": "Ver Proyecto",
+      "deployed_link": "Enlace Desplegado"
+    }
+  },
+
+  "not_found": {
+    "title": "404",
+    "message": "¡Oops! Página no encontrada.",
+    "description": "La página que estás buscando no existe o fue movida.",
+    "button": "Volver al Inicio"
+  },
+
+  "header": {
+    "ti": "IT",
+    "navigation": {
+      "about": "Sobre mí",
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "experience": "Experiencia"
+    }
+  },
+
+  "footer": {
+    "builtWith": "Construido con",
+    "copyright": "Todos los derechos reservados.",
+    "email": "Correo electrónico"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "presentation": {
+    "greeting": "Hi, I'm",
+    "description": "Developer specializing in building exceptional digital experiences.",
+    "contact": "Contact Me",
+    "download_cv": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am passionate about technology and the development of innovative solutions, with skills in programming, web development, and algorithm optimization. I have worked on academic projects such as e-commerce platforms and analysis systems for electrical circuits, applying my knowledge practically and in teams. I stand out for my capacity for innovation, critical thinking, and problem-solving, and I seek to contribute and grow professionally in a dynamic team."
+  },
+  "experience": {
+    "title": "Experience",
+    "university_projects": "Highlighted University Projects",
+    "projects": [
+      {
+        "name": "Freelancer Application",
+        "description": "Design and development of a platform to connect independent professionals with potential clients."
+      },
+      {
+        "name": "Online Store",
+        "description": "Implementation of an e-commerce system for a local store, optimizing its digital presence."
+      },
+      {
+        "name": "Algorithm Optimization for Circuits",
+        "description": "Improvement in the design and analysis of electrical circuits."
+      }
+    ],
+    "conclusion": "These experiences allowed me to apply theoretical knowledge in practical contexts, foster teamwork, and develop innovative solutions."
+  },
+  "skills": {
+    "title": "Skills",
+    "programmingLanguages": "Programming Languages",
+    "frontendDevelopment": "Frontend Development",
+    "backendDevelopment": "Backend Development",
+    "databasesAndServers": "Databases and Servers",
+    "toolsAndDevOps": "Tools and DevOps",
+    "softSkills": "Soft Skills",
+    "languages": "Languages",
+    "items": {
+      "javascript": "JavaScript (Main)",
+      "restApis": "RESTful APIs",
+      "problemSolving": "Problem Solving",
+      "innovation": "Innovation",
+      "teamwork": "Teamwork",
+      "communication": "Communication",
+      "spanish": "Spanish (Native)",
+      "english": "English (B2)"
+    }
+  },
+  "education": {
+    "title": "Education",
+    "degree": "Bachelor's in Computer Engineering",
+    "institution": "Universidad Autonoma de Occidente",
+    "years": "2022 - 2026",
+    "focus": "Focused on software development, data structures, and algorithms, with hands-on experience in collaborative projects."
+  },
+  "roles": {
+    "title": "Roles Performed",
+    "list": [
+      "Backend Developer",
+      "Full Stack Developer",
+      "Team Lead (Small Projects)"
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "list": [
+      {
+        "title": "Freelancers Web Page",
+        "description": "A web page for freelancers to offer their services and clients to hire them. (No responsive design yet)."
+      },
+      {
+        "title": "ScoreBoard App",
+        "description": "An application for recording and organizing equipment, designed to simplify the organization and presentation of results efficiently."
+      },
+      {
+        "title": "E-commerce",
+        "description": "An e-commerce platform designed to facilitate the purchase and sale of products, offering an intuitive experience for users, with functionalities such as inventory management, product search, and an efficient purchase flow."
+      },
+      {
+        "title": "RAG System",
+        "description": "A RAG (Retrieval-Augmented Generation) system that uses OpenAI AI together with vectorization techniques to process and analyze documents provided by the user. The system allows generating precise responses based on the information provided, integrating an interactive dashboard for document management, query monitoring, and results visualization, thus optimizing access to personalized and relevant knowledge."
+      }
+    ],
+    "buttons": {
+      "view_project": "View Project",
+      "deployed_link": "Deployed Link"
+    }
+  },
+
+  "not_found": {
+    "title": "404",
+    "message": "Oops! Page not found.",
+    "description": "The page you are looking for does not exist or was moved.",
+    "button": "Back to Home"
+  },
+
+  "header": {
+    "ti": "TI",
+    "navigation": {
+      "about": "About Me",
+      "skills": "Skills",
+      "projects": "Projects",
+      "experience": "Experience"
+    }
+  },
+
+  "footer": {
+    "builtWith": "Built with",
+    "copyright": "All rights reserved.",
+    "email": "Email"
+  }
+}

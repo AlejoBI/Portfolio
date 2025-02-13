@@ -1,13 +1,17 @@
 import es from "../../assets/images/es.webp";
 import gb from "../../assets/images/gb.webp";
 
+import { useTranslation } from "react-i18next";
+
 const Skills = () => {
+  const { t } = useTranslation();
+
   const skills = [
     {
-      category: "Programming Languages",
+      category: t("skills.programmingLanguages"),
       items: [
         {
-          name: "JavaScript (Main)",
+          name: t("skills.items.javascript"),
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         },
         {
@@ -21,7 +25,7 @@ const Skills = () => {
       ],
     },
     {
-      category: "Frontend Development",
+      category: t("skills.frontendDevelopment"),
       items: [
         {
           name: "HTML",
@@ -46,7 +50,7 @@ const Skills = () => {
       ],
     },
     {
-      category: "Backend Development",
+      category: t("skills.backendDevelopment"),
       items: [
         {
           name: "Node.js",
@@ -59,7 +63,7 @@ const Skills = () => {
       ],
     },
     {
-      category: "Databases and Servers",
+      category: t("skills.databasesAndServers"),
       items: [
         {
           name: "MySQL",
@@ -77,11 +81,11 @@ const Skills = () => {
           name: "Express.js",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
         },
-        { name: "RESTful APIs", icon: "" },
+        { name: t("skills.items.restApis"), icon: "" },
       ],
     },
     {
-      category: "Tools and DevOps",
+      category: t("skills.toolsAndDevOps"),
       items: [
         {
           name: "Docker",
@@ -94,19 +98,19 @@ const Skills = () => {
       ],
     },
     {
-      category: "Soft Skills",
+      category: t("skills.softSkills"),
       items: [
-        { name: "Problem Solving", icon: "" },
-        { name: "Innovation", icon: "" },
-        { name: "Teamwork", icon: "" },
-        { name: "Communication", icon: "" },
+        { name: t("skills.items.problemSolving"), icon: "" },
+        { name: t("skills.items.innovation"), icon: "" },
+        { name: t("skills.items.teamwork"), icon: "" },
+        { name: t("skills.items.communication"), icon: "" },
       ],
     },
     {
-      category: "Languages",
+      category: t("skills.languages"),
       items: [
-        { name: "Spanish (Native)", icon: es },
-        { name: "English (B2)", icon: gb },
+        { name: t("skills.items.spanish"), icon: es },
+        { name: t("skills.items.english"), icon: gb },
       ],
     },
   ];

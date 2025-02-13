@@ -5,7 +5,13 @@ import projecto2 from "../../assets/images/projects/ScoreBoardApp.webp";
 import projecto3 from "../../assets/images/projects/CosasEcommerce.webp";
 import projecto4 from "../../assets/images/projects/SistemaRag.webp";
 
+import { useTranslation } from "react-i18next";
+
 const Projects = () => {
+  const { t } = useTranslation();
+
+  const listProjectsTranslations = t("projects.list", { returnObjects: true });
+
   const projectsList = [
     {
       title: "Freelancers Web Page",
@@ -36,7 +42,8 @@ const Projects = () => {
     },
     {
       title: "RAG System",
-      description: "A RAG (Retrieval-Augmented Generation) system that uses OpenAI AI together with vectorization techniques to process and analyze documents provided by the user. The system allows generating precise responses based on the information provided, integrating an interactive dashboard for document management, query monitoring and results visualization, thus optimizing access to personalized and relevant knowledge.",
+      description:
+        "A RAG (Retrieval-Augmented Generation) system that uses OpenAI AI together with vectorization techniques to process and analyze documents provided by the user. The system allows generating precise responses based on the information provided, integrating an interactive dashboard for document management, query monitoring and results visualization, thus optimizing access to personalized and relevant knowledge.",
       image: projecto4,
       tags: [
         "Python",
@@ -54,6 +61,12 @@ const Projects = () => {
       deploy: "Deployed Link",
     },
   ];
+
+  if (Array.isArray(listProjectsTranslations)) {
+    for (let i = 0; i < projectsList.length; i++) {
+      projectsList[i] = { ...projectsList[i], ...listProjectsTranslations[i] };
+    }
+  }
 
   const settings = {
     dots: true,
@@ -112,7 +125,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-1000"
                   >
-                    View Project
+                    {t("projects.buttons.view_project")}
                   </Link>
                   {project.deploy !== "Deployed Link" && (
                     <a
@@ -121,7 +134,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="text-blue-600 dark:text-blue-400 hover:underline transition duration-1000"
                     >
-                      Deployed Link
+                      {t("projects.buttons.deployed_link")}
                     </a>
                   )}
                 </div>
