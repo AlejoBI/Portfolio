@@ -20,7 +20,7 @@ const links = [
     isImage: true,
   },
   {
-    href: "https://www.linkedin.com/in/alejandro-bravo-isajar-061b682b5/",
+    href: "https://www.linkedin.com/in/alejandro-bravo-isajar-923862292/",
     className:
       "bg-blue-500 text-white px-5 py-3 rounded-md shadow-md hover:bg-blue-600 dark:hover:bg-blue-400 hover:scale-105 hover:shadow-xl transition duration-1000",
     imgSrc: linkedin,
