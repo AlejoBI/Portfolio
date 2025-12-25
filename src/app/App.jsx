@@ -37,29 +37,34 @@ Layout.propTypes = {
 const App = () => {
   return (
     <>
-      <div className="m-0 p-0 h-auto bg-gray-100 dark:bg-gray-900 dark:text-white min-h-screen transition duration-1000">
-        <LanguageSwitcher />
-        <DarkModeToggle />
-        <Router>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Layout>
-                  <Home />
-                </Layout>
-              }
-            />
-            <Route
-              path="*"
-              element={
-                <Layout>
-                  <NotFoundPage />
-                </Layout>
-              }
-            />
-          </Routes>
-        </Router>
+      <div className="m-0 p-0 h-auto bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen transition-colors duration-1000 relative overflow-x-hidden">
+        {/* Background gradients */}
+        <div className="fixed inset-0 bg-gradient-to-br from-gray-100 via-blue-50/30 to-purple-50/30 dark:from-gray-900 dark:via-blue-900/10 dark:to-purple-900/10 pointer-events-none"></div>
+
+        <div className="relative z-10">
+          <LanguageSwitcher />
+          <DarkModeToggle />
+          <Router>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Layout>
+                    <Home />
+                  </Layout>
+                }
+              />
+              <Route
+                path="*"
+                element={
+                  <Layout>
+                    <NotFoundPage />
+                  </Layout>
+                }
+              />
+            </Routes>
+          </Router>
+        </div>
       </div>
     </>
   );

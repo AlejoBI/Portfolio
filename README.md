@@ -54,4 +54,4 @@ Explore the **Projects** section of this portfolio to view the applications and 
 Feel free to connect with me or check out my other platforms:
 - 📧 [Email Me](mailto:alejandrobravoisajar1@gmail.com)
 - 🌐 [GitHub](https://github.com/AlejoBI)
-- 💼 [LinkedIn](https://www.linkedin.com/in/alejandro-bravo-isajar-061b682b5/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/alejandrobi)

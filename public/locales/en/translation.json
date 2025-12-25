@@ -1,13 +1,13 @@
 {
   "presentation": {
-    "greeting": "Hi, I'm",
-    "description": "Developer specializing in building exceptional digital experiences.",
+    "greeting": "Hi, I'm",    "title": "Computer Engineer",    "description": "Developer specializing in building exceptional digital experiences.",
     "contact": "Contact Me",
-    "download_cv": "Download CV"
+    "download_cv": "Download CV",
+    "cv_description": "Download my resume in PDF format"
   },
   "about": {
     "title": "About Me",
-    "description": "I am passionate about technology and the development of innovative solutions, with skills in programming, web development, and algorithm optimization. I have worked on academic projects such as e-commerce platforms and analysis systems for electrical circuits, applying my knowledge practically and in teams. I stand out for my capacity for innovation, critical thinking, and problem-solving, and I seek to contribute and grow professionally in a dynamic team."
+    "description": "I am a Computer Engineering student, with a constant focus on deeply understanding every tool, process, and dynamic that influence my work. I stand out for maintaining a proactive attitude, learning from those around me and quickly adapting to new challenges. I value teamwork as a space to contribute, listen, and build effective solutions, always seeking that each project delivers a solid and well-executed result. My training is primarily oriented towards backend development with Java, Node.js, and Spring Boot, integrating SQL/NoSQL databases and applying good practices in architecture, optimization, and DevOps."
   },
   "experience": {
     "title": "Experience",
@@ -15,23 +15,27 @@
     "projects": [
       {
         "name": "Freelancer Application",
-        "description": "Design and development of a platform to connect independent professionals with potential clients."
+        "description": "Web platform designed to connect independent professionals with potential clients, facilitating the offering and hiring of specialized services."
       },
       {
         "name": "Online Store",
-        "description": "Implementation of an e-commerce system for a local store, optimizing its digital presence."
+        "description": "Complete e-commerce system for a local store, enhancing their digital presence and online shopping experience."
       },
       {
         "name": "Algorithm Optimization for Circuits",
-        "description": "Improvement in the design and analysis of electrical circuits."
+        "description": "Optimization project focused on improving the design and computational analysis of electrical circuits through efficient algorithms."
       },
       {
         "name": "Document Analysis System",
-        "description": "Development of a system to process and analyze documents, using vectorization and machine learning techniques to extract relevant information and generate precise responses."
+        "description": "RAG system that processes and analyzes documents using AI, enabling the extraction of relevant information and generation of precise responses."
       },
       {
         "name": "Team Management Application",
-        "description": "Development of an application to record and organize teams, designed to simplify the organization and presentation of results efficiently."
+        "description": "Application to record and organize sports teams, simplifying tournament management and results presentation."
+      },
+      {
+        "name": "ISOlytics - Audit and Compliance Software",
+        "description": "Comprehensive tool for companies to validate and manage their compliance with international standards such as ISO, ITIL, and other quality frameworks."
       }
     ],
     "conclusion": "These experiences allowed me to apply theoretical knowledge in practical contexts, foster teamwork, and develop innovative solutions."
@@ -53,15 +57,39 @@
       "teamwork": "Teamwork",
       "communication": "Communication",
       "spanish": "Spanish (Native)",
-      "english": "English (B2)"
+      "english": "English (B1)"
     }
   },
   "education": {
     "title": "Education",
-    "degree": "Bachelor's in Computer Engineering",
-    "institution": "Universidad Autonoma de Occidente",
-    "years": "2022 - 2026",
-    "focus": "Focused on software development, data structures, and algorithms, with hands-on experience in collaborative projects."
+    "university": {
+      "degree": "Computer Engineering",
+      "institution": "Universidad Autónoma de Occidente",
+      "years": "2022 - 2026",
+      "focus": "Training in Computer Engineering with emphasis on backend development, databases, software architecture, and agile methodologies."
+    },
+    "highschool": {
+      "degree": "Academic High School Diploma",
+      "institution": "Institución Educativa Villacolombia",
+      "year": "2020"
+    }
+  },
+  "certifications": {
+    "title": "Certifications",
+    "list": [
+      {
+        "name": "Scrum Fundamentals Certified (SFC)",
+        "issuer": "SCRUMstudy",
+        "date": "July 2025",
+        "link": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1088870"
+      },
+      {
+        "name": "Developing Interpersonal Skills",
+        "issuer": "Coursera",
+        "date": "August 2025",
+        "link": "https://www.coursera.org/account/accomplishments/verify/MF8UQV00C9Y0"
+      }
+    ]
   },
   "roles": {
     "title": "Roles Performed",
@@ -89,6 +117,12 @@
       {
         "title": "RAG System",
         "description": "A RAG (Retrieval-Augmented Generation) system that uses OpenAI AI together with vectorization techniques to process and analyze documents provided by the user. The system allows generating precise responses based on the information provided, integrating an interactive dashboard for document management, query monitoring, and results visualization, thus optimizing access to personalized and relevant knowledge."
+      },
+      {
+        "title": "ISOlytics",
+        "description": "Audit and compliance software. Implementation of a tool for companies to validate their compliance with standards (ISO, ITIL, etc.).",
+        "link": "https://isolytics.vercel.app/",
+        "deploy": "https://isolytics.vercel.app/"
       }
     ],
     "buttons": {

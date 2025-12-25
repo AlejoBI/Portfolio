@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import traducir from "../../assets/images/traducir.webp";
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
@@ -12,7 +11,6 @@ const LanguageSwitcher = () => {
     setIsOpen(false);
   };
 
-  // Cierra el menú si se hace clic fuera
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -34,29 +32,44 @@ const LanguageSwitcher = () => {
   return (
     <div
       ref={menuRef}
-      className="fixed bottom-20 right-4 z-10 flex items-center"
+      className="fixed bottom-20 right-4 z-50 flex items-center"
     >
       {isOpen && (
-        <div className="absolute right-14 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg overflow-hidden transition duration-300">
+        <div className="absolute right-16 glass-dark border border-gray-700/50 rounded-xl shadow-2xl overflow-hidden animate-slide-in-up">
           <button
             onClick={() => changeLanguage("es")}
-            className="block w-full text-left px-4 py-2 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300"
+            className="flex items-center gap-3 w-full text-left px-5 py-3 text-white hover:bg-blue-500/20 transition-all duration-300 border-b border-gray-700/50"
           >
-            Spanish
+            <span className="text-2xl">🇪🇸</span>
+            <span className="font-medium">Español</span>
           </button>
           <button
             onClick={() => changeLanguage("en")}
-            className="block w-full text-left px-4 py-2 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300"
+            className="flex items-center gap-3 w-full text-left px-5 py-3 text-white hover:bg-blue-500/20 transition-all duration-300"
           >
-            English
+            <span className="text-lg font-bold text-white">EN</span>
+            <span className="font-medium">English</span>
           </button>
         </div>
       )}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-white to-blue-500 dark:from-blue-700 dark:to-gray-900 text-gray-900 dark:text-white shadow-lg hover:from-blue-600 hover:to-white dark:hover:from-gray-800 dark:hover:to-blue-600 transition duration-1000"
+        className="group p-4 bg-gray-800 dark:bg-gradient-tech hover:shadow-2xl rounded-2xl shadow-xl transition-all duration-300 hover:scale-110 animate-pulse hover:animate-none"
+        aria-label="Change Language"
       >
-        <img src={traducir} alt="Traducir" className="w-6 h-6" />
+        <svg
+          className="w-6 h-6 text-blue-400 dark:text-white transition-all duration-300 group-hover:rotate-12"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+          />
+        </svg>
       </button>
     </div>
   );

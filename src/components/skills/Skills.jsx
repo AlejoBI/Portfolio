@@ -1,6 +1,3 @@
-import es from "../../assets/images/es.webp";
-import gb from "../../assets/images/gb.webp";
-
 import { useTranslation } from "react-i18next";
 
 const Skills = () => {
@@ -38,10 +35,6 @@ const Skills = () => {
         {
           name: "React (Vite.js)",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-        },
-        {
-          name: "Bootstrap",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
         },
         {
           name: "Tailwind CSS",
@@ -109,35 +102,65 @@ const Skills = () => {
     {
       category: t("skills.languages"),
       items: [
-        { name: t("skills.items.spanish"), icon: es },
-        { name: t("skills.items.english"), icon: gb },
+        { name: t("skills.items.spanish"), icon: "🇪🇸", isEmoji: true },
+        { name: t("skills.items.english"), icon: "EN", isText: true },
       ],
     },
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-      {skills.map((skillCategory) => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {skills.map((skillCategory, idx) => (
         <div
           key={skillCategory.category}
-          className="border p-4 rounded shadow-md bg-gray-50 dark:bg-gray-800 transition duration-1000 hover:scale-105 hover:shadow-xl"
+          className="group relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-2xl p-6 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all duration-500 card-hover"
+          style={{ animationDelay: `${idx * 0.1}s` }}
         >
-          <h3 className="text-lg font-bold mb-3 text-gray-900 dark:text-white transition duration-1000">
-            {skillCategory.category}
-          </h3>
-          <ul className="space-y-2">
-            {skillCategory.items.map((skill) => (
-              <li
-                key={skill.name}
-                className="flex items-center space-x-3 text-gray-700 dark:text-gray-200 transition duration-1000"
-              >
-                <div className="w-6 h-6 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center justify-center transition duration-1000">
-                  {skill.icon && <img src={skill.icon} alt={skill.name} />}
-                </div>
-                <span>{skill.name}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="absolute inset-0 bg-gradient-tech opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500"></div>
+
+          <div className="relative z-10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 bg-gradient-tech rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">💻</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white transition-all duration-300">
+                {skillCategory.category}
+              </h3>
+            </div>
+
+            <ul className="space-y-3">
+              {skillCategory.items.map((skill, skillIdx) => (
+                <li
+                  key={skill.name}
+                  className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 group/item"
+                  style={{ animationDelay: `${idx * 0.1 + skillIdx * 0.05}s` }}
+                >
+                  <div className="relative">
+                    <div className="w-8 h-8 bg-gray-200/50 dark:bg-gray-700/50 rounded-lg flex items-center justify-center group-hover/item:scale-110 group-hover/item:bg-gray-300/50 dark:group-hover/item:bg-gray-600/50 transition-all duration-300 overflow-hidden">
+                      {skill.isEmoji ? (
+                        <span className="text-xl">{skill.icon}</span>
+                      ) : skill.isText ? (
+                        <span className="text-xs font-bold text-gray-700 dark:text-gray-300">{skill.icon}</span>
+                      ) : skill.icon ? (
+                        <img
+                          src={skill.icon}
+                          alt={skill.name}
+                          className="w-6 h-6 object-contain filter group-hover/item:brightness-125 transition-all duration-300"
+                        />
+                      ) : (
+                        <div className="w-3 h-3 bg-gradient-tech rounded-full"></div>
+                      )}
+                    </div>
+                  </div>
+                  <span className="text-sm font-medium group-hover/item:translate-x-1 transition-transform duration-300">
+                    {skill.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-tech opacity-10 blur-2xl rounded-full group-hover:opacity-20 transition-opacity duration-500"></div>
         </div>
       ))}
     </div>

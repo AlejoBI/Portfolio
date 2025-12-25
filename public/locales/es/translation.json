@@ -1,13 +1,15 @@
 {
   "presentation": {
     "greeting": "Hola, soy",
+    "title": "Ingeniero Informático",
     "description": "Desarrollador especializado en la creación de experiencias digitales excepcionales.",
     "contact": "Contáctame",
-    "download_cv": "Descargar CV"
+    "download_cv": "Descargar CV",
+    "cv_description": "Descarga mi currículum en formato PDF"
   },
   "about": {
     "title": "Sobre mí",
-    "description": "Soy apasionado por la tecnología y el desarrollo de soluciones innovadoras, con habilidades en programación, desarrollo web y optimización de algoritmos. He trabajado en proyectos académicos como plataformas de comercio electrónico y sistemas de análisis de circuitos eléctricos, aplicando mis conocimientos en la práctica y en equipo. Me destaco por mi capacidad de innovación, pensamiento crítico y resolución de problemas, y busco contribuir y crecer profesionalmente en un equipo dinámico."
+    "description": "Soy estudiante de Ingeniería Informática, con un enfoque constante en comprender a fondo cada herramienta, proceso y dinámica que influyen en mi trabajo. Me destaco por mantener una actitud proactiva, aprendiendo de quienes me rodean y adaptándome con rapidez a nuevos retos. Valoro el trabajo en equipo como un espacio para aportar, escuchar y construir soluciones efectivas, siempre buscando que cada proyecto deje un resultado sólido y bien ejecutado. Mi formación se orienta principalmente al desarrollo backend con Java, Node.js y Spring Boot, integrando bases de datos SQL/NoSQL y aplicando buenas prácticas de arquitectura, optimización y DevOps."
   },
   "experience": {
     "title": "Experiencia",
@@ -15,23 +17,27 @@
     "projects": [
       {
         "name": "Aplicación Freelancer",
-        "description": "Diseño y desarrollo de una plataforma para conectar profesionales independientes con clientes potenciales."
+        "description": "Plataforma web diseñada para conectar profesionales independientes con clientes potenciales, facilitando la oferta y contratación de servicios especializados."
       },
       {
         "name": "Tienda en Línea",
-        "description": "Implementación de un sistema de comercio electrónico para una tienda local, optimizando su presencia digital."
+        "description": "Sistema de comercio electrónico completo para una tienda local, mejorando su presencia digital y experiencia de compra en línea."
       },
       {
         "name": "Optimización de Algoritmos para Circuitos",
-        "description": "Mejora en el diseño y análisis de circuitos eléctricos."
+        "description": "Proyecto de optimización enfocado en mejorar el diseño y análisis computacional de circuitos eléctricos mediante algoritmos eficientes."
       },
       {
         "name": "Sistema de Análisis de Documentos",
-        "description": "Desarrollo de un sistema para procesar y analizar documentos, utilizando técnicas de vectorización y aprendizaje automático para extraer información relevante y generar respuestas precisas."
+        "description": "Sistema RAG (Generación Aumentada por Recuperación) que procesa y analiza documentos usando IA, permitiendo extraer información relevante y generar respuestas precisas."
       },
       {
-        "name": "Apicacion de Gestión de Equipos",
-        "description": "Desarrollo de una aplicación para registrar y organizar equipos, diseñada para simplificar la organización y presentación de resultados de manera eficiente."
+        "name": "Aplicación de Gestión de Equipos",
+        "description": "Aplicación para registrar y organizar equipos deportivos, simplificando la gestión de torneos y presentación de resultados."
+      },
+      {
+        "name": "ISOlytics - Software de Auditorías y Normativas",
+        "description": "Herramienta integral para que empresas validen y gestionen su cumplimiento frente a normativas internacionales como ISO, ITIL y otros estándares de calidad."
       }
     ],
     "conclusion": "Estas experiencias me permitieron aplicar conocimientos teóricos en contextos prácticos, fomentar el trabajo en equipo y desarrollar soluciones innovadoras."
@@ -53,15 +59,56 @@
       "teamwork": "Trabajo en Equipo",
       "communication": "Comunicación",
       "spanish": "Español (Nativo)",
-      "english": "Inglés (B2)"
+      "english": "Inglés (B1)"
     }
   },
   "education": {
     "title": "Educación",
-    "degree": "Ingeniería Informática - Pregrado",
-    "institution": "Universidad Autónoma de Occidente",
-    "years": "2022 - 2026",
-    "focus": "Enfocado en desarrollo de software, estructuras de datos y algoritmos, con experiencia práctica en proyectos colaborativos."
+    "university": {
+      "degree": "Ingeniería Informática",
+      "institution": "Universidad Autónoma de Occidente",
+      "years": "2022 - 2026",
+      "focus": "Formación en Ingeniería Informática con énfasis en desarrollo backend, bases de datos, arquitectura de software y metodologías ágiles."
+    },
+    "highschool": {
+      "degree": "Bachiller Académico",
+      "institution": "Institución Educativa Villacolombia",
+      "year": "2020"
+    }
+  },
+  "certifications": {
+    "title": "Certificaciones",
+    "list": [
+      {
+        "name": "Scrum Fundamentals Certified (SFC)",
+        "issuer": "SCRUMstudy",
+        "date": "Julio 2025",
+        "link": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1088870"
+      },
+      {
+        "name": "Desarrollar las habilidades interpersonales",
+        "issuer": "Coursera",
+        "date": "Agosto 2025",
+        "link": "https://www.coursera.org/account/accomplishments/verify/MF8UQV00C9Y0"
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certificaciones",
+    "list": [
+      {
+        "name": "Scrum Fundamentals Certified (SFC)",
+        "issuer": "SCRUMstudy",
+        "date": "Julio 2025",
+        "link": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1088870"
+      },
+      {
+        "name": "Desarrollar las habilidades interpersonales",
+        "issuer": "Coursera",
+        "date": "Agosto 2025",
+        "link": "https://www.coursera.org/account/accomplishments/verify/MF8UQV00C9Y0"
+      }
+    ]
   },
   "roles": {
     "title": "Roles Desempeñados",
@@ -89,6 +136,12 @@
       {
         "title": "Sistema RAG",
         "description": "Un sistema RAG (Generación Aumentada por Recuperación) que utiliza la IA de OpenAI junto con técnicas de vectorización para procesar y analizar documentos proporcionados por el usuario. El sistema permite generar respuestas precisas basadas en la información proporcionada, integrando un panel interactivo para la gestión de documentos, monitoreo de consultas y visualización de resultados, optimizando así el acceso a conocimiento personalizado y relevante."
+      },
+      {
+        "title": "ISOlytics",
+        "description": "Software de auditorías y normativas. Implementación de una herramienta para que empresas validen su cumplimiento frente a normativas (ISO, ITIL, etc.).",
+        "link": "https://isolytics.vercel.app/",
+        "deploy": "https://isolytics.vercel.app/"
       }
     ],
     "buttons": {
