@@ -1,0 +1,22 @@
+{
+  "university": {
+    "degree": {
+      "en": "Computer Engineering",
+      "es": "Ingeniería Informática"
+    },
+    "institution": "Universidad Autónoma de Occidente",
+    "years": "2022 - 2026",
+    "focus": {
+      "en": "Training in Computer Engineering with emphasis on backend development, databases, software architecture, and agile methodologies.",
+      "es": "Formación en Ingeniería Informática con énfasis en desarrollo backend, bases de datos, arquitectura de software y metodologías ágiles."
+    }
+  },
+  "highschool": {
+    "degree": {
+      "en": "Academic High School Diploma",
+      "es": "Bachiller Académico"
+    },
+    "institution": "Institución Educativa Villacolombia",
+    "year": "2020"
+  }
+}

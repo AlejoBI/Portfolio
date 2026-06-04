@@ -1,0 +1,146 @@
+[
+  {
+    "category": {
+      "en": "Programming Languages",
+      "es": "Lenguajes de Programación"
+    },
+    "items": [
+      {
+        "name": { "en": "JavaScript (Main)", "es": "JavaScript (Principal)" },
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+      },
+      {
+        "name": "Python",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+      },
+      {
+        "name": "Java",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Frontend Development",
+      "es": "Desarrollo Frontend"
+    },
+    "items": [
+      {
+        "name": "HTML",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+      },
+      {
+        "name": "CSS",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+      },
+      {
+        "name": "React (Vite.js)",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Backend Development",
+      "es": "Desarrollo Backend"
+    },
+    "items": [
+      {
+        "name": "Node.js",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+      },
+      {
+        "name": "Spring Boot",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Databases and Servers",
+      "es": "Bases de Datos y Servidores"
+    },
+    "items": [
+      {
+        "name": "MySQL",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+      },
+      {
+        "name": "Firebase",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg"
+      },
+      {
+        "name": "Express.js",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+      },
+      {
+        "name": { "en": "RESTful APIs", "es": "APIs RESTful" },
+        "icon": ""
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Tools and DevOps",
+      "es": "Herramientas y DevOps"
+    },
+    "items": [
+      {
+        "name": "Docker",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+      },
+      {
+        "name": "Git",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Soft Skills",
+      "es": "Habilidades Blandas"
+    },
+    "items": [
+      {
+        "name": { "en": "Problem Solving", "es": "Resolución de Problemas" },
+        "icon": ""
+      },
+      {
+        "name": { "en": "Innovation", "es": "Innovación" },
+        "icon": ""
+      },
+      {
+        "name": { "en": "Teamwork", "es": "Trabajo en Equipo" },
+        "icon": ""
+      },
+      {
+        "name": { "en": "Communication", "es": "Comunicación" },
+        "icon": ""
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Languages",
+      "es": "Idiomas"
+    },
+    "items": [
+      {
+        "name": { "en": "Spanish (Native)", "es": "Español (Nativo)" },
+        "icon": "\uD83C\uDDEA\uD83C\uDDF8"
+      },
+      {
+        "name": { "en": "English (B1)", "es": "Inglés (B1)" },
+        "icon": "EN"
+      }
+    ]
+  }
+]

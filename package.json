@@ -5,36 +5,39 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\"",
     "preview": "vite preview"
   },
   "dependencies": {
     "i18next": "^24.2.2",
     "i18next-browser-languagedetector": "^8.0.2",
-    "i18next-http-backend": "^3.0.2",
     "lucide-react": "^0.475.0",
-    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-i18next": "^15.4.0",
-    "react-router-dom": "^7.1.1",
-    "react-slick": "^0.30.3",
-    "slick-carousel": "^1.8.1"
+    "react-i18next": "^15.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
+    "@types/react": "^18.3.30",
+    "@types/react-dom": "^18.3.7",
+    "@typescript-eslint/eslint-plugin": "^8.60.1",
+    "@typescript-eslint/parser": "^8.60.1",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.17.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
     "postcss": "^8.4.49",
+    "prettier": "^3.8.3",
     "tailwindcss": "^3.4.17",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.60.1",
     "vite": "^6.0.5"
   }
 }

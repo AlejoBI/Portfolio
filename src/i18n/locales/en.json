@@ -1,0 +1,54 @@
+{
+  "presentation": {
+    "greeting": "Hi, I'm",
+    "contact": "Contact Me",
+    "download_cv": "Download CV",
+    "cv_description": "Download my resume in PDF format"
+  },
+  "about": {
+    "title": "About Me"
+  },
+  "experience": {
+    "title": "Experience",
+    "university_projects": "Highlighted University Projects"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "education": {
+    "title": "Education"
+  },
+  "certifications": {
+    "title": "Certifications"
+  },
+  "roles": {
+    "title": "Roles Performed"
+  },
+  "projects": {
+    "title": "Projects",
+    "buttons": {
+      "view_project": "View Project",
+      "deployed_link": "Deployed Link"
+    }
+  },
+  "not_found": {
+    "title": "404",
+    "message": "Oops! Page not found.",
+    "description": "The page you are looking for does not exist or was moved.",
+    "button": "Back to Home"
+  },
+  "header": {
+    "ti": "TI",
+    "navigation": {
+      "about": "About Me",
+      "skills": "Skills",
+      "projects": "Projects",
+      "experience": "Experience"
+    }
+  },
+  "footer": {
+    "builtWith": "Built with",
+    "copyright": "All rights reserved.",
+    "email": "Email"
+  }
+}

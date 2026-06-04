@@ -1,0 +1,62 @@
+[
+  {
+    "name": {
+      "en": "Freelancer Application",
+      "es": "Aplicación Freelancer"
+    },
+    "description": {
+      "en": "Web platform designed to connect independent professionals with potential clients, facilitating the offering and hiring of specialized services.",
+      "es": "Plataforma web diseñada para conectar profesionales independientes con clientes potenciales, facilitando la oferta y contratación de servicios especializados."
+    }
+  },
+  {
+    "name": {
+      "en": "Online Store",
+      "es": "Tienda en Línea"
+    },
+    "description": {
+      "en": "Complete e-commerce system for a local store, enhancing their digital presence and online shopping experience.",
+      "es": "Sistema de comercio electrónico completo para una tienda local, mejorando su presencia digital y experiencia de compra en línea."
+    }
+  },
+  {
+    "name": {
+      "en": "Algorithm Optimization for Circuits",
+      "es": "Optimización de Algoritmos para Circuitos"
+    },
+    "description": {
+      "en": "Optimization project focused on improving the design and computational analysis of electrical circuits through efficient algorithms.",
+      "es": "Proyecto de optimización enfocado en mejorar el diseño y análisis computacional de circuitos eléctricos mediante algoritmos eficientes."
+    }
+  },
+  {
+    "name": {
+      "en": "Document Analysis System",
+      "es": "Sistema de Análisis de Documentos"
+    },
+    "description": {
+      "en": "RAG system that processes and analyzes documents using AI, enabling the extraction of relevant information and generation of precise responses.",
+      "es": "Sistema RAG (Generación Aumentada por Recuperación) que procesa y analiza documentos usando IA, permitiendo extraer información relevante y generar respuestas precisas."
+    }
+  },
+  {
+    "name": {
+      "en": "Team Management Application",
+      "es": "Aplicación de Gestión de Equipos"
+    },
+    "description": {
+      "en": "Application to record and organize sports teams, simplifying tournament management and results presentation.",
+      "es": "Aplicación para registrar y organizar equipos deportivos, simplificando la gestión de torneos y presentación de resultados."
+    }
+  },
+  {
+    "name": {
+      "en": "ISOlytics - Audit and Compliance Software",
+      "es": "ISOlytics - Software de Auditorías y Normativas"
+    },
+    "description": {
+      "en": "Comprehensive tool for companies to validate and manage their compliance with international standards such as ISO, ITIL, and other quality frameworks.",
+      "es": "Herramienta integral para que empresas validen y gestionen su cumplimiento frente a normativas internacionales como ISO, ITIL y otros estándares de calidad."
+    }
+  }
+]

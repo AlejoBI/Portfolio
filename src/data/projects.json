@@ -1,0 +1,72 @@
+[
+  {
+    "imageKey": "freelancers",
+    "title": {
+      "en": "Freelancers Web Page",
+      "es": "Página Web de Freelancers"
+    },
+    "description": {
+      "en": "A web page for freelancers to offer their services and clients to hire them. (No responsive design yet).",
+      "es": "Una página web para que los freelancers ofrezcan sus servicios y los clientes los contraten (sin diseño responsivo)."
+    },
+    "tags": ["React", "Node.js", "Firebase", "Bootstrap"],
+    "link": "https://github.com/AlejoBI/Proyecto-EDA2",
+    "deploy": "https://freelancers-eda2.web.app/"
+  },
+  {
+    "imageKey": "scoreboard",
+    "title": {
+      "en": "ScoreBoard App",
+      "es": "Aplicación ScoreBoard"
+    },
+    "description": {
+      "en": "An application for recording and organizing equipment, designed to simplify the organization and presentation of results efficiently.",
+      "es": "Una aplicación para registrar y organizar equipos, diseñada para simplificar la organización y presentación de resultados de manera eficiente."
+    },
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "link": "https://github.com/JuanJaramillo12004/ScoreBoard",
+    "deploy": ""
+  },
+  {
+    "imageKey": "ecommerce",
+    "title": {
+      "en": "E-commerce",
+      "es": "E-commerce"
+    },
+    "description": {
+      "en": "An e-commerce platform designed to facilitate the purchase and sale of products, offering an intuitive experience for users, with functionalities such as inventory management, product search, and an efficient purchase flow.",
+      "es": "Una plataforma de comercio electrónico diseñada para facilitar la compra y venta de productos, ofreciendo una experiencia intuitiva para los usuarios, con funcionalidades como gestión de inventario, búsqueda de productos y un flujo de compra eficiente."
+    },
+    "tags": ["HTML", "CSS", "JavaScript", "SQL", "Bootstrap", "Spring Boot"],
+    "link": "https://github.com/JuanDiegoCortes/E-commerce",
+    "deploy": ""
+  },
+  {
+    "imageKey": "rag",
+    "title": {
+      "en": "RAG System",
+      "es": "Sistema RAG"
+    },
+    "description": {
+      "en": "A RAG (Retrieval-Augmented Generation) system that uses OpenAI AI together with vectorization techniques to process and analyze documents provided by the user. The system allows generating precise responses based on the information provided, integrating an interactive dashboard for document management, query monitoring, and results visualization, thus optimizing access to personalized and relevant knowledge.",
+      "es": "Un sistema RAG (Generación Aumentada por Recuperación) que utiliza la IA de OpenAI junto con técnicas de vectorización para procesar y analizar documentos proporcionados por el usuario. El sistema permite generar respuestas precisas basadas en la información proporcionada, integrando un panel interactivo para la gestión de documentos, monitoreo de consultas y visualización de resultados, optimizando así el acceso a conocimiento personalizado y relevante."
+    },
+    "tags": ["Python", "FastApi", "React", "JavaScript", "Bootstrap", "ApiRest", "MongoDB", "ChromaDB", "CI/CD", "Code Coverage"],
+    "link": "https://github.com/AlejoBI/Proyecto-IS2",
+    "deploy": ""
+  },
+  {
+    "imageKey": "isolytics",
+    "title": {
+      "en": "ISOlytics",
+      "es": "ISOlytics"
+    },
+    "description": {
+      "en": "Audit and compliance software. Implementation of a tool for companies to validate their compliance with standards (ISO, ITIL, etc.).",
+      "es": "Software de auditorías y normativas. Implementación de una herramienta para que empresas validen su cumplimiento frente a normativas (ISO, ITIL, etc.)."
+    },
+    "tags": ["React", "TypeScript", "Node.js", "Express.js", "Firebase", "Redux", "TailwindCSS", "Docker", "Microservicios"],
+    "link": "https://isolytics.vercel.app/",
+    "deploy": "https://isolytics.vercel.app/"
+  }
+]

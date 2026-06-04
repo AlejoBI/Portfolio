@@ -1,0 +1,16 @@
+{
+  "name": "Alejandro Bravo Isajar",
+  "title": {
+    "en": "Computer Engineer",
+    "es": "Ingeniero Informático"
+  },
+  "shortBio": {
+    "en": "Developer specializing in building exceptional digital experiences.",
+    "es": "Desarrollador especializado en la creación de experiencias digitales excepcionales."
+  },
+  "bio": {
+    "en": "I am a Computer Engineering student, with a constant focus on deeply understanding every tool, process, and dynamic that influence my work. I stand out for maintaining a proactive attitude, learning from those around me and quickly adapting to new challenges. I value teamwork as a space to contribute, listen, and build effective solutions, always seeking that each project delivers a solid and well-executed result. My training is primarily oriented towards backend development with Java, Node.js, and Spring Boot, integrating SQL/NoSQL databases and applying good practices in architecture, optimization, and DevOps.",
+    "es": "Soy estudiante de Ingeniería Informática, con un enfoque constante en comprender a fondo cada herramienta, proceso y dinámica que influyen en mi trabajo. Me destaco por mantener una actitud proactiva, aprendiendo de quienes me rodean y adaptándome con rapidez a nuevos retos. Valoro el trabajo en equipo como un espacio para aportar, escuchar y construir soluciones efectivas, siempre buscando que cada proyecto deje un resultado sólido y bien ejecutado. Mi formación se orienta principalmente al desarrollo backend con Java, Node.js y Spring Boot, integrando bases de datos SQL/NoSQL y aplicando buenas prácticas de arquitectura, optimización y DevOps."
+  },
+  "email": "alejandrobravoisajar1@gmail.com"
+}

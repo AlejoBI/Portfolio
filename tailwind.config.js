@@ -1,16 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class',
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}"
-  ],
+  darkMode: "class",
+  content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        jersey: ['"Jersey 10"', 'serif'],
+        sans: ['"Space Grotesk"', "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        mono: ['"JetBrains Mono"', "monospace"],
       },
     },
   },
   plugins: [],
-}
-
+};

@@ -1,0 +1,54 @@
+{
+  "presentation": {
+    "greeting": "Hola, soy",
+    "contact": "Contáctame",
+    "download_cv": "Descargar CV",
+    "cv_description": "Descarga mi currículum en formato PDF"
+  },
+  "about": {
+    "title": "Sobre mí"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "university_projects": "Proyectos Universitarios Destacados"
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "education": {
+    "title": "Educación"
+  },
+  "certifications": {
+    "title": "Certificaciones"
+  },
+  "roles": {
+    "title": "Roles Desempeñados"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "buttons": {
+      "view_project": "Ver Proyecto",
+      "deployed_link": "Enlace Desplegado"
+    }
+  },
+  "not_found": {
+    "title": "404",
+    "message": "¡Oops! Página no encontrada.",
+    "description": "La página que estás buscando no existe o fue movida.",
+    "button": "Volver al Inicio"
+  },
+  "header": {
+    "ti": "IT",
+    "navigation": {
+      "about": "Sobre mí",
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "experience": "Experiencia"
+    }
+  },
+  "footer": {
+    "builtWith": "Construido con",
+    "copyright": "Todos los derechos reservados.",
+    "email": "Correo electrónico"
+  }
+}
