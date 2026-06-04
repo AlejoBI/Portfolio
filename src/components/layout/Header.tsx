@@ -1,5 +1,7 @@
-import { useState, useEffect, memo } from "react";
+import { useState, useEffect, useRef, memo } from "react";
 import { useTranslation } from "react-i18next";
+
+const NAV_IDS = ["about", "skills", "projects", "experience"];
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -9,7 +11,10 @@ const Header = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const { t } = useTranslation();
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
 
   const navigation = [
     { name: t("header.navigation.about"), href: "#about" },
@@ -33,7 +38,37 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  const handleLinkClick = () => setMenuOpen(false);
+  useEffect(() => {
+    const sections = NAV_IDS.map((id) => document.getElementById(id)).filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        }
+      },
+      { rootMargin: "-40% 0px -55% 0px" },
+    );
+
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (menuOpen && firstMobileLinkRef.current) {
+      firstMobileLinkRef.current.focus();
+    }
+  }, [menuOpen]);
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+    menuButtonRef.current?.focus();
+  };
 
   return (
     <header
@@ -72,9 +107,11 @@ const Header = () => {
         </div>
 
         <button
+          ref={menuButtonRef}
           onClick={() => setMenuOpen((prev) => !prev)}
           className="lg:hidden text-2xl text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors z-50 relative"
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
           <div className="w-6 h-5 flex flex-col justify-between">
             <span
@@ -102,6 +139,7 @@ const Header = () => {
               href={item.href}
               className="relative px-4 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 group"
               onClick={handleLinkClick}
+              aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
             >
               <span className="relative z-10">{item.name}</span>
               <span className="absolute inset-0 bg-gradient-tech rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
@@ -122,11 +160,13 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
+                ref={index === 0 ? firstMobileLinkRef : undefined}
                 className="text-3xl font-bold text-gray-900 dark:text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-tech transition-all duration-300"
                 style={{
                   transitionDelay: menuOpen ? `${index * 100}ms` : "0ms",
                 }}
                 onClick={handleLinkClick}
+                aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
               >
                 {item.name}
               </a>

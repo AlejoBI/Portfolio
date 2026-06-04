@@ -31,6 +31,11 @@
       "deployed_link": "Enlace Desplegado"
     }
   },
+  "skip_to_content": "Saltar al contenido",
+  "meta": {
+    "title": "Alejandro Bravo Isajar | Desarrollador de Software",
+    "description": "Desarrollador full-stack especializado en React, TypeScript y tecnologías web modernas. Explora mis proyectos, habilidades y experiencia profesional."
+  },
   "not_found": {
     "title": "404",
     "message": "¡Oops! Página no encontrada.",

@@ -2,6 +2,7 @@ import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import useTheme from "./hooks/useTheme";
 import Layout from "./components/layout/Layout";
+import MetaTags from "./components/seo/MetaTags";
 import Hero from "./components/sections/Hero";
 import Experience from "./components/sections/Experience";
 import Skills from "./components/sections/Skills";
@@ -12,7 +13,9 @@ const App = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="m-0 p-0 h-auto bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen transition-colors duration-200 relative overflow-x-hidden">
+    <>
+      <MetaTags />
+      <div className="m-0 p-0 h-auto bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen transition-colors duration-200 relative overflow-x-hidden">
       <div className="fixed inset-0 bg-gradient-to-br from-gray-100 via-blue-50/30 to-purple-50/30 dark:from-gray-900 dark:via-blue-900/10 dark:to-purple-900/10 pointer-events-none transition-colors duration-200" />
 
       <div className="relative z-10">
@@ -54,6 +57,7 @@ const App = () => {
         </Layout>
       </div>
     </div>
+  </>
   );
 };
 

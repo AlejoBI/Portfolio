@@ -124,6 +124,7 @@ const Hero = () => {
                   <img
                     src={ImagePortfolio}
                     alt="Alejandro Bravo Isajar"
+                    loading="lazy"
                     className="relative rounded-full w-72 h-72 md:w-96 md:h-96 object-cover border-4 border-white dark:border-gray-800 shadow-2xl animate-float"
                   />
                 </div>

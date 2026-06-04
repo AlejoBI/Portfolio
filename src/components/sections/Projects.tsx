@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import useInView from "../../hooks/useInView";
 import { tData } from "../../utils/tData";
@@ -23,6 +23,14 @@ const projects = (projectsData as Project[]).map((p) => ({
   image: imageMap[p.imageKey] || "",
 })) as Project[];
 
+const PLACEHOLDER_IMG = (
+  <div className="w-full h-full flex items-center justify-center bg-gray-100 dark:bg-gray-700">
+    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.41a2.25 2.25 0 013.182 0l2.909 2.91m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+    </svg>
+  </div>
+);
+
 const ProjectCard = memo(
   ({
     project,
@@ -34,6 +42,7 @@ const ProjectCard = memo(
     readonly inView: boolean;
   }) => {
     const { t } = useTranslation();
+    const [imgError, setImgError] = useState(false);
 
     return (
       <div
@@ -43,11 +52,17 @@ const ProjectCard = memo(
         style={{ transitionDelay: `${index * 100}ms` }}
       >
         <div className="relative h-48 overflow-hidden">
-          <img
-            src={project.image!}
-            alt={tData(project.title)}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
+          {imgError || !project.image ? (
+            PLACEHOLDER_IMG
+          ) : (
+            <img
+              src={project.image}
+              alt={tData(project.title)}
+              loading="lazy"
+              onError={() => setImgError(true)}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </div>
 
