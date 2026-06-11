@@ -57,7 +57,7 @@ const SkillCard = memo(
         <div className="absolute inset-0 bg-gradient-tech opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500" />
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-gradient-tech rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-blue-600 dark:bg-gradient-tech rounded-lg flex items-center justify-center">
               <CategoryIcon className="w-5 h-5 text-white" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">
