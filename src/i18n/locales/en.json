@@ -10,7 +10,8 @@
   },
   "experience": {
     "title": "Experience",
-    "university_projects": "Highlighted University Projects"
+    "formal": "Professional Experience",
+    "university": "University Projects"
   },
   "skills": {
     "title": "Skills"

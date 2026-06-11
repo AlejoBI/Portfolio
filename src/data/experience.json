@@ -1,5 +1,56 @@
 [
   {
+    "type": "formal",
+    "name": {
+      "en": "Reactive Microservices with WebFlux and Kafka",
+      "es": "Microservicios Reactivos con WebFlux y Kafka"
+    },
+    "company": "Smart Financial SAS",
+    "period": "2025 - 2026",
+    "description": {
+      "en": "Development of reactive microservices for a financial platform using the reactive stack, event-driven architecture, and container orchestration.",
+      "es": "Desarrollo de microservicios reactivos para una plataforma financiera usando el stack reactivo, arquitectura orientada a eventos y orquestación de contenedores."
+    },
+    "details": [
+      {
+        "en": "Asynchronous microservices with Spring WebFlux and Project Reactor (Flux, Mono) under the reactive paradigm.",
+        "es": "Desarrollo de microservicios asíncronos con Spring WebFlux y Project Reactor (Flux, Mono) bajo el paradigma reactivo."
+      },
+      {
+        "en": "Non-blocking relational persistence with R2DBC.",
+        "es": "Persistencia relacional no bloqueante con R2DBC."
+      },
+      {
+        "en": "Container orchestration with Kubernetes: elastic deployment, horizontal scaling, Liveness and Readiness Probes.",
+        "es": "Orquestación de contenedores con Kubernetes: despliegue elástico, escalado horizontal, Liveness y Readiness Probes."
+      },
+      {
+        "en": "Asynchronous messaging with RabbitMQ for process decoupling (background auditing, event-driven).",
+        "es": "Mensajería asíncrona con RabbitMQ para desacoplamiento de procesos (auditoría background, event-driven)."
+      },
+      {
+        "en": "Kong API Gateway configuration: transactional routing, authentication and rate limiting.",
+        "es": "Configuración de Kong API Gateway: enrutamiento transaccional, autenticación y rate limiting."
+      },
+      {
+        "en": "Real-time monitoring with Prometheus and Grafana (Spring Boot Actuator, Micrometer).",
+        "es": "Monitoreo en tiempo real con Prometheus y Grafana (Spring Boot Actuator, Micrometer)."
+      },
+      {
+        "en": "Massive performance testing with Apache JMeter: stepped load injection and high-concurrency simulation.",
+        "es": "Pruebas de rendimiento masivas con Apache JMeter: inyección de carga escalonada y simulación de alta concurrencia."
+      },
+      {
+        "en": "Architectural documentation with C4 model (context, containers, components).",
+        "es": "Documentación arquitectónica con modelo C4 (contexto, contenedores, componentes)."
+      },
+      {
+        "en": "JVM performance diagnostics: heap analysis, garbage collector in reactive flows and memory leak detection.",
+        "es": "Diagnóstico de performance JVM: análisis de heap, garbage collector en flujos reactivos y detección de memory leaks."
+      }
+    ]
+  },
+  {
     "name": {
       "en": "Freelancer Application",
       "es": "Aplicación Freelancer"

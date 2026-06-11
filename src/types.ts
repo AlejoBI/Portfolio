@@ -8,8 +8,12 @@ export interface Cert {
 }
 
 export interface ExperienceProject {
+  type?: "formal" | "university";
   name: Translatable;
   description: Translatable;
+  company?: string;
+  period?: string;
+  details?: Translatable[];
 }
 
 export interface SkillItem {
