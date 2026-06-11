@@ -77,7 +77,7 @@ const SkillCard = memo(
                       <img
                         src={skill.icon}
                         alt={skill.name}
-                        className="w-6 h-6 object-contain dark:brightness-150 transition-all duration-300"
+                        className="w-6 h-6 object-contain dark:invert transition-all duration-300"
                       />
                     ) : skill.icon ? (
                       <span className="text-xs leading-none">{skill.icon}</span>
