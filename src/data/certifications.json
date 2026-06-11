@@ -1,15 +1,39 @@
 [
   {
     "name": {
-      "en": "Scrum Fundamentals Certified (SFC)",
-      "es": "Scrum Fundamentals Certified (SFC)"
+      "en": "How to Solve Problems and Make Decisions Effectively",
+      "es": "Cómo resolver problemas y tomar decisiones con eficacia"
     },
-    "issuer": "SCRUMstudy",
+    "issuer": "UC Irvine",
     "date": {
-      "en": "July 2025",
-      "es": "Julio 2025"
+      "en": "May 2026",
+      "es": "Mayo 2026"
     },
-    "link": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1088870"
+    "link": "https://coursera.org/verify/VIAQYQEWUF7N"
+  },
+  {
+    "name": {
+      "en": "Generative AI: Prompt Engineering Basics",
+      "es": "Generative AI: Prompt Engineering Basics"
+    },
+    "issuer": "IBM",
+    "date": {
+      "en": "May 2026",
+      "es": "Mayo 2026"
+    },
+    "link": "https://coursera.org/verify/XG2ZCHVMB54Y"
+  },
+  {
+    "name": {
+      "en": "Microservices and Reactive Applications with WebFlux and Kafka",
+      "es": "Microservicios y aplicaciones reactivas con WebFlux y Kafka"
+    },
+    "issuer": "Udemy",
+    "date": {
+      "en": "February 2026",
+      "es": "Febrero 2026"
+    },
+    "link": "https://www.udemy.com/certificate/UC-0f365a64-3e0d-407f-a058-c52fd11e047a/"
   },
   {
     "name": {
@@ -22,5 +46,17 @@
       "es": "Agosto 2025"
     },
     "link": "https://www.coursera.org/account/accomplishments/verify/MF8UQV00C9Y0"
+  },
+  {
+    "name": {
+      "en": "Scrum Fundamentals Certified (SFC)",
+      "es": "Scrum Fundamentals Certified (SFC)"
+    },
+    "issuer": "SCRUMstudy",
+    "date": {
+      "en": "July 2025",
+      "es": "Julio 2025"
+    },
+    "link": "https://www.scrumstudy.com/certification/verify?type=SFC&number=1088870"
   }
 ]

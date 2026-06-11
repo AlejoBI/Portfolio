@@ -9,7 +9,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\"",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cv": "cd cv && powershell -ExecutionPolicy Bypass -File build.ps1"
   },
   "dependencies": {
     "i18next": "^24.2.2",

@@ -70,6 +70,10 @@
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
       },
       {
+        "name": "PostgreSQL",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+      },
+      {
         "name": "MongoDB",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
       },
@@ -100,6 +104,22 @@
       {
         "name": "Git",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Methodologies",
+      "es": "Metodologías"
+    },
+    "items": [
+      {
+        "name": "Scrum",
+        "icon": ""
+      },
+      {
+        "name": { "en": "Agile", "es": "Ágil" },
+        "icon": ""
       }
     ]
   },
