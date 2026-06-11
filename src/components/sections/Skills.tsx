@@ -72,17 +72,17 @@ const SkillCard = memo(
                 style={{ animationDelay: `${skillIdx * 50}ms` }}
               >
                 <div className="relative">
-                  <div className="w-8 h-8 bg-gray-200/50 dark:bg-gray-700/50 rounded-lg flex items-center justify-center group-hover/item:scale-110 group-hover/item:bg-gray-300/50 dark:group-hover/item:bg-gray-600/50 transition-all duration-300 overflow-hidden">
+                  <div className="w-8 h-8 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center group-hover/item:scale-110 group-hover/item:bg-gray-300 dark:group-hover/item:bg-gray-600 transition-all duration-300 overflow-hidden">
                     {skill.icon.startsWith("http") ? (
                       <img
                         src={skill.icon}
                         alt={skill.name}
-                        className="w-6 h-6 object-contain filter group-hover/item:brightness-125 transition-all duration-300"
+                        className="w-6 h-6 object-contain dark:brightness-150 transition-all duration-300"
                       />
                     ) : skill.icon ? (
                       <span className="text-xs leading-none">{skill.icon}</span>
                     ) : (
-                      <div className="w-4 h-4 text-gray-500 dark:text-gray-400">
+                      <div className="w-4 h-4 text-gray-600 dark:text-gray-300">
                         <CategoryIcon className="w-full h-full" />
                       </div>
                     )}
