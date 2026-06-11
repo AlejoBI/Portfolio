@@ -46,7 +46,7 @@ const AnimatedSection = memo(
     return (
       <div
         ref={ref}
-        className={`transition-all duration-700 ${
+        className={`transition-[transform,opacity] duration-700 ${
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         } ${className}`}
         style={{ transitionDelay: delay }}
@@ -181,7 +181,7 @@ const Hero = () => {
               href={cv}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-blue-600 dark:bg-gradient-tech text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 font-semibold hover:scale-105"
+              className="w-full bg-blue-600 dark:bg-gradient-tech text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl font-semibold hover:scale-105"
             >
               {t("presentation.download_cv")}
             </a>
@@ -299,13 +299,13 @@ const Hero = () => {
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-2xl p-6 hover:border-green-400/50 dark:hover:border-green-500/50 transition-all duration-500 card-hover"
+                className="group relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-2xl p-6 hover:border-green-400/50 dark:hover:border-green-500/50 transition-[transform,opacity,border-color] duration-500 card-hover"
               >
                 <div className="absolute inset-0 bg-gradient-tech opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500" />
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-gray-900 dark:text-white transition-all duration-300 mb-2">
+                      <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                         {tData(cert.name)}
                       </h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -313,7 +313,7 @@ const Hero = () => {
                       </p>
                     </div>
                     <svg
-                      className="w-5 h-5 text-gray-400 dark:text-gray-500 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300 flex-shrink-0"
+                      className="w-5 h-5 text-gray-400 dark:text-gray-500 group-hover:text-blue-500 dark:group-hover:text-blue-400 flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

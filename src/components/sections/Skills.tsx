@@ -49,7 +49,7 @@ const SkillCard = memo(
 
     return (
       <div
-        className={`group relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-2xl p-6 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all duration-500 card-hover ${
+        className={`group relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-2xl p-6 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[transform,opacity,border-color] duration-500 card-hover ${
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
         style={{ transitionDelay: `${index * 100}ms` }}
@@ -68,7 +68,7 @@ const SkillCard = memo(
             {items.map((skill, skillIdx) => (
               <li
                 key={skill.name}
-                className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all duration-300 group/item"
+                className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white group/item"
                 style={{ animationDelay: `${skillIdx * 50}ms` }}
               >
                 <div className="relative">

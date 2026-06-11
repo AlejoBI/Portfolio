@@ -38,10 +38,10 @@ const Footer = () => {
               href="https://github.com/AlejoBI"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all duration-300"
+              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[background-color,border-color] duration-300"
             >
               <svg
-                className="w-6 h-6 text-gray-700 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"
+                className="w-6 h-6 text-gray-700 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -57,10 +57,10 @@ const Footer = () => {
               href="https://www.linkedin.com/in/alejandrobi"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all duration-300"
+              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[background-color,border-color] duration-300"
             >
               <svg
-                className="w-6 h-6 text-gray-700 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"
+                className="w-6 h-6 text-gray-700 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -70,10 +70,10 @@ const Footer = () => {
 
             <a
               href="mailto:alejandrobravoisajar1@gmail.com"
-              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all duration-300"
+              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[background-color,border-color] duration-300"
             >
               <svg
-                className="w-6 h-6 text-gray-700 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"
+                className="w-6 h-6 text-gray-700 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

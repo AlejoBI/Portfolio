@@ -24,7 +24,7 @@ const FormalCard = memo(
 
     return (
       <div
-        className={`group relative bg-gradient-to-br from-blue-500/5 to-purple-500/5 dark:from-blue-500/10 dark:to-purple-500/10 border border-blue-300/50 dark:border-blue-500/30 rounded-2xl p-6 hover:border-blue-400 dark:hover:border-blue-400 transition-all duration-500 ${
+        className={`group relative bg-gradient-to-br from-blue-500/5 to-purple-500/5 dark:from-blue-500/10 dark:to-purple-500/10 border border-blue-300/50 dark:border-blue-500/30 rounded-2xl p-6 hover:border-blue-400 dark:hover:border-blue-400 transition-[transform,opacity,border-color] duration-500 ${
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
@@ -36,7 +36,7 @@ const FormalCard = memo(
           </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
-                <h4 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
                   {tData(project.name)}
                 </h4>
                 <span className="px-2 py-0.5 bg-blue-500/15 dark:bg-blue-500/25 text-blue-600 dark:text-blue-400 text-xs rounded-full font-semibold whitespace-nowrap">
@@ -67,7 +67,7 @@ const FormalCard = memo(
               {hasMore && (
                 <button
                   onClick={() => setShowAll(!showAll)}
-                  className="mt-3 flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200"
+                  className="mt-3 flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
                 >
                   {showAll ? (
                     <>Show less <ChevronUp className="w-4 h-4" /></>
@@ -96,7 +96,7 @@ const UniversityCard = memo(
     readonly inView: boolean;
   }) => (
     <div
-      className={`group relative bg-gray-100/50 dark:bg-gray-800/30 border border-gray-300/50 dark:border-gray-700/50 rounded-xl p-5 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all duration-300 ${
+      className={`group relative bg-gray-100/50 dark:bg-gray-800/30 border border-gray-300/50 dark:border-gray-700/50 rounded-xl p-5 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[transform,opacity,border-color] duration-300 ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
@@ -106,7 +106,7 @@ const UniversityCard = memo(
           {index + 1}
         </div>
         <div>
-          <h4 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+          <h4 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
             {tData(project.name)}
           </h4>
           <p className="text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">
@@ -179,7 +179,7 @@ const Experience = () => {
           {uniHasMore && (
             <button
               onClick={() => setShowAllUni(!showAllUni)}
-              className="mt-4 flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200 mx-auto"
+              className="mt-4 flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium mx-auto"
             >
               {showAllUni ? (
                 <>Show less <ChevronUp className="w-4 h-4" /></>

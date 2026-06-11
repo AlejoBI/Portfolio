@@ -27,7 +27,7 @@ const ContactButtons = () => {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative px-6 py-3 bg-blue-600 dark:bg-gradient-tech hover:shadow-2xl hover:scale-105 transition-all duration-300 rounded-xl font-semibold text-white flex items-center gap-2 overflow-hidden"
+          className="group relative px-6 py-3 bg-blue-600 dark:bg-gradient-tech hover:shadow-2xl hover:scale-105 rounded-xl font-semibold text-white flex items-center gap-2 overflow-hidden"
         >
           <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
           {"icon" in link && link.icon === "github" ? (

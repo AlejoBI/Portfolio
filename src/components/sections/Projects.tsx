@@ -46,7 +46,7 @@ const ProjectCard = memo(
 
     return (
       <div
-        className={`group relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-2xl overflow-hidden hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all duration-500 card-hover ${
+        className={`group relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-2xl overflow-hidden hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[transform,opacity,border-color] duration-500 card-hover ${
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
         style={{ transitionDelay: `${index * 100}ms` }}
@@ -90,7 +90,7 @@ const ProjectCard = memo(
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-600 dark:bg-gradient-tech text-white text-sm rounded-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="px-4 py-2 bg-blue-600 dark:bg-gradient-tech text-white text-sm rounded-lg hover:shadow-xl hover:scale-105"
             >
               {t("projects.buttons.view_project")}
             </a>
@@ -99,7 +99,7 @@ const ProjectCard = memo(
                 href={project.deploy}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 text-sm rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition-all duration-300"
+                className="px-4 py-2 border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 text-sm rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500"
               >
                 {t("projects.buttons.deployed_link")}
               </a>

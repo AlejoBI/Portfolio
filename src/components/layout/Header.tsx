@@ -72,7 +72,7 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-all duration-500 fixed top-0 w-full z-50 border-b border-gray-200/50 dark:border-white/10 shadow-lg ${
+      className={`bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-[transform,opacity] duration-500 fixed top-0 w-full z-50 border-b border-gray-200/50 dark:border-white/10 shadow-lg ${
         show ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       }`}
     >
@@ -80,11 +80,11 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           <button
             onClick={scrollToTop}
-            className="text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 flex items-center transition-all duration-300 group"
+            className="text-xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 flex items-center group"
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-tech rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
-              <div className="relative h-10 w-10 rounded-full ring-2 ring-blue-500/50 group-hover:ring-blue-400 transition-all duration-300 bg-blue-600 dark:bg-gradient-tech flex items-center justify-center">
+              <div className="relative h-10 w-10 rounded-full ring-2 ring-blue-500/50 group-hover:ring-blue-400 bg-blue-600 dark:bg-gradient-tech flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-white"
                   fill="currentColor"
@@ -94,7 +94,7 @@ const Header = () => {
                 </svg>
               </div>
             </div>
-            <span className="ml-3 code-font transition-colors duration-300">
+            <span className="ml-3 code-font">
               <span className="text-blue-600 dark:text-blue-400">
                 {"<"}
               </span>
@@ -109,7 +109,7 @@ const Header = () => {
         <button
           ref={menuButtonRef}
           onClick={() => setMenuOpen((prev) => !prev)}
-          className="lg:hidden text-2xl text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors z-50 relative"
+          className="lg:hidden text-2xl text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 z-50 relative"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
@@ -137,7 +137,7 @@ const Header = () => {
             <a
               key={item.name}
               href={item.href}
-              className="relative px-4 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 group"
+              className="relative px-4 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white group"
               onClick={handleLinkClick}
               aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
             >
@@ -149,7 +149,7 @@ const Header = () => {
         </nav>
 
         <div
-          className={`lg:hidden fixed top-0 left-0 w-full h-screen bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl transition-all duration-500 ${
+          className={`lg:hidden fixed top-0 left-0 w-full h-screen bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl transition-[opacity] duration-500 ${
             menuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
@@ -161,7 +161,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 ref={index === 0 ? firstMobileLinkRef : undefined}
-                className="text-3xl font-bold text-gray-900 dark:text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-tech transition-all duration-300"
+                className="text-3xl font-bold text-gray-900 dark:text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-tech"
                 style={{
                   transitionDelay: menuOpen ? `${index * 100}ms` : "0ms",
                 }}
