@@ -1,64 +1,87 @@
-import { memo } from "react";
+import { memo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import useInView from "../../hooks/useInView";
 import { tData } from "../../utils/tData";
 import experienceProjects from "../../data/experience.json";
 import experienceConclusion from "../../data/experienceConclusion.json";
 import type { ExperienceProject, Translatable } from "../../types";
-import { Briefcase, GraduationCap } from "lucide-react";
+import { Briefcase, GraduationCap, ChevronDown, ChevronUp } from "lucide-react";
+
+const INITIAL_VISIBLE = 4;
 
 const FormalCard = memo(
   ({
     project,
     inView,
   }: {
-    readonly project: ExperienceProject;
+    readonly project: ExperienceProject & { details?: Translatable[] };
     readonly inView: boolean;
-  }) => (
-    <div
-      className={`group relative bg-gradient-to-br from-blue-500/5 to-purple-500/5 dark:from-blue-500/10 dark:to-purple-500/10 border border-blue-300/50 dark:border-blue-500/30 rounded-2xl p-6 hover:border-blue-400 dark:hover:border-blue-400 transition-all duration-500 ${
-        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-      }`}
-    >
-      <div className="absolute inset-0 bg-gradient-tech opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500" />
-      <div className="relative z-10">
-        <div className="flex items-start gap-4 mb-4">
-          <div className="flex-shrink-0 w-12 h-12 bg-gradient-tech rounded-xl flex items-center justify-center shadow-lg">
-            <Briefcase className="w-6 h-6 text-white" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 flex-wrap">
-              <h4 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                {tData(project.name)}
-              </h4>
-              <span className="px-2 py-0.5 bg-blue-500/15 dark:bg-blue-500/25 text-blue-600 dark:text-blue-400 text-xs rounded-full font-semibold whitespace-nowrap">
-                {project.period}
-              </span>
+  }) => {
+    const [showAll, setShowAll] = useState(false);
+    const details = project.details ?? [];
+    const hasMore = details.length > INITIAL_VISIBLE;
+    const visible = showAll ? details : details.slice(0, INITIAL_VISIBLE);
+
+    return (
+      <div
+        className={`group relative bg-gradient-to-br from-blue-500/5 to-purple-500/5 dark:from-blue-500/10 dark:to-purple-500/10 border border-blue-300/50 dark:border-blue-500/30 rounded-2xl p-6 hover:border-blue-400 dark:hover:border-blue-400 transition-all duration-500 ${
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        }`}
+      >
+        <div className="absolute inset-0 bg-gradient-tech opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500" />
+        <div className="relative z-10">
+          <div className="flex items-start gap-4 mb-4">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-tech rounded-xl flex items-center justify-center shadow-lg">
+              <Briefcase className="w-6 h-6 text-white" />
             </div>
-            <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mt-1">
-              {project.company}
-            </p>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 flex-wrap">
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  {tData(project.name)}
+                </h4>
+                <span className="px-2 py-0.5 bg-blue-500/15 dark:bg-blue-500/25 text-blue-600 dark:text-blue-400 text-xs rounded-full font-semibold whitespace-nowrap">
+                  {project.period}
+                </span>
+              </div>
+              <p className="text-base font-semibold text-gray-700 dark:text-gray-300 mt-1">
+                {project.company}
+              </p>
+            </div>
           </div>
+          <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+            {tData(project.description)}
+          </p>
+          {details.length > 0 && (
+            <>
+              <ul className="space-y-2 overflow-hidden transition-all duration-300">
+                {visible.map((detail, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"
+                  >
+                    <span className="flex-shrink-0 w-1.5 h-1.5 mt-1.5 bg-blue-500 rounded-full" />
+                    <span>{tData(detail)}</span>
+                  </li>
+                ))}
+              </ul>
+              {hasMore && (
+                <button
+                  onClick={() => setShowAll(!showAll)}
+                  className="mt-3 flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200"
+                >
+                  {showAll ? (
+                    <>Show less <ChevronUp className="w-4 h-4" /></>
+                  ) : (
+                    <>Show more ({details.length - INITIAL_VISIBLE} more) <ChevronDown className="w-4 h-4" /></>
+                  )}
+                </button>
+              )}
+            </>
+          )}
         </div>
-        <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-          {tData(project.description)}
-        </p>
-        {project.details && (
-          <ul className="space-y-2">
-            {project.details.map((detail, i) => (
-              <li
-                key={i}
-                className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"
-              >
-                <span className="flex-shrink-0 w-1.5 h-1.5 mt-1.5 bg-blue-500 rounded-full" />
-                <span>{tData(detail)}</span>
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
-    </div>
-  ),
+    );
+  },
 );
 FormalCard.displayName = "FormalCard";
 
@@ -96,13 +119,18 @@ const UniversityCard = memo(
 );
 UniversityCard.displayName = "UniversityCard";
 
+const INITIAL_UNIVERSITY = 5;
+
 const Experience = () => {
   const { t } = useTranslation();
   const { ref, inView } = useInView();
+  const [showAllUni, setShowAllUni] = useState(false);
   const projects = experienceProjects as (ExperienceProject & { details?: Translatable[] })[];
 
   const formal = projects.filter((p) => p.type === "formal");
   const university = projects.filter((p) => p.type !== "formal");
+  const uniHasMore = university.length > INITIAL_UNIVERSITY;
+  const uniVisible = showAllUni ? university : university.slice(0, INITIAL_UNIVERSITY);
 
   return (
     <div className="space-y-10" ref={ref}>
@@ -139,7 +167,7 @@ const Experience = () => {
             </h3>
           </div>
           <div className="space-y-4">
-            {university.map((project, index) => (
+            {uniVisible.map((project, index) => (
               <UniversityCard
                 key={tData(project.name)}
                 project={project}
@@ -148,6 +176,18 @@ const Experience = () => {
               />
             ))}
           </div>
+          {uniHasMore && (
+            <button
+              onClick={() => setShowAllUni(!showAllUni)}
+              className="mt-4 flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors duration-200 mx-auto"
+            >
+              {showAllUni ? (
+                <>Show less <ChevronUp className="w-4 h-4" /></>
+              ) : (
+                <>Show more ({university.length - INITIAL_UNIVERSITY} more) <ChevronDown className="w-4 h-4" /></>
+              )}
+            </button>
+          )}
         </div>
       )}
 
