@@ -140,7 +140,7 @@ const Hero = () => {
 
         {/* About + CV */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          <AnimatedSection className="lg:col-span-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-blue-200/50 dark:border-blue-500/20 transition-colors duration-200">
+          <AnimatedSection className="lg:col-span-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-blue-200/50 dark:border-blue-500/20">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-1 h-12 bg-gradient-tech rounded-full" />
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
@@ -154,7 +154,7 @@ const Hero = () => {
 
           <AnimatedSection
             delay="0.2s"
-            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-purple-200/50 dark:border-purple-500/20 flex flex-col justify-center items-center text-center transition-colors duration-200"
+            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-purple-200/50 dark:border-purple-500/20 flex flex-col justify-center items-center text-center"
           >
             <div className="w-20 h-20 bg-blue-600 dark:bg-gradient-tech rounded-2xl flex items-center justify-center mb-6 animate-glow">
               <svg
@@ -190,7 +190,7 @@ const Hero = () => {
 
         {/* Education + Roles */}
         <div id="education" className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-          <AnimatedSection className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-cyan-200/50 dark:border-cyan-500/20 transition-colors duration-200">
+          <AnimatedSection className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-cyan-200/50 dark:border-cyan-500/20">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-cyber rounded-xl flex items-center justify-center">
                 <svg
@@ -242,7 +242,7 @@ const Hero = () => {
 
           <AnimatedSection
             delay="0.2s"
-            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-pink-200/50 dark:border-pink-500/20 transition-colors duration-200"
+            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-pink-200/50 dark:border-pink-500/20"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-tech rounded-xl flex items-center justify-center">
@@ -271,7 +271,7 @@ const Hero = () => {
         </div>
 
         {/* Certifications */}
-        <AnimatedSection className="mb-20 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-green-200/50 dark:border-green-500/20 transition-colors duration-200">
+        <AnimatedSection className="mb-20 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-green-200/50 dark:border-green-500/20">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 bg-gradient-tech rounded-xl flex items-center justify-center">
               <svg
