@@ -59,6 +59,8 @@ const ProjectCard = memo(
               src={project.image}
               alt={tData(project.title)}
               loading="lazy"
+              width={800}
+              height={192}
               onError={() => setImgError(true)}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />

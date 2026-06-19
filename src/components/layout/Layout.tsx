@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { memo, type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -31,4 +31,4 @@ const Layout = ({ children, dark, toggleTheme }: LayoutProps) => {
   );
 };
 
-export default Layout;
+export default memo(Layout);

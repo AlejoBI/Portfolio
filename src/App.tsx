@@ -1,12 +1,13 @@
-import { memo } from "react";
+import { memo, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import useTheme from "./hooks/useTheme";
 import Layout from "./components/layout/Layout";
 import MetaTags from "./components/seo/MetaTags";
 import Hero from "./components/sections/Hero";
-import Experience from "./components/sections/Experience";
-import Skills from "./components/sections/Skills";
-import Projects from "./components/sections/Projects";
+
+const Experience = lazy(() => import("./components/sections/Experience"));
+const Skills = lazy(() => import("./components/sections/Skills"));
+const Projects = lazy(() => import("./components/sections/Projects"));
 
 const App = () => {
   const { dark, toggle } = useTheme();
@@ -29,7 +30,9 @@ const App = () => {
                   {t("experience.title")}
                 </h2>
               </div>
-              <Experience />
+              <Suspense fallback={<div className="h-32 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />}>
+                <Experience />
+              </Suspense>
             </div>
           </div>
           <div id="skills" className="container mx-auto px-6 lg:px-20 mb-20" style={{ contentVisibility: "auto" }}>
@@ -40,7 +43,9 @@ const App = () => {
                   {t("skills.title")}
                 </h2>
               </div>
-              <Skills />
+              <Suspense fallback={<div className="h-64 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />}>
+                <Skills />
+              </Suspense>
             </div>
           </div>
           <div id="projects" className="container mx-auto px-6 lg:px-20 mb-20" style={{ contentVisibility: "auto" }}>
@@ -51,7 +56,9 @@ const App = () => {
                   {t("projects.title")}
                 </h2>
               </div>
-              <Projects />
+              <Suspense fallback={<div className="h-64 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />}>
+                <Projects />
+              </Suspense>
             </div>
           </div>
         </Layout>

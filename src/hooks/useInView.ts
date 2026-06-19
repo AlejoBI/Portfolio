@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 const useInView = (options?: IntersectionObserverInit) => {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
+  const optionsRef = useRef(options);
+  optionsRef.current = options;
 
   useEffect(() => {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -19,11 +21,11 @@ const useInView = (options?: IntersectionObserverInit) => {
         setInView(true);
         observer.disconnect();
       }
-    }, options);
+    }, optionsRef.current);
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [options]);
+  }, []);
 
   return { ref, inView };
 };

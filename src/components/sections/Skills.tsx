@@ -77,6 +77,9 @@ const SkillCard = memo(
                       <img
                         src={skill.icon}
                         alt={skill.name}
+                        loading="lazy"
+                        width={24}
+                        height={24}
                         className="w-6 h-6 object-contain transition-all duration-300"
                       />
                     ) : skill.icon ? (
