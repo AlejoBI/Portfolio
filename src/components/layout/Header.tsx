@@ -8,8 +8,6 @@ const scrollToTop = () => {
 };
 
 const Header = () => {
-  const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const { t } = useTranslation();
@@ -22,21 +20,6 @@ const Header = () => {
     { name: t("header.navigation.projects"), href: "#projects" },
     { name: t("header.navigation.experience"), href: "#experience" },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setShow(false);
-        setMenuOpen(false);
-      } else {
-        setShow(true);
-      }
-      setLastScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
 
   useEffect(() => {
     const sections = NAV_IDS.map((id) => document.getElementById(id)).filter(Boolean);
@@ -72,9 +55,7 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-[transform,opacity] duration-500 fixed top-0 w-full z-50 border-b border-gray-200/50 dark:border-white/10 shadow-lg ${
-        show ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-      }`}
+      className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-[transform,opacity] duration-500 fixed top-0 w-full z-50 border-b border-gray-200/50 dark:border-white/10 shadow-lg"
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center space-x-3">

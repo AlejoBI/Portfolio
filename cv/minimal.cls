@@ -13,7 +13,7 @@
 \RequirePackage{enumitem}
 \RequirePackage{tabularx}
 
-\geometry{margin=1.8cm, top=1cm, bottom=1.2cm}
+\geometry{margin=1.5cm, top=0.8cm, bottom=1cm}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 
@@ -27,7 +27,7 @@
 \titleformat{\section}
   {\Large\bfseries}
   {}{0em}{}[\vspace{-0.2em}{\rule{\textwidth}{0.4pt}}]
-\titlespacing{\section}{0pt}{0.6em}{0.2em}
+\titlespacing{\section}{0pt}{0.4em}{0.15em}
 
 \newcommand{\cventry}[6]{%
   \noindent\begin{tabularx}{\textwidth}{@{}p{2.4cm} X@{}}
@@ -38,7 +38,7 @@
     \if\relax\detokenize{#6}\relax\else\newline\small #6\fi
     \unskip
   \end{tabularx}
-  \vspace{0.5em}
+  \vspace{0.2em}
 }
 
 \newcommand{\certentry}[4]{%
@@ -47,7 +47,7 @@
     {\small #2\ |\ #3} &
     \small #4
   \end{tabularx}
-  \vspace{0.3em}
+  \vspace{0.2em}
 }
 
 \newcommand{\skillcategory}[2]{%
@@ -70,7 +70,7 @@
     \cvlinkedin \hspace{1em}
     \cvgithub
   }
-  \par\vspace{0.8em}
+  \par\vspace{0.5em}
 }
 
 \endinput

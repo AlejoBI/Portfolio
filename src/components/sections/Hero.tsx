@@ -183,6 +183,7 @@ const Hero = () => {
               href={cv}
               target="_blank"
               rel="noopener noreferrer"
+              download="AlejandroBravoIsajarCV.pdf"
               className="w-full bg-blue-600 dark:bg-gradient-tech text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl font-semibold hover:scale-105"
             >
               {t("presentation.download_cv")}

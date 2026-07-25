@@ -14,7 +14,7 @@ const FormalCard = memo(
     project,
     inView,
   }: {
-    readonly project: ExperienceProject & { details?: Translatable[] };
+    readonly project: ExperienceProject & { details?: Translatable[]; note?: Translatable };
     readonly inView: boolean;
   }) => {
     const [showAll, setShowAll] = useState(false);
@@ -77,6 +77,12 @@ const FormalCard = memo(
                 </button>
               )}
             </>
+          )}
+          {project.note && (
+            <div className="mt-4 flex items-start gap-2 text-sm px-4 py-3 bg-amber-500/10 dark:bg-amber-500/15 border border-amber-400/30 dark:border-amber-500/25 rounded-xl">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-1.5 bg-amber-500 rounded-full" />
+              <span className="text-amber-700 dark:text-amber-400">{tData(project.note)}</span>
+            </div>
           )}
         </div>
       </div>

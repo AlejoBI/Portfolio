@@ -14,6 +14,7 @@ export interface ExperienceProject {
   company?: string;
   period?: string;
   details?: Translatable[];
+  note?: Translatable;
 }
 
 export interface SkillItem {

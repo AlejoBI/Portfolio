@@ -6,7 +6,7 @@
       "es": "Microservicios Reactivos con WebFlux y Kafka"
     },
     "company": "Smart Financial SAS",
-    "period": "2025 - 2026",
+    "period": "feb. 2026 - ago. 2026",
     "description": {
       "en": "Development of reactive microservices for a financial platform using the reactive stack, event-driven architecture, and container orchestration.",
       "es": "Desarrollo de microservicios reactivos para una plataforma financiera usando el stack reactivo, arquitectura orientada a eventos y orquestación de contenedores."
@@ -48,7 +48,11 @@
         "en": "JVM performance diagnostics: heap analysis, garbage collector in reactive flows and memory leak detection.",
         "es": "Diagnóstico de performance JVM: análisis de heap, garbage collector en flujos reactivos y detección de memory leaks."
       }
-    ]
+    ],
+    "note": {
+      "en": "Note: Container orchestration (Kubernetes) and API Gateway configuration (Kong) were coordinated by request and implemented by the DevOps team; all other components were developed directly by me.",
+      "es": "Nota: La orquestación de contenedores (Kubernetes) y la configuración del API Gateway (Kong) fueron coordinados por solicitud e implementados por el equipo de DevOps; todos los demás componentes fueron desarrollados directamente por mí."
+    }
   },
   {
     "name": {
