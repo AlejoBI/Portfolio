@@ -3,6 +3,8 @@
     "greeting": "Hi, I'm",
     "contact": "Contact Me",
     "download_cv": "Download CV",
+    "download_cv_es": "Descargar CV (ES)",
+    "download_cv_en": "Download CV (EN)",
     "cv_description": "Download my resume in PDF format"
   },
   "about": {

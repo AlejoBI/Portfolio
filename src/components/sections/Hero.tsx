@@ -6,6 +6,7 @@ import education from "../../data/education.json";
 import certifications from "../../data/certifications.json";
 import ImagePortfolio from "../../assets/images/Foto.webp";
 import cv from "../../assets/docs/CV.pdf";
+import cvEn from "../../assets/docs/CV_EN.pdf";
 import useInView from "../../hooks/useInView";
 
 const ContactButtons = lazy(() => import("./ContactButtons"));
@@ -59,9 +60,10 @@ const AnimatedSection = memo(
 AnimatedSection.displayName = "AnimatedSection";
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const edu = education as EducationData;
   const certs = certifications as Certification[];
+  const isEn = i18n.language === "en";
 
   return (
     <div className="relative min-h-screen bg-transparent">
@@ -180,12 +182,15 @@ const Hero = () => {
               {t("presentation.cv_description")}
             </p>
             <a
-              href={cv}
+              href={isEn ? cvEn : cv}
               target="_blank"
               rel="noopener noreferrer"
-              download="AlejandroBravoIsajarCV.pdf"
-              className="w-full bg-blue-600 dark:bg-gradient-tech text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl font-semibold hover:scale-105"
+              download={isEn ? "AlejandroBravoIsajarCV_EN.pdf" : "AlejandroBravoIsajarCV_ES.pdf"}
+              className="w-full bg-blue-600 dark:bg-gradient-tech text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl font-semibold hover:scale-105 flex items-center justify-center gap-2"
             >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
               {t("presentation.download_cv")}
             </a>
           </AnimatedSection>
