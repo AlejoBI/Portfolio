@@ -22,7 +22,7 @@ const App = () => {
       <div className="relative z-10">
         <Layout dark={dark} toggleTheme={toggle}>
           <Hero />
-          <div id="experience" className="container mx-auto px-6 lg:px-20 mb-20" style={{ contentVisibility: "auto" }}>
+          <div id="experience" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20" style={{ contentVisibility: "auto" }}>
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-blue-200/50 dark:border-blue-500/20">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-1 h-12 bg-gradient-tech rounded-full" />
@@ -35,7 +35,7 @@ const App = () => {
               </Suspense>
             </div>
           </div>
-          <div id="skills" className="container mx-auto px-6 lg:px-20 mb-20" style={{ contentVisibility: "auto" }}>
+          <div id="skills" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20" style={{ contentVisibility: "auto" }}>
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-purple-200/50 dark:border-purple-500/20">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-1 h-12 bg-gradient-tech rounded-full" />
@@ -48,7 +48,7 @@ const App = () => {
               </Suspense>
             </div>
           </div>
-          <div id="projects" className="container mx-auto px-6 lg:px-20 mb-20" style={{ contentVisibility: "auto" }}>
+          <div id="projects" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20" style={{ contentVisibility: "auto" }}>
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-blue-200/50 dark:border-blue-500/20">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-1 h-12 bg-gradient-tech rounded-full" />

@@ -138,7 +138,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div id="about" />
+        <div id="about" className="scroll-mt-20" />
 
         {/* About + CV */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
