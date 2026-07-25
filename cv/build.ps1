@@ -19,7 +19,7 @@ if (-not (Test-Path $OutputDir)) {
   New-Item -ItemType Directory -Path $OutputDir -Force | Out-Null
 }
 
-$AssetsDir = Join-Path (Split-Path -Parent $CvDir) "src\assets\docs"
+$AssetsDir = Join-Path (Split-Path -Parent $CvDir) "public\cv"
 
 function Build-Cv {
   param([string]$Profile)

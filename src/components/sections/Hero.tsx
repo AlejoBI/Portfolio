@@ -5,8 +5,7 @@ import profile from "../../data/profile.json";
 import education from "../../data/education.json";
 import certifications from "../../data/certifications.json";
 import ImagePortfolio from "../../assets/images/Foto.webp";
-import cv from "../../assets/docs/CV.pdf";
-import cvEn from "../../assets/docs/CV_EN.pdf";
+
 import useInView from "../../hooks/useInView";
 
 const ContactButtons = lazy(() => import("./ContactButtons"));
@@ -182,9 +181,7 @@ const Hero = () => {
               {t("presentation.cv_description")}
             </p>
             <a
-              href={isEn ? cvEn : cv}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={isEn ? "/cv/CV_EN.pdf" : "/cv/CV.pdf"}
               download={isEn ? "AlejandroBravoIsajarCV_EN.pdf" : "AlejandroBravoIsajarCV_ES.pdf"}
               className="w-full bg-blue-600 dark:bg-gradient-tech text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl font-semibold hover:scale-105 flex items-center justify-center gap-2"
             >
