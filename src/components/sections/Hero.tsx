@@ -181,7 +181,7 @@ const Hero = () => {
               {t("presentation.cv_description")}
             </p>
             <a
-              href={isEn ? "/cv/CV_EN.pdf" : "/cv/CV.pdf"}
+              href={isEn ? "/cv/AlejandroBravoIsajarCV_EN.pdf" : "/cv/AlejandroBravoIsajarCV_ES.pdf"}
               download={isEn ? "AlejandroBravoIsajarCV_EN.pdf" : "AlejandroBravoIsajarCV_ES.pdf"}
               className="w-full bg-blue-600 dark:bg-gradient-tech text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl font-semibold hover:scale-105 flex items-center justify-center gap-2"
             >

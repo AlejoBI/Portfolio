@@ -65,8 +65,8 @@ if ($ProfileName -ne "") {
 if (Test-Path $AssetsDir) {
   $cvEs = Join-Path $OutputDir "cv.pdf"
   $cvEn = Join-Path $OutputDir "cv_en.pdf"
-  if (Test-Path $cvEs) { Copy-Item -Path $cvEs -Destination (Join-Path $AssetsDir "CV.pdf") -Force }
-  if (Test-Path $cvEn) { Copy-Item -Path $cvEn -Destination (Join-Path $AssetsDir "CV_EN.pdf") -Force }
+  if (Test-Path $cvEs) { Copy-Item -Path $cvEs -Destination (Join-Path $AssetsDir "AlejandroBravoIsajarCV_ES.pdf") -Force }
+  if (Test-Path $cvEn) { Copy-Item -Path $cvEn -Destination (Join-Path $AssetsDir "AlejandroBravoIsajarCV_EN.pdf") -Force }
   Write-Host "`nPDFs copied to $AssetsDir" -ForegroundColor Green
 }
 
