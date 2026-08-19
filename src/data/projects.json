@@ -1,17 +1,95 @@
 [
   {
+    "imageKey": "multimedia-portfolio",
+    "title": {
+      "en": "Multimedia Portfolio",
+      "es": "Portafolio Multimedia"
+    },
+    "description": {
+      "en": "A professional portfolio template designed for Multimedia Engineers to showcase projects with video, 3D models, and interactive content. Features an interactive 3D hero scene built with React Three Fiber, project detail modals with video playback via React Player, Framer Motion animations, and full bilingual support (EN/ES). Built with React, TypeScript, Vite, and TailwindCSS.",
+      "es": "Un portafolio profesional diseñado para Ingenieros Multimédia para mostrar proyectos con video, modelos 3D y contenido interactivo. Incluye una escena hero 3D interactiva con React Three Fiber, modales de detalle de proyecto con reproducción de video via React Player, animaciones con Framer Motion y soporte bilingüe completo (EN/ES). Construido con React, TypeScript, Vite y TailwindCSS."
+    },
+    "tags": ["React 18", "TypeScript", "Vite", "TailwindCSS", "Framer Motion", "React Three Fiber", "React Player", "i18next"],
+    "link": "https://github.com/nicky212016/Portafolio_Nuevo",
+    "deploy": "https://nicolascortesrestrepo.vercel.app/",
+    "disabled": false
+  },
+  {
+    "imageKey": "forge-core",
+    "title": {
+      "en": "Forge Kit Store - Full Stack",
+      "es": "Forge Kit Store - Full Stack"
+    },
+    "description": {
+      "en": "A complete multi-page web application featuring a product catalog with search and category filters, detailed product pages with image galleries, a validated contact form, and an admin panel with authentication and CRUD operations. Built as a monorepo with 4 shared packages (@forge-kit/ui, core, types, config). Supports 4 service tiers (Basic to E-commerce) switchable via environment variable with zero code changes. Includes Supabase integration with Row Level Security, CI/CD pipeline, and lazy-loaded routes.",
+      "es": "Una aplicación web completa de múltiples páginas con catálogo de productos, búsqueda y filtros por categoría, páginas de detalle con galería de imágenes, formulario de contacto validado y panel de admin con autenticación y operaciones CRUD. Construida como monorepo con 4 paquetes compartidos (@forge-kit/ui, core, types, config). Soporta 4 niveles de servicio (Básico hasta E-commerce) intercambiables por variable de entorno sin cambios de código. Incluye integración con Supabase y Row Level Security, pipeline de CI/CD y rutas con lazy loading."
+    },
+    "tags": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "TanStack Query", "React Hook Form", "Zod", "Supabase", "PostgreSQL", "CI/CD"],
+    "link": "https://github.com/AlejoBI/forge-kit-store",
+    "deploy": "https://forge-kit-store-core.vercel.app/",
+    "disabled": false
+  },
+  {
+    "imageKey": "forge-basico",
+    "title": {
+      "en": "Forge Kit Store - Landing Page",
+      "es": "Forge Kit Store - Landing Page"
+    },
+    "description": {
+      "en": "A professional single-page landing template designed for small and medium businesses in Colombia. Features a Hero section, About Us, Contact form, floating WhatsApp button, SEO optimization, and fully responsive design. Part of a reusable template ecosystem with 4 service tiers, from basic landings to full e-commerce platforms.",
+      "es": "Una plantilla de landing page profesional de una sola página diseñada para pequeñas y medianas empresas en Colombia. Incluye sección Hero, Sobre Nosotros, formulario de contacto, botón flotante de WhatsApp, optimización SEO y diseño totalmente responsivo. Parte de un ecosistema de plantillas reutilizables con 4 niveles de servicio, desde landings básicos hasta plataformas de e-commerce completas."
+    },
+    "tags": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    "link": "https://github.com/AlejoBI/forge-kit-store",
+    "deploy": "https://forge-kit-store-basico.vercel.app/",
+    "disabled": false
+  },
+  {
+    "imageKey": "isolytics",
+    "title": {
+      "en": "ISOlytics",
+      "es": "ISOlytics"
+    },
+    "description": {
+      "en": "Audit and compliance management software that helps organizations validate their adherence to industry standards such as ISO and ITIL. Built with a microservices architecture, featuring real-time dashboards, automated compliance checks, and comprehensive reporting tools.",
+      "es": "Software de gestión de auditorías y cumplimiento normativo que ayuda a las organizaciones a validar su adherencia a estándares industriales como ISO e ITIL. Construido con arquitectura de microservicios, con dashboards en tiempo real, verificaciones automatizadas de cumplimiento y herramientas de reporte integral."
+    },
+    "tags": ["React", "TypeScript", "Node.js", "Express.js", "Firebase", "Redux", "TailwindCSS", "Docker", "Microservicios"],
+    "link": "https://isolytics.vercel.app/",
+    "deploy": "https://isolytics.vercel.app/",
+    "disabled": false,
+    "archived": true
+  },
+  {
+    "imageKey": "rag",
+    "title": {
+      "en": "RAG System",
+      "es": "Sistema RAG"
+    },
+    "description": {
+      "en": "A Retrieval-Augmented Generation system that combines OpenAI's AI with vectorization techniques to process user-provided documents. Features an interactive dashboard for document management, query monitoring, and results visualization, enabling precise and context-aware responses.",
+      "es": "Un sistema de Generación Aumentada por Recuperación que combina la IA de OpenAI con técnicas de vectorización para procesar documentos proporcionados por el usuario. Cuenta con un panel interactivo para gestión de documentos, monitoreo de consultas y visualización de resultados, permitiendo respuestas precisas y contextualizadas."
+    },
+    "tags": ["Python", "FastApi", "React", "JavaScript", "Bootstrap", "ApiRest", "MongoDB", "ChromaDB", "CI/CD", "Code Coverage"],
+    "link": "https://github.com/AlejoBI/Proyecto-IS2",
+    "deploy": "",
+    "disabled": false,
+    "archived": true
+  },
+  {
     "imageKey": "freelancers",
     "title": {
       "en": "Freelancers Web Page",
       "es": "Página Web de Freelancers"
     },
     "description": {
-      "en": "A web page for freelancers to offer their services and clients to hire them. (No responsive design yet).",
-      "es": "Una página web para que los freelancers ofrezcan sus servicios y los clientes los contraten (sin diseño responsivo)."
+      "en": "A platform that connects freelancers with clients, allowing service providers to showcase their skills and clients to discover, evaluate, and hire talent efficiently. Built with React, Node.js, and Firebase for real-time data management.",
+      "es": "Una plataforma que conecta freelancers con clientes, permitiendo a los prestadores de servicios mostrar sus habilidades y a los clientes descubrir, evaluar y contratar talento de manera eficiente. Construida con React, Node.js y Firebase para la gestión de datos en tiempo real."
     },
     "tags": ["React", "Node.js", "Firebase", "Bootstrap"],
     "link": "https://github.com/AlejoBI/Proyecto-EDA2",
-    "deploy": "https://freelancers-eda2.web.app/"
+    "deploy": "https://proyecto-eda-2.vercel.app/",
+    "archived": true
   },
   {
     "imageKey": "scoreboard",
@@ -25,7 +103,8 @@
     },
     "tags": ["HTML", "CSS", "JavaScript"],
     "link": "https://github.com/JuanJaramillo12004/ScoreBoard",
-    "deploy": ""
+    "deploy": "",
+    "disabled": true
   },
   {
     "imageKey": "ecommerce",
@@ -39,34 +118,7 @@
     },
     "tags": ["HTML", "CSS", "JavaScript", "SQL", "Bootstrap", "Spring Boot"],
     "link": "https://github.com/JuanDiegoCortes/E-commerce",
-    "deploy": ""
-  },
-  {
-    "imageKey": "rag",
-    "title": {
-      "en": "RAG System",
-      "es": "Sistema RAG"
-    },
-    "description": {
-      "en": "A RAG (Retrieval-Augmented Generation) system that uses OpenAI AI together with vectorization techniques to process and analyze documents provided by the user. The system allows generating precise responses based on the information provided, integrating an interactive dashboard for document management, query monitoring, and results visualization, thus optimizing access to personalized and relevant knowledge.",
-      "es": "Un sistema RAG (Generación Aumentada por Recuperación) que utiliza la IA de OpenAI junto con técnicas de vectorización para procesar y analizar documentos proporcionados por el usuario. El sistema permite generar respuestas precisas basadas en la información proporcionada, integrando un panel interactivo para la gestión de documentos, monitoreo de consultas y visualización de resultados, optimizando así el acceso a conocimiento personalizado y relevante."
-    },
-    "tags": ["Python", "FastApi", "React", "JavaScript", "Bootstrap", "ApiRest", "MongoDB", "ChromaDB", "CI/CD", "Code Coverage"],
-    "link": "https://github.com/AlejoBI/Proyecto-IS2",
-    "deploy": ""
-  },
-  {
-    "imageKey": "isolytics",
-    "title": {
-      "en": "ISOlytics",
-      "es": "ISOlytics"
-    },
-    "description": {
-      "en": "Audit and compliance software. Implementation of a tool for companies to validate their compliance with standards (ISO, ITIL, etc.).",
-      "es": "Software de auditorías y normativas. Implementación de una herramienta para que empresas validen su cumplimiento frente a normativas (ISO, ITIL, etc.)."
-    },
-    "tags": ["React", "TypeScript", "Node.js", "Express.js", "Firebase", "Redux", "TailwindCSS", "Docker", "Microservicios"],
-    "link": "https://isolytics.vercel.app/",
-    "deploy": "https://isolytics.vercel.app/"
+    "deploy": "",
+    "disabled": true
   }
 ]

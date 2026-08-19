@@ -34,5 +34,7 @@ export interface Project {
   tags: string[];
   link: string;
   deploy: string;
-  image?: string;
+  disabled?: boolean;
+  archived?: boolean;
+  images?: string[];
 }

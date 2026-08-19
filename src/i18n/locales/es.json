@@ -31,8 +31,11 @@
     "title": "Proyectos",
     "buttons": {
       "view_project": "Ver Proyecto",
-      "deployed_link": "Enlace Desplegado"
-    }
+      "deployed_link": "Enlace Desplegado",
+      "show_more": "Ver más",
+      "show_less": "Ver menos"
+    },
+    "university_project": "Proyecto universitario"
   },
   "skip_to_content": "Saltar al contenido",
   "meta": {

@@ -31,8 +31,11 @@
     "title": "Projects",
     "buttons": {
       "view_project": "View Project",
-      "deployed_link": "Deployed Link"
-    }
+      "deployed_link": "Deployed Link",
+      "show_more": "Show more",
+      "show_less": "Show less"
+    },
+    "university_project": "University project"
   },
   "skip_to_content": "Skip to content",
   "meta": {
