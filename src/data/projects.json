@@ -6,8 +6,8 @@
       "es": "Portafolio Multimedia"
     },
     "description": {
-      "en": "A professional portfolio template designed for Multimedia Engineers to showcase projects with video, 3D models, and interactive content. Features an interactive 3D hero scene built with React Three Fiber, project detail modals with video playback via React Player, Framer Motion animations, and full bilingual support (EN/ES). Built with React, TypeScript, Vite, and TailwindCSS.",
-      "es": "Un portafolio profesional diseñado para Ingenieros Multimédia para mostrar proyectos con video, modelos 3D y contenido interactivo. Incluye una escena hero 3D interactiva con React Three Fiber, modales de detalle de proyecto con reproducción de video via React Player, animaciones con Framer Motion y soporte bilingüe completo (EN/ES). Construido con React, TypeScript, Vite y TailwindCSS."
+      "en": "A professional portfolio designed to clearly showcase projects. Focused on structuring and presenting information in an organized way, resulting in a significant improvement in clarity and accessibility of the work displayed.",
+      "es": "Un portafolio profesional diseñado para mostrar proyectos de forma clara. Enfocado en estructurar y presentar la información de manera organizada, lo que representó un cambio significativo en la claridad y accesibilidad de los trabajos mostrados."
     },
     "tags": ["React 18", "TypeScript", "Vite", "TailwindCSS", "Framer Motion", "React Three Fiber", "React Player", "i18next"],
     "link": "https://github.com/nicky212016/Portafolio_Nuevo",
@@ -21,8 +21,8 @@
       "es": "Forge Kit Store - Full Stack"
     },
     "description": {
-      "en": "A complete multi-page web application featuring a product catalog with search and category filters, detailed product pages with image galleries, a validated contact form, and an admin panel with authentication and CRUD operations. Built as a monorepo with 4 shared packages (@forge-kit/ui, core, types, config). Supports 4 service tiers (Basic to E-commerce) switchable via environment variable with zero code changes. Includes Supabase integration with Row Level Security, CI/CD pipeline, and lazy-loaded routes.",
-      "es": "Una aplicación web completa de múltiples páginas con catálogo de productos, búsqueda y filtros por categoría, páginas de detalle con galería de imágenes, formulario de contacto validado y panel de admin con autenticación y operaciones CRUD. Construida como monorepo con 4 paquetes compartidos (@forge-kit/ui, core, types, config). Soporta 4 niveles de servicio (Básico hasta E-commerce) intercambiables por variable de entorno sin cambios de código. Incluye integración con Supabase y Row Level Security, pipeline de CI/CD y rutas con lazy loading."
+      "en": "A web application designed to organize and manage a product catalog, making product search, consultation, and administration more efficient. Its modular structure helped keep the solution organized and reusable, resulting in a significant improvement in clarity and maintainability.",
+      "es": "Una aplicación web diseñada para organizar y gestionar un catálogo de productos, facilitando la búsqueda, consulta y administración de su información. Su estructura modular permitió mantener la solución organizada y reutilizable, lo que representó un cambio significativo en la claridad y mantenibilidad del proyecto."
     },
     "tags": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "TanStack Query", "React Hook Form", "Zod", "Supabase", "PostgreSQL", "CI/CD"],
     "link": "https://github.com/AlejoBI/forge-kit-store",
@@ -51,8 +51,8 @@
       "es": "ISOlytics"
     },
     "description": {
-      "en": "Audit and compliance management software that helps organizations validate their adherence to industry standards such as ISO and ITIL. Built with a microservices architecture, featuring real-time dashboards, automated compliance checks, and comprehensive reporting tools.",
-      "es": "Software de gestión de auditorías y cumplimiento normativo que ayuda a las organizaciones a validar su adherencia a estándares industriales como ISO e ITIL. Construido con arquitectura de microservicios, con dashboards en tiempo real, verificaciones automatizadas de cumplimiento y herramientas de reporte integral."
+      "en": "A solution designed to facilitate verification and tracking of regulatory compliance. By structuring audit workflows, it made the process more organized and traceable, leading to a significant improvement in information traceability.",
+      "es": "Solución orientada a facilitar la verificación y seguimiento del cumplimiento normativo. Al estructurar los flujos de auditoría, el proceso se volvió más ordenado y trazable, lo que representó un cambio significativo en la trazabilidad de la información."
     },
     "tags": ["React", "TypeScript", "Node.js", "Express.js", "Firebase", "Redux", "TailwindCSS", "Docker", "Microservicios"],
     "link": "https://isolytics.vercel.app/",
@@ -67,8 +67,8 @@
       "es": "Sistema RAG"
     },
     "description": {
-      "en": "A Retrieval-Augmented Generation system that combines OpenAI's AI with vectorization techniques to process user-provided documents. Features an interactive dashboard for document management, query monitoring, and results visualization, enabling precise and context-aware responses.",
-      "es": "Un sistema de Generación Aumentada por Recuperación que combina la IA de OpenAI con técnicas de vectorización para procesar documentos proporcionados por el usuario. Cuenta con un panel interactivo para gestión de documentos, monitoreo de consultas y visualización de resultados, permitiendo respuestas precisas y contextualizadas."
+      "en": "A solution designed to process documents and generate context-aware responses based on their content. By structuring information retrieval in an organized way, it led to a significant improvement in the precision and usefulness of the responses obtained.",
+      "es": "Solución diseñada para procesar documentos y obtener respuestas contextualizadas a partir de su contenido. Al organizar la recuperación de información de forma estructurada, se logró un cambio significativo en la precisión y utilidad de las respuestas obtenidas."
     },
     "tags": ["Python", "FastApi", "React", "JavaScript", "Bootstrap", "ApiRest", "MongoDB", "ChromaDB", "CI/CD", "Code Coverage"],
     "link": "https://github.com/AlejoBI/Proyecto-IS2",
@@ -83,8 +83,8 @@
       "es": "Página Web de Freelancers"
     },
     "description": {
-      "en": "A platform that connects freelancers with clients, allowing service providers to showcase their skills and clients to discover, evaluate, and hire talent efficiently. Built with React, Node.js, and Firebase for real-time data management.",
-      "es": "Una plataforma que conecta freelancers con clientes, permitiendo a los prestadores de servicios mostrar sus habilidades y a los clientes descubrir, evaluar y contratar talento de manera eficiente. Construida con React, Node.js y Firebase para la gestión de datos en tiempo real."
+      "en": "A platform designed to connect independent professionals with potential clients. Focused on keeping information organized and secure, it resulted in a significant improvement in the speed and clarity of establishing those connections.",
+      "es": "Plataforma diseñada para conectar profesionales independientes con clientes potenciales. Enfocada en mantener la información organizada y segura, lo que representó un cambio significativo en la agilidad para establecer esas conexiones."
     },
     "tags": ["React", "Node.js", "Firebase", "Bootstrap"],
     "link": "https://github.com/AlejoBI/Proyecto-EDA2",
@@ -98,8 +98,8 @@
       "es": "Aplicación ScoreBoard"
     },
     "description": {
-      "en": "An application for recording and organizing equipment, designed to simplify the organization and presentation of results efficiently.",
-      "es": "Una aplicación para registrar y organizar equipos, diseñada para simplificar la organización y presentación de resultados de manera eficiente."
+      "en": "An application designed to record and organize teams, simplifying the way results are organized and presented. This led to a significant improvement in clarity when displaying and managing match results.",
+      "es": "Una aplicación diseñada para registrar y organizar equipos, simplificando la forma en que se organizan y presentan los resultados. Esto representó un cambio significativo en la claridad al mostrar y gestionar los resultados de los partidos."
     },
     "tags": ["HTML", "CSS", "JavaScript"],
     "link": "https://github.com/JuanJaramillo12004/ScoreBoard",
@@ -113,8 +113,8 @@
       "es": "E-commerce"
     },
     "description": {
-      "en": "An e-commerce platform designed to facilitate the purchase and sale of products, offering an intuitive experience for users, with functionalities such as inventory management, product search, and an efficient purchase flow.",
-      "es": "Una plataforma de comercio electrónico diseñada para facilitar la compra y venta de productos, ofreciendo una experiencia intuitiva para los usuarios, con funcionalidades como gestión de inventario, búsqueda de productos y un flujo de compra eficiente."
+      "en": "An e-commerce platform designed to structure the buying and selling process of products. By organizing catalogs, inventory, and purchase flows, it resulted in a significant improvement in clarity and order for both users and product management.",
+      "es": "Una plataforma de comercio electrónico diseñada para estructurar el proceso de compra y venta de productos. Al organizar catálogos, inventario y flujos de compra, se logró un cambio significativo en la claridad y el orden tanto para los usuarios como para la gestión de los productos."
     },
     "tags": ["HTML", "CSS", "JavaScript", "SQL", "Bootstrap", "Spring Boot"],
     "link": "https://github.com/JuanDiegoCortes/E-commerce",

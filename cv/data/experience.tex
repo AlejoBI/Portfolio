@@ -3,25 +3,14 @@
   {Microservicios Reactivos con WebFlux y Kafka}
   {Smart Financial SAS}{Cali, Colombia}{
   \begin{itemize}
-    \item Desarrollo de microservicios as\'incronos con Spring WebFlux y Project Reactor
-      (Flux, Mono) bajo el paradigma reactivo.
-    \item Persistencia relacional no bloqueante con R2DBC.
-    \item Orquestaci\'on de contenedores con Kubernetes: despliegue el\'astico,
-      escalado horizontal, Liveness y Readiness Probes.
-    \item Mensajer\'{\i}a as\'incrona con RabbitMQ para desacoplamiento de procesos
-      (auditor\'{\i}a background, event-driven).
-    \item Configuraci\'on de Kong API Gateway: enrutamiento transaccional, autenticaci\'on
-      y rate limiting.
-    \item Monitoreo en tiempo real con Prometheus y Grafana (Spring Boot Actuator,
-      Micrometer).
-    \item Pruebas de rendimiento masivas con Apache JMeter: inyecci\'on de carga
-      escalonada y simulaci\'on de alta concurrencia.
-    \item Documentaci\'on arquitect\'onica con modelo C4 (contexto, contenedores,
-      componentes).
-    \item Diagn\'ostico de performance JVM: an\'alisis de heap, garbage collector
-      en flujos reactivos y detecci\'on de memory leaks.
-    \item Nota: Kubernetes y Kong API Gateway fueron implementados por el equipo
-      de DevOps; el resto lo desarroll\'e directamente.
+    \item Implement\'e microservicios bajo arquitectura reactiva, contribuyendo a que el sistema pudiera gestionar picos de carga significativos sin afectar su estabilidad.
+    \item Apliqu\'e persistencia no bloqueante para evitar cuellos de botella de E/S, lo que represent\'o un cambio significativo en la capacidad de respuesta del sistema.
+    \item Desacoplé procesos críticos mediante mensajer\'{\i}a as\'incrona, logrando que tareas en segundo plano no interrumpieran el flujo transaccional principal y generando un cambio significativo en la fluidez del procesamiento.
+    \item Contribuí a la configuraci\'on y gobernanza del API Gateway, reforzando el control de acceso y la protecci\'on ante solicitudes excesivas, lo que supuso un cambio significativo en la gesti\'on de los servicios.
+    \item Integr\'e métricas y monitoreo en tiempo real, facilitando la detecci\'on temprana de anomal\'{\i}as y contribuyendo a un aumento significativo en la estabilidad operativa.
+    \item Realic\'e pruebas de carga escalonada para validar el comportamiento del sistema bajo escenarios exigentes, lo que permiti\'o identificar ajustes y generar cambios significativos en su capacidad para soportar alta concurrencia.
+    \item Apoyé la documentaci\'on arquitect\'onica y el an\'alisis de rendimiento del sistema, lo que facilit\'o decisiones t\'ecnicas que representaron cambios significativos en la mantenibilidad y robustez del proyecto.
+    \item Nota: Kubernetes y Kong API Gateway fueron implementados por el equipo de DevOps; el resto lo desarroll\'e directamente.
   \end{itemize}
 }{}
 }

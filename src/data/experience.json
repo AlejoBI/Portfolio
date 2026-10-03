@@ -8,45 +8,37 @@
     "company": "Smart Financial SAS",
     "period": "feb. 2026 - ago. 2026",
     "description": {
-      "en": "Development of reactive microservices for a financial platform using the reactive stack, event-driven architecture, and container orchestration.",
-      "es": "Desarrollo de microservicios reactivos para una plataforma financiera usando el stack reactivo, arquitectura orientada a eventos y orquestación de contenedores."
+      "en": "Development of reactive microservices for a financial platform, focused on improving scalability, stability, and response capacity to handle demanding workloads.",
+      "es": "Desarrollo de microservicios reactivos para una plataforma financiera, enfocado en mejorar la escalabilidad, la estabilidad y la capacidad de respuesta para soportar cargas exigentes."
     },
     "details": [
       {
-        "en": "Asynchronous microservices with Spring WebFlux and Project Reactor (Flux, Mono) under the reactive paradigm.",
-        "es": "Desarrollo de microservicios asíncronos con Spring WebFlux y Project Reactor (Flux, Mono) bajo el paradigma reactivo."
+        "en": "Implemented reactive microservices that helped the system handle significant load peaks without compromising stability, representing a meaningful change in its ability to cope with demand.",
+        "es": "Implementé microservicios bajo arquitectura reactiva, contribuyendo a que el sistema pudiera gestionar picos de carga significativos sin afectar su estabilidad, lo que representó un cambio significativo en su capacidad para responder a la demanda."
       },
       {
-        "en": "Non-blocking relational persistence with R2DBC.",
-        "es": "Persistencia relacional no bloqueante con R2DBC."
+        "en": "Applied non-blocking persistence to prevent I/O bottlenecks, leading to a significant improvement in the system's response capacity.",
+        "es": "Apliqué persistencia no bloqueante para evitar cuellos de botella de E/S, lo que representó un cambio significativo en la capacidad de respuesta del sistema."
       },
       {
-        "en": "Container orchestration with Kubernetes: elastic deployment, horizontal scaling, Liveness and Readiness Probes.",
-        "es": "Orquestación de contenedores con Kubernetes: despliegue elástico, escalado horizontal, Liveness y Readiness Probes."
+        "en": "Decoupled critical processes through asynchronous messaging, preventing background tasks from interrupting the main transactional flow and creating a significant improvement in processing fluidity.",
+        "es": "Desacoplé procesos críticos mediante mensajería asíncrona, logrando que tareas en segundo plano no interrumpieran el flujo transaccional principal, lo que generó un cambio significativo en la fluidez del procesamiento."
       },
       {
-        "en": "Asynchronous messaging with RabbitMQ for process decoupling (background auditing, event-driven).",
-        "es": "Mensajería asíncrona con RabbitMQ para desacoplamiento de procesos (auditoría background, event-driven)."
+        "en": "Contributed to API Gateway configuration and governance, strengthening access control and protection against excessive requests, resulting in a significant improvement in service management.",
+        "es": "Contribuí a la configuración y gobernanza del API Gateway, reforzando el control de acceso y la protección ante solicitudes excesivas, lo que supuso un cambio significativo en la gestión de los servicios."
       },
       {
-        "en": "Kong API Gateway configuration: transactional routing, authentication and rate limiting.",
-        "es": "Configuración de Kong API Gateway: enrutamiento transaccional, autenticación y rate limiting."
+        "en": "Integrated real-time metrics and monitoring, enabling early detection of anomalies and contributing to a significant improvement in operational stability.",
+        "es": "Integré métricas y monitoreo en tiempo real, facilitando la detección temprana de anomalías y contribuyendo a un cambio significativo en la estabilidad operativa."
       },
       {
-        "en": "Real-time monitoring with Prometheus and Grafana (Spring Boot Actuator, Micrometer).",
-        "es": "Monitoreo en tiempo real con Prometheus y Grafana (Spring Boot Actuator, Micrometer)."
+        "en": "Conducted stepped load tests to validate system behavior under demanding scenarios, identifying adjustments that led to significant improvements in its ability to handle high concurrency.",
+        "es": "Realicé pruebas de carga escalonada para validar el comportamiento del sistema bajo escenarios exigentes, lo que permitió identificar ajustes y generar cambios significativos en su capacidad para soportar alta concurrencia."
       },
       {
-        "en": "Massive performance testing with Apache JMeter: stepped load injection and high-concurrency simulation.",
-        "es": "Pruebas de rendimiento masivas con Apache JMeter: inyección de carga escalonada y simulación de alta concurrencia."
-      },
-      {
-        "en": "Architectural documentation with C4 model (context, containers, components).",
-        "es": "Documentación arquitectónica con modelo C4 (contexto, contenedores, componentes)."
-      },
-      {
-        "en": "JVM performance diagnostics: heap analysis, garbage collector in reactive flows and memory leak detection.",
-        "es": "Diagnóstico de performance JVM: análisis de heap, garbage collector en flujos reactivos y detección de memory leaks."
+        "en": "Supported architectural documentation and performance analysis, helping inform technical decisions that led to significant improvements in project maintainability and robustness.",
+        "es": "Apoyé la documentación arquitectónica y el análisis de rendimiento del sistema, lo que facilitó decisiones técnicas que representaron cambios significativos en la mantenibilidad y robustez del proyecto."
       }
     ],
     "note": {
@@ -60,8 +52,8 @@
       "es": "Aplicación Freelancer"
     },
     "description": {
-      "en": "Web platform designed to connect independent professionals with potential clients, facilitating the offering and hiring of specialized services.",
-      "es": "Plataforma web diseñada para conectar profesionales independientes con clientes potenciales, facilitando la oferta y contratación de servicios especializados."
+      "en": "Web platform designed to connect independent professionals with potential clients. Focused on keeping information organized and secure, resulting in a significant improvement in the speed of establishing those connections.",
+      "es": "Plataforma web diseñada para conectar profesionales independientes con clientes potenciales. Enfocada en mantener la información organizada y segura, lo que representó un cambio significativo en la agilidad para establecer esas conexiones."
     }
   },
   {
@@ -70,8 +62,8 @@
       "es": "Tienda en Línea"
     },
     "description": {
-      "en": "Complete e-commerce system for a local store, enhancing their digital presence and online shopping experience.",
-      "es": "Sistema de comercio electrónico completo para una tienda local, mejorando su presencia digital y experiencia de compra en línea."
+      "en": "E-commerce system designed to structure the buying and selling process for a local store. By organizing catalogs, orders, and the purchase flow, it led to a significant improvement in clarity and order of the sales process.",
+      "es": "Sistema de comercio electrónico diseñado para estructurar el proceso de compra y venta de una tienda local. Al organizar catálogos, pedidos y el flujo de compra, se logró un cambio significativo en la claridad y el orden del proceso de ventas."
     }
   },
   {
@@ -80,8 +72,8 @@
       "es": "Optimización de Algoritmos para Circuitos"
     },
     "description": {
-      "en": "Optimization project focused on improving the design and computational analysis of electrical circuits through efficient algorithms.",
-      "es": "Proyecto de optimización enfocado en mejorar el diseño y análisis computacional de circuitos eléctricos mediante algoritmos eficientes."
+      "en": "Algorithm optimization project focused on improving the computational analysis of electrical circuits. By optimizing calculation processes, it resulted in a significant improvement in processing efficiency.",
+      "es": "Proyecto de optimización algorítmica enfocado en mejorar el análisis computacional de circuitos eléctricos. Al optimizar los procesos de cálculo, se logró un cambio significativo en la eficiencia del procesamiento."
     }
   },
   {
@@ -90,8 +82,8 @@
       "es": "Sistema de Análisis de Documentos"
     },
     "description": {
-      "en": "RAG system that processes and analyzes documents using AI, enabling the extraction of relevant information and generation of precise responses.",
-      "es": "Sistema RAG (Generación Aumentada por Recuperación) que procesa y analiza documentos usando IA, permitiendo extraer información relevante y generar respuestas precisas."
+      "en": "RAG system designed to process documents and generate context-aware responses. By structuring information retrieval in an organized way, it led to a significant improvement in the precision and usefulness of the responses obtained.",
+      "es": "Sistema RAG diseñado para procesar documentos y obtener respuestas contextualizadas a partir de su contenido. Al organizar la recuperación de información de forma estructurada, se logró un cambio significativo en la precisión y utilidad de las respuestas obtenidas."
     }
   },
   {
@@ -100,8 +92,8 @@
       "es": "Aplicación de Gestión de Equipos"
     },
     "description": {
-      "en": "Application to record and organize sports teams, simplifying tournament management and results presentation.",
-      "es": "Aplicación para registrar y organizar equipos deportivos, simplificando la gestión de torneos y presentación de resultados."
+      "en": "Application designed to record and organize sports teams, simplifying how tournaments and results are managed and presented. This resulted in a significant improvement in clarity when organizing and displaying results.",
+      "es": "Aplicación diseñada para registrar y organizar equipos deportivos, simplificando la forma en que se gestionan y presentan torneos y resultados. Esto representó un cambio significativo en la claridad al organizar y mostrar los resultados."
     }
   },
   {
@@ -110,8 +102,8 @@
       "es": "ISOlytics - Software de Auditorías y Normativas"
     },
     "description": {
-      "en": "Comprehensive tool for companies to validate and manage their compliance with international standards such as ISO, ITIL, and other quality frameworks.",
-      "es": "Herramienta integral para que empresas validen y gestionen su cumplimiento frente a normativas internacionales como ISO, ITIL y otros estándares de calidad."
+      "en": "Solution designed to facilitate verification and tracking of regulatory compliance. By structuring audit workflows, it made the process more organized and traceable, leading to a significant improvement in information traceability.",
+      "es": "Solución diseñada para facilitar la verificación y seguimiento del cumplimiento normativo. Al estructurar los flujos de auditoría, el proceso se volvió más ordenado y trazable, lo que representó un cambio significativo en la trazabilidad de la información."
     }
   }
 ]
