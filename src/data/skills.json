@@ -6,16 +6,16 @@
     },
     "items": [
       {
-        "name": { "en": "JavaScript (Main)", "es": "JavaScript (Principal)" },
+        "name": "Java",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+      },
+      {
+        "name": "JavaScript",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
       },
       {
         "name": "Python",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-      },
-      {
-        "name": "Java",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
       }
     ]
   },
@@ -26,16 +26,20 @@
     },
     "items": [
       {
+        "name": "React",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "Vite.js",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg"
+      },
+      {
         "name": "HTML",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
       },
       {
         "name": "CSS",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-      },
-      {
-        "name": "React (Vite.js)",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
       },
       {
         "name": "Tailwind CSS",
@@ -50,19 +54,62 @@
     },
     "items": [
       {
+        "name": "Spring Boot",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+      },
+      {
+        "name": "NestJS",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg"
+      },
+      {
         "name": "Node.js",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
       },
       {
-        "name": "Spring Boot",
+        "name": "Express.js",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+      },
+      {
+        "name": "Spring WebFlux",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
       }
     ]
   },
   {
     "category": {
-      "en": "Databases and Servers",
-      "es": "Bases de Datos y Servidores"
+      "en": "APIs, Authentication and Architecture",
+      "es": "APIs, Autenticación y Arquitectura"
+    },
+    "items": [
+      {
+        "name": {
+          "en": "RESTful APIs",
+          "es": "APIs RESTful"
+        },
+        "icon": ""
+      },
+      {
+        "name": "Passport",
+        "icon": ""
+      },
+      {
+        "name": "API Gateway (Kong)",
+        "icon": ""
+      },
+      {
+        "name": "Modelo C4",
+        "icon": ""
+      },
+      {
+        "name": "RabbitMQ",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg"
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "Databases",
+      "es": "Bases de Datos"
     },
     "items": [
       {
@@ -82,19 +129,19 @@
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg"
       },
       {
-        "name": "Express.js",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+        "name": "R2DBC",
+        "icon": ""
       },
       {
-        "name": { "en": "RESTful APIs", "es": "APIs RESTful" },
+        "name": "TypeORM",
         "icon": ""
       }
     ]
   },
   {
     "category": {
-      "en": "Tools and DevOps",
-      "es": "Herramientas y DevOps"
+      "en": "DevOps and Observability",
+      "es": "DevOps y Observabilidad"
     },
     "items": [
       {
@@ -102,8 +149,67 @@
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
       },
       {
+        "name": "Docker Compose",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+      },
+      {
+        "name": "Kubernetes",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg"
+      },
+      {
+        "name": "Prometheus",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg"
+      },
+      {
+        "name": "Grafana",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
+      },
+      {
         "name": "Git",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+      },
+      {
+        "name": "GitHub Actions",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg"
+      }
+    ]
+  },
+  {
+    "category": { "en": "Testing", "es": "Testing" },
+    "items": [
+      {
+        "name": "Jest",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+      },
+      {
+        "name": "Apache JMeter",
+        "icon": ""
+      }
+    ]
+  },
+  {
+    "category": {
+      "en": "AI Productivity",
+      "es": "Productividad con IA"
+    },
+    "items": [
+      {
+        "name": "Prompt Engineering",
+        "icon": ""
+      },
+      {
+        "name": {
+          "en": "AI-Assisted Coding",
+          "es": "Asistencia de código con IA"
+        },
+        "icon": ""
+      },
+      {
+        "name": {
+          "en": "Validation and review of generated output",
+          "es": "Validación y revisión del output generado"
+        },
+        "icon": ""
       }
     ]
   },
@@ -114,44 +220,21 @@
     },
     "items": [
       {
+        "name": { "en": "Agile", "es": "Ágil" },
+        "icon": ""
+      },
+      {
         "name": "Scrum",
         "icon": ""
       },
       {
-        "name": { "en": "Agile", "es": "Ágil" },
-        "icon": ""
+        "name": "Kanban (Jira)",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
       }
     ]
   },
   {
-    "category": {
-      "en": "Soft Skills",
-      "es": "Habilidades Blandas"
-    },
-    "items": [
-      {
-        "name": { "en": "Problem Solving", "es": "Resolución de Problemas" },
-        "icon": ""
-      },
-      {
-        "name": { "en": "Innovation", "es": "Innovación" },
-        "icon": ""
-      },
-      {
-        "name": { "en": "Teamwork", "es": "Trabajo en Equipo" },
-        "icon": ""
-      },
-      {
-        "name": { "en": "Communication", "es": "Comunicación" },
-        "icon": ""
-      }
-    ]
-  },
-  {
-    "category": {
-      "en": "Languages",
-      "es": "Idiomas"
-    },
+    "category": { "en": "Languages", "es": "Idiomas" },
     "items": [
       {
         "name": { "en": "Spanish (Native)", "es": "Español (Nativo)" },

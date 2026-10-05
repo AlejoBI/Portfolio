@@ -1,4 +1,5 @@
 import { memo, type ComponentType } from "react";
+import { useTranslation } from "react-i18next";
 import useInView from "../../hooks/useInView";
 import { tData } from "../../utils/tData";
 import skillsData from "../../data/skills.json";
@@ -7,10 +8,12 @@ import {
   Code2,
   Monitor,
   Server,
+  ShieldCheck,
   Database,
-  Wrench,
+  Container,
+  FlaskConical,
+  Sparkles,
   CheckSquare,
-  Users,
   Globe,
 } from "lucide-react";
 
@@ -21,14 +24,17 @@ const categoryIcons: Record<string, ComponentType<{ className?: string }>> = {
   "Desarrollo Frontend": Monitor,
   "Backend Development": Server,
   "Desarrollo Backend": Server,
-  "Databases and Servers": Database,
-  "Bases de Datos y Servidores": Database,
-  "Tools and DevOps": Wrench,
-  "Herramientas y DevOps": Wrench,
+  "APIs, Authentication and Architecture": ShieldCheck,
+  "APIs, Autenticación y Arquitectura": ShieldCheck,
+  Databases: Database,
+  "Bases de Datos": Database,
+  "DevOps and Observability": Container,
+  "DevOps y Observabilidad": Container,
+  Testing: FlaskConical,
+  "AI Productivity": Sparkles,
+  "Productividad con IA": Sparkles,
   Methodologies: CheckSquare,
   Metodologías: CheckSquare,
-  "Soft Skills": Users,
-  "Habilidades Blandas": Users,
   Languages: Globe,
   Idiomas: Globe,
 };
@@ -60,9 +66,7 @@ const SkillCard = memo(
             <div className="w-10 h-10 bg-gradient-tech rounded-lg flex items-center justify-center">
               <CategoryIcon className="w-5 h-5 text-gray-900 dark:text-white" />
             </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-              {category}
-            </h3>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">{category}</h3>
           </div>
           <ul className="space-y-3">
             {items.map((skill, skillIdx) => (
@@ -108,13 +112,15 @@ SkillCard.displayName = "SkillCard";
 const Skills = () => {
   const { ref, inView } = useInView();
 
+  // Every label here comes from tData(), which reads i18next imperatively and so
+  // does not subscribe on its own. Without this hook the memoized cards keep the
+  // labels resolved on first render and never follow a language switch.
+  useTranslation();
+
   const skills: SkillCategory[] = skillsData as SkillCategory[];
 
   return (
-    <div
-      ref={ref}
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-    >
+    <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {skills.map((skillCategory, idx) => (
         <SkillCard
           key={tData(skillCategory.category)}
