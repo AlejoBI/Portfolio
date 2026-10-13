@@ -21,27 +21,12 @@
       "es": "Forge Kit Store - Full Stack"
     },
     "description": {
-      "en": "A web application designed to organize and manage a product catalog, making product search, consultation, and administration more efficient. Its modular structure helped keep the solution organized and reusable, resulting in a significant improvement in clarity and maintainability.",
-      "es": "Una aplicación web diseñada para organizar y gestionar un catálogo de productos, facilitando la búsqueda, consulta y administración de su información. Su estructura modular permitió mantener la solución organizada y reutilizable, lo que representó un cambio significativo en la claridad y mantenibilidad del proyecto."
+      "en": "A full-stack e-commerce platform designed to manage an entire online store from a single place. It combines a public storefront — catalog with categories, product pages, cart and checkout — with a role-based admin panel for products, categories, orders, shipping, notifications and billing. Structuring frontend, backend and data access as independent layers kept the solution organized and reusable, resulting in a significant improvement in clarity, security and maintainability.",
+      "es": "Una plataforma de e-commerce full stack diseñada para gestionar toda una tienda online desde un solo lugar. Combina una tienda pública —catálogo con categorías, páginas de producto, carrito y checkout— con un panel de administración basado en roles para productos, categorías, pedidos, envíos, notificaciones y facturación. Estructurar frontend, backend y acceso a datos como capas independientes permitió mantener la solución organizada y reutilizable, lo que representó un cambio significativo en la claridad, la seguridad y la mantenibilidad."
     },
-    "tags": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "TanStack Query", "React Hook Form", "Zod", "Supabase", "PostgreSQL", "CI/CD"],
+    "tags": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "TanStack Query", "React Hook Form", "Zod", "Supabase", "PostgreSQL", "Role-based Auth", "CI/CD"],
     "link": "https://github.com/AlejoBI/forge-kit-store",
     "deploy": "https://forge-kit-store-core.vercel.app/",
-    "disabled": false
-  },
-  {
-    "imageKey": "forge-basico",
-    "title": {
-      "en": "Forge Kit Store - Landing Page",
-      "es": "Forge Kit Store - Landing Page"
-    },
-    "description": {
-      "en": "A professional single-page landing template designed for small and medium businesses in Colombia. Features a Hero section, About Us, Contact form, floating WhatsApp button, SEO optimization, and fully responsive design. Part of a reusable template ecosystem with 4 service tiers, from basic landings to full e-commerce platforms.",
-      "es": "Una plantilla de landing page profesional de una sola página diseñada para pequeñas y medianas empresas en Colombia. Incluye sección Hero, Sobre Nosotros, formulario de contacto, botón flotante de WhatsApp, optimización SEO y diseño totalmente responsivo. Parte de un ecosistema de plantillas reutilizables con 4 niveles de servicio, desde landings básicos hasta plataformas de e-commerce completas."
-    },
-    "tags": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
-    "link": "https://github.com/AlejoBI/forge-kit-store",
-    "deploy": "https://forge-kit-store-basico.vercel.app/",
     "disabled": false
   },
   {
