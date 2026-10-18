@@ -1,5 +1,21 @@
 [
   {
+    "imageKey": "ashua",
+    "title": {
+      "en": "ASHUA - Online Catalog",
+      "es": "ASHUA - Catálogo en Línea"
+    },
+    "description": {
+      "en": "An online catalog designed for an artisanal equestrian brand, combining a landing page with carousel and brand story with a searchable catalog filtered by category and subcategory, product sheets with image galleries and direct WhatsApp inquiries. Structuring content, SEO and images in two resolutions kept the site fast and easy to maintain without a database or admin panel, resulting in a significant improvement in loading speed and clarity of the shopping experience.",
+      "es": "Un catálogo en línea diseñado para una marca artesanal de productos ecuestres, que combina una portada con carrusel e historia de la marca con un catálogo con búsqueda, filtros por categoría y subcategoría, fichas de producto con galería de imágenes y consulta directa por WhatsApp. Estructurar el contenido, el SEO e imágenes en dos resoluciones mantuvo el sitio rápido y fácil de mantener sin base de datos ni panel de administración, lo que representó un cambio significativo en la velocidad de carga y la claridad de la experiencia de compra."
+    },
+    "tags": ["React 19", "TypeScript", "Vite 6", "Tailwind CSS", "React Router", "React Query", "React Hook Form", "Zod", "SEO", "Vercel"],
+    "link": "https://github.com/AlejoBI/ASHUA",
+    "deploy": "https://ashua.vercel.app",
+    "disabled": false,
+    "quoteCTA": true
+  },
+  {
     "imageKey": "multimedia-portfolio",
     "title": {
       "en": "Multimedia Portfolio",
@@ -27,7 +43,8 @@
     "tags": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "TanStack Query", "React Hook Form", "Zod", "Supabase", "PostgreSQL", "Role-based Auth", "CI/CD"],
     "link": "https://github.com/AlejoBI/forge-kit-store",
     "deploy": "https://forge-kit-store-core.vercel.app/",
-    "disabled": false
+    "disabled": false,
+    "quoteCTA": true
   },
   {
     "imageKey": "isolytics",

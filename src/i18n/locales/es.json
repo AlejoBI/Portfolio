@@ -31,7 +31,8 @@
     "title": "Proyectos",
     "buttons": {
       "view_project": "Ver Proyecto",
-      "deployed_link": "Enlace Desplegado",
+      "deployed_link": "Demo",
+      "quote_cta": "¿Quieres algo así?",
       "show_more": "Ver más",
       "show_less": "Ver menos"
     },

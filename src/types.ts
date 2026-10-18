@@ -36,5 +36,6 @@ export interface Project {
   deploy: string;
   disabled?: boolean;
   archived?: boolean;
+  quoteCTA?: boolean;
   images?: string[];
 }

@@ -163,12 +163,12 @@ const ProjectCard = memo(
             ))}
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-600 dark:bg-gradient-tech text-white text-sm rounded-lg hover:shadow-xl hover:scale-105"
+              className="flex-1 sm:flex-none justify-center text-center text-xs sm:text-sm px-3 sm:px-4 py-2 leading-tight bg-blue-600 dark:bg-gradient-tech text-white rounded-lg hover:shadow-xl hover:scale-105"
             >
               {t("projects.buttons.view_project")}
             </a>
@@ -177,9 +177,19 @@ const ProjectCard = memo(
                 href={project.deploy}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 text-sm rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500"
+                className="flex-1 sm:flex-none justify-center text-center text-xs sm:text-sm px-3 sm:px-4 py-2 leading-tight border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500"
               >
                 {t("projects.buttons.deployed_link")}
+              </a>
+            )}
+            {project.quoteCTA && (
+              <a
+                href="https://tally.so/r/GevaZQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-none justify-center text-center text-xs sm:text-sm px-3 sm:px-4 py-2 leading-tight bg-emerald-600 text-white rounded-lg hover:shadow-xl hover:scale-105"
+              >
+                {t("projects.buttons.quote_cta")}
               </a>
             )}
           </div>
