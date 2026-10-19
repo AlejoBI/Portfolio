@@ -5,7 +5,8 @@
     "download_cv": "Download CV",
     "download_cv_es": "Descargar CV (ES)",
     "download_cv_en": "Download CV (EN)",
-    "cv_description": "Download my resume in PDF format"
+    "cv_description": "Download my resume in PDF format",
+    "whatsapp": "Request a quote on WhatsApp"
   },
   "about": {
     "title": "About Me"

@@ -1,4 +1,6 @@
 import { memo } from "react";
+import { MessageCircle } from "lucide-react";
+import { contact } from "../../config/contact";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -12,13 +14,9 @@ const Footer = () => {
         <div className="text-center space-y-8">
           <div className="flex justify-center mb-6">
             <div className="text-3xl font-bold">
-              <span className="text-blue-500 dark:text-blue-400 code-font">
-                {"<"}
-              </span>
+              <span className="text-blue-500 dark:text-blue-400 code-font">{"<"}</span>
               <span className="text-gray-900 dark:text-white">ABI</span>
-              <span className="text-blue-500 dark:text-blue-400 code-font">
-                {"/>"}
-              </span>
+              <span className="text-blue-500 dark:text-blue-400 code-font">{"/>"}</span>
             </div>
           </div>
 
@@ -35,6 +33,16 @@ const Footer = () => {
 
           <div className="flex justify-center gap-6">
             <a
+              href={contact.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="rounded-full border border-gray-300/50 bg-gray-200/50 p-3 text-gray-700 hover:text-blue-600 dark:border-gray-700/50 dark:bg-gray-800/50 dark:text-gray-400"
+            >
+              <MessageCircle className="h-6 w-6" aria-hidden="true" />
+            </a>
+            <a
+              aria-label="GitHub"
               href="https://github.com/AlejoBI"
               target="_blank"
               rel="noopener noreferrer"
@@ -54,6 +62,7 @@ const Footer = () => {
             </a>
 
             <a
+              aria-label="LinkedIn"
               href="https://www.linkedin.com/in/alejandrobi"
               target="_blank"
               rel="noopener noreferrer"
@@ -69,7 +78,8 @@ const Footer = () => {
             </a>
 
             <a
-              href="mailto:alejandrobravoisajar1@gmail.com"
+              href={contact.emailUrl}
+              aria-label={t("footer.email")}
               className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[background-color,border-color] duration-300"
             >
               <svg
