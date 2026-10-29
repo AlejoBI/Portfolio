@@ -9,11 +9,36 @@
       "en": "An online catalog designed for an artisanal equestrian brand, combining a landing page with carousel and brand story with a searchable catalog filtered by category and subcategory, product sheets with image galleries and direct WhatsApp inquiries. Structuring content, SEO and images in two resolutions kept the site fast and easy to maintain without a database or admin panel, resulting in a significant improvement in loading speed and clarity of the shopping experience.",
       "es": "Un catálogo en línea diseñado para una marca artesanal de productos ecuestres, que combina una portada con carrusel e historia de la marca con un catálogo con búsqueda, filtros por categoría y subcategoría, fichas de producto con galería de imágenes y consulta directa por WhatsApp. Estructurar el contenido, el SEO e imágenes en dos resoluciones mantuvo el sitio rápido y fácil de mantener sin base de datos ni panel de administración, lo que representó un cambio significativo en la velocidad de carga y la claridad de la experiencia de compra."
     },
-    "tags": ["React 19", "TypeScript", "Vite 6", "Tailwind CSS", "React Router", "React Query", "React Hook Form", "Zod", "SEO", "Vercel"],
+    "tags": [
+      "React 19",
+      "TypeScript",
+      "Vite 6",
+      "Tailwind CSS",
+      "React Router",
+      "React Query",
+      "React Hook Form",
+      "Zod",
+      "SEO",
+      "Cloudflare Pages"
+    ],
     "link": "https://github.com/AlejoBI/ASHUA",
-    "deploy": "https://ashua.vercel.app",
-    "disabled": false,
-    "quoteCTA": true
+    "deploy": "https://ashua.pages.dev",
+    "disabled": false
+  },
+  {
+    "imageKey": "jp-studio",
+    "title": {
+      "en": "JP Studio Design",
+      "es": "JP Studio Design"
+    },
+    "description": {
+      "en": "A responsive static portfolio for a graphic design studio, focused on presenting its visual identity, services and selected work with an editorial interface, project gallery and direct WhatsApp contact.",
+      "es": "Portafolio estático responsive para un estudio de diseño gráfico, enfocado en presentar su identidad visual, servicios y trabajos seleccionados mediante una interfaz editorial, galería de proyectos y contacto directo por WhatsApp."
+    },
+    "tags": ["React", "TypeScript", "Vite", "CSS", "Responsive Design", "Cloudflare Pages"],
+    "link": "https://github.com/AlejoBI/jp-studio",
+    "deploy": "https://jp-studio.pages.dev",
+    "disabled": false
   },
   {
     "imageKey": "multimedia-portfolio",
@@ -25,7 +50,16 @@
       "en": "A professional portfolio designed to clearly showcase projects. Focused on structuring and presenting information in an organized way, resulting in a significant improvement in clarity and accessibility of the work displayed.",
       "es": "Un portafolio profesional diseñado para mostrar proyectos de forma clara. Enfocado en estructurar y presentar la información de manera organizada, lo que representó un cambio significativo en la claridad y accesibilidad de los trabajos mostrados."
     },
-    "tags": ["React 18", "TypeScript", "Vite", "TailwindCSS", "Framer Motion", "React Three Fiber", "React Player", "i18next"],
+    "tags": [
+      "React 18",
+      "TypeScript",
+      "Vite",
+      "TailwindCSS",
+      "Framer Motion",
+      "React Three Fiber",
+      "React Player",
+      "i18next"
+    ],
     "link": "https://github.com/nicky212016/Portafolio_Nuevo",
     "deploy": "https://nicolascortesrestrepo.vercel.app/",
     "disabled": false
@@ -40,11 +74,23 @@
       "en": "A full-stack e-commerce platform designed to manage an entire online store from a single place. It combines a public storefront — catalog with categories, product pages, cart and checkout — with a role-based admin panel for products, categories, orders, shipping, notifications and billing. Structuring frontend, backend and data access as independent layers kept the solution organized and reusable, resulting in a significant improvement in clarity, security and maintainability.",
       "es": "Una plataforma de e-commerce full stack diseñada para gestionar toda una tienda online desde un solo lugar. Combina una tienda pública —catálogo con categorías, páginas de producto, carrito y checkout— con un panel de administración basado en roles para productos, categorías, pedidos, envíos, notificaciones y facturación. Estructurar frontend, backend y acceso a datos como capas independientes permitió mantener la solución organizada y reutilizable, lo que representó un cambio significativo en la claridad, la seguridad y la mantenibilidad."
     },
-    "tags": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui", "TanStack Query", "React Hook Form", "Zod", "Supabase", "PostgreSQL", "Role-based Auth", "CI/CD"],
+    "tags": [
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "TanStack Query",
+      "React Hook Form",
+      "Zod",
+      "Supabase",
+      "PostgreSQL",
+      "Role-based Auth",
+      "CI/CD"
+    ],
     "link": "https://github.com/AlejoBI/forge-kit-store",
     "deploy": "https://forge-kit-store-core.vercel.app/",
-    "disabled": false,
-    "quoteCTA": true
+    "disabled": false
   },
   {
     "imageKey": "isolytics",
@@ -56,7 +102,17 @@
       "en": "A solution designed to facilitate verification and tracking of regulatory compliance. By structuring audit workflows, it made the process more organized and traceable, leading to a significant improvement in information traceability.",
       "es": "Solución orientada a facilitar la verificación y seguimiento del cumplimiento normativo. Al estructurar los flujos de auditoría, el proceso se volvió más ordenado y trazable, lo que representó un cambio significativo en la trazabilidad de la información."
     },
-    "tags": ["React", "TypeScript", "Node.js", "Express.js", "Firebase", "Redux", "TailwindCSS", "Docker", "Microservicios"],
+    "tags": [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Firebase",
+      "Redux",
+      "TailwindCSS",
+      "Docker",
+      "Microservicios"
+    ],
     "link": "https://isolytics.vercel.app/",
     "deploy": "https://isolytics.vercel.app/",
     "disabled": false,
@@ -72,7 +128,18 @@
       "en": "A solution designed to process documents and generate context-aware responses based on their content. By structuring information retrieval in an organized way, it led to a significant improvement in the precision and usefulness of the responses obtained.",
       "es": "Solución diseñada para procesar documentos y obtener respuestas contextualizadas a partir de su contenido. Al organizar la recuperación de información de forma estructurada, se logró un cambio significativo en la precisión y utilidad de las respuestas obtenidas."
     },
-    "tags": ["Python", "FastApi", "React", "JavaScript", "Bootstrap", "ApiRest", "MongoDB", "ChromaDB", "CI/CD", "Code Coverage"],
+    "tags": [
+      "Python",
+      "FastApi",
+      "React",
+      "JavaScript",
+      "Bootstrap",
+      "ApiRest",
+      "MongoDB",
+      "ChromaDB",
+      "CI/CD",
+      "Code Coverage"
+    ],
     "link": "https://github.com/AlejoBI/Proyecto-IS2",
     "deploy": "",
     "disabled": false,

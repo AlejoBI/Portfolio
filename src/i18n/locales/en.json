@@ -5,8 +5,7 @@
     "download_cv": "Download CV",
     "download_cv_es": "Descargar CV (ES)",
     "download_cv_en": "Download CV (EN)",
-    "cv_description": "Download my resume in PDF format",
-    "whatsapp": "Request a quote on WhatsApp"
+    "cv_description": "Download my resume in PDF format"
   },
   "about": {
     "title": "About Me"
@@ -33,7 +32,6 @@
     "buttons": {
       "view_project": "View Project",
       "deployed_link": "Live Demo",
-      "quote_cta": "Want one like this?",
       "show_more": "Show more",
       "show_less": "Show less"
     },
