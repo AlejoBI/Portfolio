@@ -5,8 +5,7 @@
     "download_cv": "Download CV",
     "download_cv_es": "Descargar CV (ES)",
     "download_cv_en": "Download CV (EN)",
-    "cv_description": "Download my resume in PDF format",
-    "whatsapp": "Request a quote on WhatsApp"
+    "cv_description": "Download my resume in PDF format"
   },
   "about": {
     "title": "About Me"
@@ -33,9 +32,11 @@
     "buttons": {
       "view_project": "View Project",
       "deployed_link": "Live Demo",
-      "quote_cta": "Want one like this?",
       "show_more": "Show more",
-      "show_less": "Show less"
+      "show_less": "Show less",
+      "previous_image": "Previous image",
+      "next_image": "Next image",
+      "go_to_image": "Go to image"
     },
     "university_project": "University project"
   },
@@ -56,7 +57,9 @@
       "about": "About Me",
       "skills": "Skills",
       "projects": "Projects",
-      "experience": "Experience"
+      "experience": "Experience",
+      "open_menu": "Open menu",
+      "close_menu": "Close menu"
     }
   },
   "footer": {

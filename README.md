@@ -65,13 +65,9 @@ Cada `<img>` tiene dimensiones explícitas y carga diferida para evitar dos prob
 
 Excepción: la foto del héroe no usa `loading="lazy"` porque está arriba de todo y debe cargarse ya.
 
-#### Precarga de la imagen principal
+#### Prioridad de la imagen principal
 
-En `index.html` se le indica al navegador que priorice la descarga de la foto de perfil:
-
-```html
-<link rel="preload" href="/src/assets/images/Foto.webp" as="image" type="image/webp" fetchpriority="high" />
-```
+La foto del héroe usa `loading="eager"` y `fetchPriority="high"`. La URL final la genera Vite durante el build, por lo que se evita un `preload` manual con una ruta de desarrollo que no coincidiría con el archivo con hash de producción.
 
 ---
 
@@ -95,18 +91,18 @@ build: {
 }
 ```
 
-#### Lazy loading con `React.lazy()`
+#### Lazy loading por proximidad al viewport
 
-Las secciones que están debajo del pliegue (Skills, Experience, Projects) no se cargan hasta que se necesitan. Mientras tanto se muestra un placeholder con `animate-pulse`. Esto está en `src/App.tsx`:
+Las secciones que están debajo del pliegue (Skills, Experience, Projects) se importan cuando se aproximan al viewport mediante `IntersectionObserver`. Mientras tanto se muestra un placeholder con `animate-pulse`. Esto está implementado en `src/App.tsx` con `DeferredSection` y `React.lazy()`:
 
 ```tsx
 const Experience = lazy(() => import("./components/sections/Experience"));
 const Skills = lazy(() => import("./components/sections/Skills"));
 const Projects = lazy(() => import("./components/sections/Projects"));
 
-<Suspense fallback={<div className="h-64 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />}>
+<DeferredSection fallback={<div className="h-64 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />}>
   <Skills />
-</Suspense>
+</DeferredSection>
 ```
 
 ---
@@ -140,17 +136,6 @@ useEffect(() => {
 ---
 
 ### 4. CSS
-
-#### `content-visibility: auto`
-
-Las secciones que no están en pantalla no se renderizan (ni estilos, ni layout, ni paint) hasta que el usuario se acerca. Es el equivalente en CSS al `loading="lazy"` de imágenes:
-
-```tsx
-// src/App.tsx
-<div id="skills" style={{ contentVisibility: "auto" }}>
-  <Skills />
-</div>
-```
 
 #### `prefers-reduced-motion`
 
@@ -236,7 +221,7 @@ El primer elemento del `<body>` permite saltar la navegación con teclado:
 
 #### robots.txt y sitemap.xml
 
-Archivos en `public/` que le indican a los buscadores cómo indexar el sitio.
+Los archivos `public/robots.txt` y `public/sitemap.xml` indican a los buscadores cómo indexar el sitio.
 
 #### Favicon
 

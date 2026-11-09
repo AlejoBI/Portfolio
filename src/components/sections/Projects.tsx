@@ -29,12 +29,7 @@ const projects = (projectsData as Project[])
 
 const PLACEHOLDER_IMG = (
   <div className="w-full h-full flex items-center justify-center bg-gray-100 dark:bg-gray-700">
-    <svg
-      className="w-12 h-12 text-gray-400"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
+    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -45,63 +40,86 @@ const PLACEHOLDER_IMG = (
   </div>
 );
 
-const ImageGallery = memo(({ images, title }: { readonly images: string[]; readonly title: string }) => {
-  const [current, setCurrent] = useState(0);
-  const [imgError, setImgError] = useState<Record<number, boolean>>({});
+const ImageGallery = memo(
+  ({ images, title }: { readonly images: string[]; readonly title: string }) => {
+    const { t } = useTranslation();
+    const [current, setCurrent] = useState(0);
+    const [imgError, setImgError] = useState<Record<number, boolean>>({});
 
-  const prev = useCallback(() => setCurrent((i) => (i === 0 ? images.length - 1 : i - 1)), [images.length]);
-  const next = useCallback(() => setCurrent((i) => (i === images.length - 1 ? 0 : i + 1)), [images.length]);
+    const prev = useCallback(
+      () => setCurrent((i) => (i === 0 ? images.length - 1 : i - 1)),
+      [images.length],
+    );
+    const next = useCallback(
+      () => setCurrent((i) => (i === images.length - 1 ? 0 : i + 1)),
+      [images.length],
+    );
 
-  if (images.length === 0) return PLACEHOLDER_IMG;
+    if (images.length === 0) return PLACEHOLDER_IMG;
 
-  return (
-    <div className="relative h-48 overflow-hidden group/gallery">
-      {imgError[current] ? (
-        PLACEHOLDER_IMG
-      ) : (
-        <img
-          src={images[current]}
-          alt={title}
-          loading="lazy"
-          width={800}
-          height={192}
-          onError={() => setImgError((prev) => ({ ...prev, [current]: true }))}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    return (
+      <div className="relative h-48 overflow-hidden group/gallery">
+        {imgError[current] ? (
+          PLACEHOLDER_IMG
+        ) : (
+          <img
+            src={images[current]}
+            alt={title}
+            loading="lazy"
+            decoding="async"
+            width={800}
+            height={500}
+            onError={() => setImgError((prev) => ({ ...prev, [current]: true }))}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-      {images.length > 1 && (
-        <>
-          <button
-            onClick={(e) => { e.stopPropagation(); prev(); }}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover/gallery:opacity-100 transition-opacity"
-            aria-label="Previous image"
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-          <button
-            onClick={(e) => { e.stopPropagation(); next(); }}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover/gallery:opacity-100 transition-opacity"
-            aria-label="Next image"
-          >
-            <ChevronRight className="w-4 h-4" />
-          </button>
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
-            {images.map((_, i) => (
-              <button
-                key={i}
-                onClick={(e) => { e.stopPropagation(); setCurrent(i); }}
-                className={`w-2 h-2 rounded-full transition-colors ${i === current ? "bg-white" : "bg-white/50"}`}
-                aria-label={`Go to image ${i + 1}`}
-              />
-            ))}
-          </div>
-        </>
-      )}
-    </div>
-  );
-});
+        {images.length > 1 && (
+          <>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                prev();
+              }}
+              type="button"
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover/gallery:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition-opacity"
+              aria-label={t("projects.buttons.previous_image")}
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                next();
+              }}
+              type="button"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover/gallery:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition-opacity"
+              aria-label={t("projects.buttons.next_image")}
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCurrent(i);
+                  }}
+                  type="button"
+                  className={`w-2 h-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 ${i === current ? "bg-white" : "bg-white/50"}`}
+                  aria-label={`${t("projects.buttons.go_to_image")} ${i + 1}`}
+                  aria-current={i === current ? "true" : undefined}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    );
+  },
+);
 ImageGallery.displayName = "ImageGallery";
 
 const ProjectCard = memo(
@@ -145,8 +163,9 @@ const ProjectCard = memo(
           </p>
           {tData(project.description).length > 120 && (
             <button
+              type="button"
               onClick={() => setExpanded(!expanded)}
-              className="text-blue-600 dark:text-blue-400 text-xs font-medium hover:underline mb-4 -mt-2"
+              className="text-blue-600 dark:text-blue-400 text-xs font-medium hover:underline mb-4 -mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
             >
               {expanded ? t("projects.buttons.show_less") : t("projects.buttons.show_more")}
             </button>
@@ -182,16 +201,6 @@ const ProjectCard = memo(
                 {t("projects.buttons.deployed_link")}
               </a>
             )}
-            {project.quoteCTA && (
-              <a
-                href="https://tally.so/r/GevaZQ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-none justify-center text-center text-xs sm:text-sm px-3 sm:px-4 py-2 leading-tight bg-emerald-600 text-white rounded-lg hover:shadow-xl hover:scale-105"
-              >
-                {t("projects.buttons.quote_cta")}
-              </a>
-            )}
           </div>
         </div>
       </div>
@@ -206,12 +215,7 @@ const Projects = () => {
   return (
     <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {projects.map((project, idx) => (
-        <ProjectCard
-          key={project.imageKey}
-          project={project}
-          index={idx}
-          inView={inView}
-        />
+        <ProjectCard key={project.imageKey} project={project} index={idx} inView={inView} />
       ))}
     </div>
   );

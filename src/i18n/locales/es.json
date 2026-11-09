@@ -5,8 +5,7 @@
     "download_cv": "Descargar CV",
     "download_cv_es": "Descargar CV (ES)",
     "download_cv_en": "Download CV (EN)",
-    "cv_description": "Descarga mi currículum en formato PDF",
-    "whatsapp": "Cotizar por WhatsApp"
+    "cv_description": "Descarga mi currículum en formato PDF"
   },
   "about": {
     "title": "Sobre mí"
@@ -33,9 +32,11 @@
     "buttons": {
       "view_project": "Ver Proyecto",
       "deployed_link": "Demo",
-      "quote_cta": "¿Quieres algo así?",
       "show_more": "Ver más",
-      "show_less": "Ver menos"
+      "show_less": "Ver menos",
+      "previous_image": "Imagen anterior",
+      "next_image": "Imagen siguiente",
+      "go_to_image": "Ir a la imagen"
     },
     "university_project": "Proyecto universitario"
   },
@@ -56,7 +57,9 @@
       "about": "Sobre mí",
       "skills": "Habilidades",
       "projects": "Proyectos",
-      "experience": "Experiencia"
+      "experience": "Experiencia",
+      "open_menu": "Abrir menú",
+      "close_menu": "Cerrar menú"
     }
   },
   "footer": {
