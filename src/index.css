@@ -11,6 +11,11 @@ body,
   scroll-behavior: smooth;
 }
 
+:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 3px;
+}
+
 @keyframes float {
   0%,
   100% {
@@ -123,6 +128,14 @@ body,
 
   html {
     scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

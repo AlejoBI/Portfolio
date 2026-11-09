@@ -1,5 +1,4 @@
 import { memo } from "react";
-import { MessageCircle } from "lucide-react";
 import { contact } from "../../config/contact";
 import { useTranslation } from "react-i18next";
 
@@ -33,20 +32,11 @@ const Footer = () => {
 
           <div className="flex justify-center gap-6">
             <a
-              href={contact.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp"
-              className="rounded-full border border-gray-300/50 bg-gray-200/50 p-3 text-gray-700 hover:text-blue-600 dark:border-gray-700/50 dark:bg-gray-800/50 dark:text-gray-400"
-            >
-              <MessageCircle className="h-6 w-6" aria-hidden="true" />
-            </a>
-            <a
               aria-label="GitHub"
               href="https://github.com/AlejoBI"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[background-color,border-color] duration-300"
+              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[background-color,border-color] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
             >
               <svg
                 className="w-6 h-6 text-gray-700 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400"
@@ -66,7 +56,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/alejandrobi"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[background-color,border-color] duration-300"
+              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[background-color,border-color] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
             >
               <svg
                 className="w-6 h-6 text-gray-700 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400"
@@ -80,7 +70,7 @@ const Footer = () => {
             <a
               href={contact.emailUrl}
               aria-label={t("footer.email")}
-              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[background-color,border-color] duration-300"
+              className="group relative p-3 bg-gray-200/50 dark:bg-gray-800/50 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 rounded-full border border-gray-300/50 dark:border-gray-700/50 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[background-color,border-color] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
             >
               <svg
                 className="w-6 h-6 text-gray-700 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400"

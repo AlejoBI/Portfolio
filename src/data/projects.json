@@ -6,8 +6,8 @@
       "es": "ASHUA - Catálogo en Línea"
     },
     "description": {
-      "en": "An online catalog designed for an artisanal equestrian brand, combining a landing page with carousel and brand story with a searchable catalog filtered by category and subcategory, product sheets with image galleries and direct WhatsApp inquiries. Structuring content, SEO and images in two resolutions kept the site fast and easy to maintain without a database or admin panel, resulting in a significant improvement in loading speed and clarity of the shopping experience.",
-      "es": "Un catálogo en línea diseñado para una marca artesanal de productos ecuestres, que combina una portada con carrusel e historia de la marca con un catálogo con búsqueda, filtros por categoría y subcategoría, fichas de producto con galería de imágenes y consulta directa por WhatsApp. Estructurar el contenido, el SEO e imágenes en dos resoluciones mantuvo el sitio rápido y fácil de mantener sin base de datos ni panel de administración, lo que representó un cambio significativo en la velocidad de carga y la claridad de la experiencia de compra."
+      "en": "An online catalog designed for an artisanal equestrian brand, combining a landing page with carousel and brand story with a searchable catalog filtered by category and subcategory, product sheets with image galleries and direct inquiries. Structuring content, SEO and images in two resolutions kept the site fast and easy to maintain without a database or admin panel, resulting in a significant improvement in loading speed and clarity of the shopping experience.",
+      "es": "Un catálogo en línea diseñado para una marca artesanal de productos ecuestres, que combina una portada con carrusel e historia de la marca con un catálogo con búsqueda, filtros por categoría y subcategoría, fichas de producto con galería de imágenes y consulta directa. Estructurar el contenido, el SEO e imágenes en dos resoluciones mantuvo el sitio rápido y fácil de mantener sin base de datos ni panel de administración, lo que representó un cambio significativo en la velocidad de carga y la claridad de la experiencia de compra."
     },
     "tags": [
       "React 19",
@@ -32,8 +32,8 @@
       "es": "JP Studio Design"
     },
     "description": {
-      "en": "A responsive static portfolio for a graphic design studio, focused on presenting its visual identity, services and selected work with an editorial interface, project gallery and direct WhatsApp contact.",
-      "es": "Portafolio estático responsive para un estudio de diseño gráfico, enfocado en presentar su identidad visual, servicios y trabajos seleccionados mediante una interfaz editorial, galería de proyectos y contacto directo por WhatsApp."
+      "en": "A responsive static portfolio for a graphic design studio, focused on presenting its visual identity, services and selected work with an editorial interface, project gallery and direct contact.",
+      "es": "Portafolio estático responsive para un estudio de diseño gráfico, enfocado en presentar su identidad visual, servicios y trabajos seleccionados mediante una interfaz editorial, galería de proyectos y contacto directo."
     },
     "tags": ["React", "TypeScript", "Vite", "CSS", "Responsive Design", "Cloudflare Pages"],
     "link": "https://github.com/AlejoBI/jp-studio",

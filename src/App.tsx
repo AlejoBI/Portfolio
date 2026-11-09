@@ -1,6 +1,7 @@
-import { memo, lazy, Suspense } from "react";
+import { memo, lazy, Suspense, type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import useTheme from "./hooks/useTheme";
+import useInView from "./hooks/useInView";
 import Layout from "./components/layout/Layout";
 import MetaTags from "./components/seo/MetaTags";
 import Hero from "./components/sections/Hero";
@@ -8,6 +9,21 @@ import Hero from "./components/sections/Hero";
 const Experience = lazy(() => import("./components/sections/Experience"));
 const Skills = lazy(() => import("./components/sections/Skills"));
 const Projects = lazy(() => import("./components/sections/Projects"));
+
+interface DeferredSectionProps {
+  readonly children: ReactNode;
+  readonly fallback: ReactNode;
+}
+
+const DeferredSection = ({ children, fallback }: DeferredSectionProps) => {
+  const { ref, inView } = useInView({ rootMargin: "300px 0px" });
+
+  return (
+    <div ref={ref}>
+      {inView ? <Suspense fallback={fallback}>{children}</Suspense> : fallback}
+    </div>
+  );
+};
 
 const App = () => {
   const { dark, toggle } = useTheme();
@@ -22,7 +38,7 @@ const App = () => {
       <div className="relative z-10">
         <Layout dark={dark} toggleTheme={toggle}>
           <Hero />
-          <div id="experience" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20" style={{ contentVisibility: "auto" }}>
+          <div id="experience" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20">
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-blue-200/50 dark:border-blue-500/20">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-1 h-12 bg-gradient-tech rounded-full" />
@@ -30,12 +46,12 @@ const App = () => {
                   {t("experience.title")}
                 </h2>
               </div>
-              <Suspense fallback={<div className="h-32 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />}>
+              <DeferredSection fallback={<div className="h-32 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />}>
                 <Experience />
-              </Suspense>
+              </DeferredSection>
             </div>
           </div>
-          <div id="skills" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20" style={{ contentVisibility: "auto" }}>
+          <div id="skills" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20">
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-purple-200/50 dark:border-purple-500/20">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-1 h-12 bg-gradient-tech rounded-full" />
@@ -43,12 +59,12 @@ const App = () => {
                   {t("skills.title")}
                 </h2>
               </div>
-              <Suspense fallback={<div className="h-64 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />}>
+              <DeferredSection fallback={<div className="h-64 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />}>
                 <Skills />
-              </Suspense>
+              </DeferredSection>
             </div>
           </div>
-          <div id="projects" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20" style={{ contentVisibility: "auto" }}>
+          <div id="projects" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20">
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-blue-200/50 dark:border-blue-500/20">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-1 h-12 bg-gradient-tech rounded-full" />
@@ -56,9 +72,9 @@ const App = () => {
                   {t("projects.title")}
                 </h2>
               </div>
-              <Suspense fallback={<div className="h-64 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />}>
+              <DeferredSection fallback={<div className="h-64 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />}>
                 <Projects />
-              </Suspense>
+              </DeferredSection>
             </div>
           </div>
         </Layout>

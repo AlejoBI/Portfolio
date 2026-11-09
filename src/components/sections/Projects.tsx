@@ -42,6 +42,7 @@ const PLACEHOLDER_IMG = (
 
 const ImageGallery = memo(
   ({ images, title }: { readonly images: string[]; readonly title: string }) => {
+    const { t } = useTranslation();
     const [current, setCurrent] = useState(0);
     const [imgError, setImgError] = useState<Record<number, boolean>>({});
 
@@ -65,8 +66,9 @@ const ImageGallery = memo(
             src={images[current]}
             alt={title}
             loading="lazy"
+            decoding="async"
             width={800}
-            height={192}
+            height={500}
             onError={() => setImgError((prev) => ({ ...prev, [current]: true }))}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
@@ -80,8 +82,9 @@ const ImageGallery = memo(
                 e.stopPropagation();
                 prev();
               }}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover/gallery:opacity-100 transition-opacity"
-              aria-label="Previous image"
+              type="button"
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover/gallery:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition-opacity"
+              aria-label={t("projects.buttons.previous_image")}
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -90,8 +93,9 @@ const ImageGallery = memo(
                 e.stopPropagation();
                 next();
               }}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover/gallery:opacity-100 transition-opacity"
-              aria-label="Next image"
+              type="button"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 opacity-0 group-hover/gallery:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition-opacity"
+              aria-label={t("projects.buttons.next_image")}
             >
               <ChevronRight className="w-4 h-4" />
             </button>
@@ -103,8 +107,10 @@ const ImageGallery = memo(
                     e.stopPropagation();
                     setCurrent(i);
                   }}
-                  className={`w-2 h-2 rounded-full transition-colors ${i === current ? "bg-white" : "bg-white/50"}`}
-                  aria-label={`Go to image ${i + 1}`}
+                  type="button"
+                  className={`w-2 h-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 ${i === current ? "bg-white" : "bg-white/50"}`}
+                  aria-label={`${t("projects.buttons.go_to_image")} ${i + 1}`}
+                  aria-current={i === current ? "true" : undefined}
                 />
               ))}
             </div>
@@ -157,8 +163,9 @@ const ProjectCard = memo(
           </p>
           {tData(project.description).length > 120 && (
             <button
+              type="button"
               onClick={() => setExpanded(!expanded)}
-              className="text-blue-600 dark:text-blue-400 text-xs font-medium hover:underline mb-4 -mt-2"
+              className="text-blue-600 dark:text-blue-400 text-xs font-medium hover:underline mb-4 -mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
             >
               {expanded ? t("projects.buttons.show_less") : t("projects.buttons.show_more")}
             </button>

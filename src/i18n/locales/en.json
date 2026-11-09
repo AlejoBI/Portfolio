@@ -33,7 +33,10 @@
       "view_project": "View Project",
       "deployed_link": "Live Demo",
       "show_more": "Show more",
-      "show_less": "Show less"
+      "show_less": "Show less",
+      "previous_image": "Previous image",
+      "next_image": "Next image",
+      "go_to_image": "Go to image"
     },
     "university_project": "University project"
   },
@@ -54,7 +57,9 @@
       "about": "About Me",
       "skills": "Skills",
       "projects": "Projects",
-      "experience": "Experience"
+      "experience": "Experience",
+      "open_menu": "Open menu",
+      "close_menu": "Close menu"
     }
   },
   "footer": {
