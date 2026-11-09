@@ -16,6 +16,21 @@
     "quoteCTA": true
   },
   {
+    "imageKey": "jp-studio",
+    "title": {
+      "en": "JP Studio Design",
+      "es": "JP Studio Design"
+    },
+    "description": {
+      "en": "A responsive static portfolio for a graphic design studio, focused on presenting its visual identity, services and selected work with an editorial interface, project gallery and direct WhatsApp contact.",
+      "es": "Portafolio estático responsive para un estudio de diseño gráfico, enfocado en presentar su identidad visual, servicios y trabajos seleccionados mediante una interfaz editorial, galería de proyectos y contacto directo por WhatsApp."
+    },
+    "tags": ["React", "TypeScript", "Vite", "CSS", "Responsive Design", "Cloudflare Pages"],
+    "link": "https://github.com/AlejoBI/jp-studio",
+    "deploy": "https://jp-studio.pages.dev",
+    "disabled": true
+  },
+  {
     "imageKey": "multimedia-portfolio",
     "title": {
       "en": "Multimedia Portfolio",
