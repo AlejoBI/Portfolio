@@ -38,7 +38,7 @@
     "tags": ["React", "TypeScript", "Vite", "CSS", "Responsive Design", "Cloudflare Pages"],
     "link": "https://github.com/AlejoBI/jp-studio",
     "deploy": "https://jp-studio.pages.dev",
-    "disabled": false
+    "disabled": true
   },
   {
     "imageKey": "multimedia-portfolio",
