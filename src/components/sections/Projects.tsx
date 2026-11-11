@@ -8,7 +8,7 @@ import type { Project } from "../../types";
 
 const imageModules = import.meta.glob<{
   default: string;
-}>("../../assets/images/projects/*/*.webp", { eager: true });
+}>("../../assets/images/projects/*/*.{webp,svg}", { eager: true });
 
 const buildImageMap = (): Record<string, string[]> => {
   const map: Record<string, string[]> = {};

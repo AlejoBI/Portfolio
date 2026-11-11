@@ -88,12 +88,8 @@ const Hero = () => {
                   👋 {t("presentation.greeting")}
                 </span>
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                  <span className="block text-gray-900 dark:text-white">
-                    Alejandro
-                  </span>
-                  <span className="block text-gradient-tech">
-                    Bravo Isajar
-                  </span>
+                  <span className="block text-gray-900 dark:text-white">Alejandro</span>
+                  <span className="block text-gradient-tech">Bravo Isajar</span>
                 </h1>
                 <div className="flex items-center gap-2 text-xl md:text-2xl text-gray-600 dark:text-gray-400 code-font">
                   <span className="text-blue-500">{"<"}</span>
@@ -182,12 +178,19 @@ const Hero = () => {
               {t("presentation.cv_description")}
             </p>
             <a
-              href={isEn ? "/cv/AlejandroBravoIsajarCV_EN.pdf" : "/cv/AlejandroBravoIsajarCV_ES.pdf"}
+              href={
+                isEn ? "/cv/AlejandroBravoIsajarCV_EN.pdf" : "/cv/AlejandroBravoIsajarCV_ES.pdf"
+              }
               download={isEn ? "AlejandroBravoIsajarCV_EN.pdf" : "AlejandroBravoIsajarCV_ES.pdf"}
               className="w-full bg-blue-600 dark:bg-gradient-tech text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl font-semibold hover:scale-105 flex items-center justify-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                />
               </svg>
               {t("presentation.download_cv")}
             </a>
@@ -280,19 +283,19 @@ const Hero = () => {
         <AnimatedSection className="mb-20 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-green-200/50 dark:border-green-500/20">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 bg-gradient-tech rounded-xl flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-gray-900 dark:text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                  />
-                </svg>
+              <svg
+                className="w-6 h-6 text-gray-900 dark:text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                />
+              </svg>
             </div>
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
               {t("certifications.title")}
@@ -334,12 +337,7 @@ const Hero = () => {
                   </div>
                   <div className="flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 font-medium group-hover:translate-x-1 transition-transform duration-300">
                     <span>Verificar credencial</span>
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"

@@ -5,7 +5,11 @@
 html,
 body,
 #root {
-  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family:
+    "Space Grotesk",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
     sans-serif;
   font-weight: 400;
   scroll-behavior: smooth;
@@ -154,7 +158,8 @@ body,
 }
 
 .card-hover {
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -211,11 +216,8 @@ body,
 }
 
 .bg-pattern {
-  background-image: radial-gradient(
-      at 40% 20%,
-      rgba(59, 130, 246, 0.3) 0px,
-      transparent 50%
-    ),
+  background-image:
+    radial-gradient(at 40% 20%, rgba(59, 130, 246, 0.3) 0px, transparent 50%),
     radial-gradient(at 80% 0%, rgba(139, 92, 246, 0.3) 0px, transparent 50%),
     radial-gradient(at 0% 50%, rgba(236, 72, 153, 0.3) 0px, transparent 50%);
 }

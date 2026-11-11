@@ -31,9 +31,9 @@ const FormalCard = memo(
         <div className="absolute inset-0 bg-gradient-tech opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500" />
         <div className="relative z-10">
           <div className="flex items-start gap-4 mb-4">
-          <div className="flex-shrink-0 w-12 h-12 bg-gradient-tech rounded-xl flex items-center justify-center shadow-lg">
-            <Briefcase className="w-6 h-6 text-gray-900 dark:text-white" />
-          </div>
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-tech rounded-xl flex items-center justify-center shadow-lg">
+              <Briefcase className="w-6 h-6 text-gray-900 dark:text-white" />
+            </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
@@ -70,9 +70,14 @@ const FormalCard = memo(
                   className="mt-3 flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
                 >
                   {showAll ? (
-                    <>Show less <ChevronUp className="w-4 h-4" /></>
+                    <>
+                      Show less <ChevronUp className="w-4 h-4" />
+                    </>
                   ) : (
-                    <>Show more ({details.length - INITIAL_VISIBLE} more) <ChevronDown className="w-4 h-4" /></>
+                    <>
+                      Show more ({details.length - INITIAL_VISIBLE} more){" "}
+                      <ChevronDown className="w-4 h-4" />
+                    </>
                   )}
                 </button>
               )}
@@ -152,11 +157,7 @@ const Experience = () => {
           </div>
           <div className="space-y-4">
             {formal.map((project) => (
-              <FormalCard
-                key={tData(project.name)}
-                project={project}
-                inView={inView}
-              />
+              <FormalCard key={tData(project.name)} project={project} inView={inView} />
             ))}
           </div>
         </div>
@@ -188,9 +189,14 @@ const Experience = () => {
               className="mt-4 flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium mx-auto"
             >
               {showAllUni ? (
-                <>Show less <ChevronUp className="w-4 h-4" /></>
+                <>
+                  Show less <ChevronUp className="w-4 h-4" />
+                </>
               ) : (
-                <>Show more ({university.length - INITIAL_UNIVERSITY} more) <ChevronDown className="w-4 h-4" /></>
+                <>
+                  Show more ({university.length - INITIAL_UNIVERSITY} more){" "}
+                  <ChevronDown className="w-4 h-4" />
+                </>
               )}
             </button>
           )}

@@ -4,8 +4,7 @@ const useTheme = () => {
   const [dark, setDark] = useState(() => {
     const theme = localStorage.getItem("theme");
     return (
-      theme === "dark" ||
-      (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
     );
   });
 

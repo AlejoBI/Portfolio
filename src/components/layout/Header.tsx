@@ -92,9 +92,7 @@ const Header = () => {
   };
 
   return (
-    <header
-      className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-[transform,opacity] duration-500 fixed top-0 w-full z-50 border-b border-gray-200/50 dark:border-white/10 shadow-lg"
-    >
+    <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-[transform,opacity] duration-500 fixed top-0 w-full z-50 border-b border-gray-200/50 dark:border-white/10 shadow-lg">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center space-x-3">
           <button
@@ -106,23 +104,15 @@ const Header = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-tech rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
               <div className="relative h-10 w-10 rounded-full ring-2 ring-blue-500/50 group-hover:ring-blue-400 bg-blue-600 dark:bg-gradient-tech flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
                 </svg>
               </div>
             </div>
             <span className="ml-3 code-font">
-              <span className="text-blue-600 dark:text-blue-400">
-                {"<"}
-              </span>
+              <span className="text-blue-600 dark:text-blue-400">{"<"}</span>
               Alejandro
-              <span className="text-blue-600 dark:text-blue-400">
-                {"/>"}
-              </span>
+              <span className="text-blue-600 dark:text-blue-400">{"/>"}</span>
             </span>
           </button>
         </div>
@@ -132,7 +122,9 @@ const Header = () => {
           ref={menuButtonRef}
           onClick={() => setMenuOpen((prev) => !prev)}
           className="lg:hidden text-2xl text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 z-50 relative"
-          aria-label={menuOpen ? t("header.navigation.close_menu") : t("header.navigation.open_menu")}
+          aria-label={
+            menuOpen ? t("header.navigation.close_menu") : t("header.navigation.open_menu")
+          }
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
         >
@@ -173,22 +165,20 @@ const Header = () => {
 
         <div
           className={`lg:hidden fixed top-0 left-0 w-full h-screen bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl transition-[opacity] duration-500 ${
-            menuOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+            menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
           }`}
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
         >
-            <nav
-              id="mobile-navigation"
-              ref={mobileNavRef}
-              onKeyDown={handleMobileNavKeyDown}
-              className="flex flex-col items-center justify-center h-full space-y-8"
-              aria-label="Mobile navigation"
-              aria-hidden={!menuOpen}
-            >
+          <nav
+            id="mobile-navigation"
+            ref={mobileNavRef}
+            onKeyDown={handleMobileNavKeyDown}
+            className="flex flex-col items-center justify-center h-full space-y-8"
+            aria-label="Mobile navigation"
+            aria-hidden={!menuOpen}
+          >
             {navigation.map((item, index) => (
               <a
                 key={item.name}

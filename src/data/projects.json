@@ -137,28 +137,31 @@
     "imageKey": "rag",
     "title": {
       "en": "RAG System",
-      "es": "Sistema RAG"
+      "es": "Plataforma RAG privada"
     },
     "description": {
-      "en": "A solution designed to process documents and generate context-aware responses based on their content. By structuring information retrieval in an organized way, it led to a significant improvement in the precision and usefulness of the responses obtained.",
-      "es": "Solución diseñada para procesar documentos y obtener respuestas contextualizadas a partir de su contenido. Al organizar la recuperación de información de forma estructurada, se logró un cambio significativo en la precisión y utilidad de las respuestas obtenidas."
+      "en": "A private multi-user RAG platform for uploading PDF, DOCX and TXT files, indexing their content and answering questions with cited sources. It supports OpenAI and Google Gemini per request, user-isolated documents and history, anonymous expiring sessions, Redis rate limiting and production-oriented validation.",
+      "es": "Plataforma RAG privada y multiusuario para cargar archivos PDF, DOCX y TXT, indexar su contenido y responder preguntas con fuentes citadas. Permite elegir OpenAI o Google Gemini por solicitud, aislar documentos e historial por usuario, usar sesiones anónimas temporales y aplicar rate limiting con Redis."
     },
     "tags": [
       "Python",
-      "FastApi",
+      "FastAPI",
       "React",
-      "JavaScript",
-      "Bootstrap",
-      "ApiRest",
+      "Tailwind CSS",
+      "OpenAI",
+      "Google Gemini",
+      "RAG",
+      "Embeddings",
       "MongoDB",
       "ChromaDB",
-      "CI/CD",
-      "Code Coverage"
+      "Redis",
+      "Docker",
+      "CI/CD"
     ],
     "link": "https://github.com/AlejoBI/Proyecto-IS2",
     "deploy": "",
     "disabled": false,
-    "archived": true
+    "archived": false
   },
   {
     "imageKey": "freelancers",
