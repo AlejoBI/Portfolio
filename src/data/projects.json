@@ -140,8 +140,8 @@
       "es": "Plataforma RAG privada"
     },
     "description": {
-      "en": "A private multi-user RAG platform for uploading PDF, DOCX and TXT files, indexing their content and answering questions with cited sources. It supports OpenAI and Google Gemini per request, user-isolated documents and history, anonymous expiring sessions, Redis rate limiting and production-oriented validation.",
-      "es": "Plataforma RAG privada y multiusuario para cargar archivos PDF, DOCX y TXT, indexar su contenido y responder preguntas con fuentes citadas. Permite elegir OpenAI o Google Gemini por solicitud, aislar documentos e historial por usuario, usar sesiones anónimas temporales y aplicar rate limiting con Redis."
+      "en": "A deployed private multi-user RAG platform for uploading PDF, DOCX and TXT files, indexing their content and answering questions with cited sources. It supports OpenAI and Google Gemini per request, provider-specific indexes, user-isolated documents and history, anonymous expiring sessions and production-oriented validation.",
+      "es": "Plataforma RAG privada y multiusuario desplegada para cargar archivos PDF, DOCX y TXT, indexar su contenido y responder preguntas con fuentes citadas. Permite elegir OpenAI o Google Gemini por solicitud, mantener índices separados por proveedor, aislar documentos e historial y usar sesiones anónimas temporales."
     },
     "tags": [
       "Python",
@@ -159,7 +159,7 @@
       "CI/CD"
     ],
     "link": "https://github.com/AlejoBI/Proyecto-IS2",
-    "deploy": "",
+    "deploy": "https://proyecto-is2.pages.dev",
     "disabled": false,
     "archived": false
   },
