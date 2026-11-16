@@ -32,8 +32,9 @@ export interface Project {
   title: Translatable;
   description: Translatable;
   tags: string[];
-  link: string;
+  link?: string;
   deploy: string;
+  deployLabel?: Translatable;
   disabled?: boolean;
   archived?: boolean;
   images?: string[];

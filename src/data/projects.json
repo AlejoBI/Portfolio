@@ -21,8 +21,11 @@
       "SEO",
       "Cloudflare Pages"
     ],
-    "link": "https://github.com/AlejoBI/ASHUA",
-    "deploy": "https://ashua.pages.dev",
+    "deploy": "https://ashuacol.com",
+    "deployLabel": {
+      "en": "Visit site",
+      "es": "Ver sitio"
+    },
     "disabled": false
   },
   {
@@ -77,6 +80,10 @@
     ],
     "link": "https://github.com/nicky212016/Portafolio_Nuevo",
     "deploy": "https://nicolascortesrestrepo.vercel.app/",
+    "deployLabel": {
+      "en": "Visit site",
+      "es": "Ver sitio"
+    },
     "disabled": false
   },
   {
