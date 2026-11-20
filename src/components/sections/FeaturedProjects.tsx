@@ -1,5 +1,5 @@
 import { memo, useCallback, useEffect, useState } from "react";
-import { ArrowUpRight, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight, ExternalLink, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import projectsData from "../../data/projects.json";
 import type { Project } from "../../types";
@@ -27,6 +27,7 @@ const FeaturedProjects = () => {
   const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [detailsOpen, setDetailsOpen] = useState(false);
   const project = featuredProjects[current];
 
   const goTo = useCallback(
@@ -123,6 +124,14 @@ const FeaturedProjects = () => {
             </div>
 
             <div className="mt-10 flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                onClick={() => setDetailsOpen(true)}
+                className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/40 px-4 py-3 text-sm font-semibold text-cyan-200 transition hover:border-cyan-300 hover:bg-cyan-300/10"
+              >
+                {t("projects.buttons.show_more")}
+                <ArrowUpRight className="h-4 w-4" />
+              </button>
               {project.deploy && (
                 <a
                   href={project.deploy}
@@ -149,7 +158,7 @@ const FeaturedProjects = () => {
         </div>
 
         <div className="flex justify-center gap-2 pt-5" aria-label="Select featured project">
-          {featuredProjects.map((item, index) => (
+        {featuredProjects.map((item, index) => (
             <button
               key={`${item.imageKey}-${index}`}
               type="button"
@@ -161,6 +170,31 @@ const FeaturedProjects = () => {
           ))}
         </div>
       </div>
+
+      {detailsOpen && (
+        <div className="fixed inset-0 z-[80] flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="case-study-title">
+          <div className="relative max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-3xl border border-cyan-400/30 bg-slate-900 p-6 text-white shadow-2xl md:p-9">
+            <button type="button" onClick={() => setDetailsOpen(false)} className="absolute right-5 top-5 rounded-full border border-slate-700 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300" aria-label="Close project details">
+              <X className="h-5 w-5" />
+            </button>
+            <p className="mb-3 font-mono text-xs uppercase tracking-[0.18em] text-cyan-300">Case study</p>
+            <h3 id="case-study-title" className="pr-12 text-3xl font-bold md:text-5xl">{tData(project.title)}</h3>
+            <p className="mt-6 max-w-3xl leading-8 text-slate-300">{tData(project.description)}</p>
+            <div className="mt-7 flex flex-wrap gap-2">
+              {project.tags.map((tag) => <span key={tag} className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-xs text-cyan-100">{tag}</span>)}
+            </div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {project.images?.slice(0, 6).map((image) => (
+                <img key={image} src={image} alt="" width={800} height={500} loading="lazy" className="aspect-video w-full rounded-2xl border border-slate-700 object-cover" />
+              ))}
+            </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {project.deploy && <a href={project.deploy} target="_blank" rel="noopener noreferrer" className="rounded-xl bg-cyan-400 px-4 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-300">{project.deployLabel ? tData(project.deployLabel) : t("projects.buttons.deployed_link")}</a>}
+              {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-slate-600 px-4 py-3 text-sm font-semibold text-slate-200 hover:border-cyan-300 hover:text-cyan-300">GitHub</a>}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

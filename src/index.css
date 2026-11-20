@@ -135,7 +135,8 @@ body {
   .animate-glow,
   .animate-slide-in-up,
   .animate-fade-in,
-  .particle {
+  .particle,
+  .tech-marquee {
     animation: none !important;
   }
 
@@ -218,6 +219,23 @@ body {
     linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+@keyframes tech-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tech-marquee {
+  animation: tech-marquee 38s linear infinite;
+}
+
+.tech-marquee:hover {
+  animation-play-state: paused;
 }
 
 .gradient-primary {
