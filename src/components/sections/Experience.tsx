@@ -24,14 +24,14 @@ const FormalCard = memo(
 
     return (
       <div
-        className={`group relative bg-gradient-to-br from-blue-500/5 to-purple-500/5 dark:from-blue-500/10 dark:to-purple-500/10 border border-blue-300/50 dark:border-blue-500/30 rounded-2xl p-6 hover:border-blue-400 dark:hover:border-blue-400 transition-[transform,opacity,border-color] duration-500 ${
+        className={`group relative bg-slate-50/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700/70 rounded-2xl p-6 hover:border-cyan-400/60 dark:hover:border-cyan-400/50 transition-[transform,opacity,border-color] duration-500 ${
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
-        <div className="absolute inset-0 bg-gradient-tech opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500" />
+        <div className="absolute inset-0 bg-cyan-400 opacity-0 group-hover:opacity-[0.03] rounded-2xl transition-opacity duration-500" />
         <div className="relative z-10">
           <div className="flex items-start gap-4 mb-4">
-            <div className="flex-shrink-0 w-12 h-12 bg-gradient-tech rounded-xl flex items-center justify-center shadow-lg">
+            <div className="flex-shrink-0 w-12 h-12 bg-cyan-400/15 border border-cyan-400/30 rounded-xl flex items-center justify-center">
               <Briefcase className="w-6 h-6 text-gray-900 dark:text-white" />
             </div>
             <div className="flex-1 min-w-0">
@@ -84,9 +84,9 @@ const FormalCard = memo(
             </>
           )}
           {project.note && (
-            <div className="mt-4 flex items-start gap-2 text-sm px-4 py-3 bg-amber-500/10 dark:bg-amber-500/15 border border-amber-400/30 dark:border-amber-500/25 rounded-xl">
-              <span className="flex-shrink-0 w-1.5 h-1.5 mt-1.5 bg-amber-500 rounded-full" />
-              <span className="text-amber-700 dark:text-amber-400">{tData(project.note)}</span>
+            <div className="mt-4 flex items-start gap-2 text-sm px-4 py-3 bg-cyan-400/5 border border-cyan-400/20 rounded-xl">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-1.5 bg-cyan-400 rounded-full" />
+              <span className="text-cyan-700 dark:text-cyan-300">{tData(project.note)}</span>
             </div>
           )}
         </div>
@@ -113,7 +113,7 @@ const UniversityCard = memo(
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <div className="flex items-start gap-4">
-        <div className="flex-shrink-0 w-8 h-8 bg-gradient-cyber rounded-lg flex items-center justify-center text-gray-900 dark:text-white font-bold code-font text-sm">
+        <div className="flex-shrink-0 w-8 h-8 bg-cyan-400/15 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-700 dark:text-cyan-300 font-bold code-font text-sm">
           {index + 1}
         </div>
         <div>
@@ -148,7 +148,7 @@ const Experience = () => {
       {formal.length > 0 && (
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-gradient-tech rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-cyan-400/15 border border-cyan-400/30 rounded-lg flex items-center justify-center">
               <Briefcase className="w-5 h-5 text-gray-900 dark:text-white" />
             </div>
             <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
@@ -166,7 +166,7 @@ const Experience = () => {
       {university.length > 0 && (
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-gradient-cyber rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-cyan-400/15 border border-cyan-400/30 rounded-lg flex items-center justify-center">
               <GraduationCap className="w-5 h-5 text-gray-900 dark:text-white" />
             </div>
             <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">
@@ -203,7 +203,7 @@ const Experience = () => {
         </div>
       )}
 
-      <div className="p-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/20 dark:border-blue-500/20 rounded-xl">
+      <div className="p-6 bg-cyan-400/5 border border-cyan-400/20 rounded-xl">
         <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
           {tData(experienceConclusion.conclusion)}
         </p>

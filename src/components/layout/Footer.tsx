@@ -6,16 +6,16 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="relative bg-gray-100 dark:bg-gray-900 border-t border-gray-300 dark:border-gray-800 py-12 mt-20">
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-100 via-blue-50/5 to-transparent dark:from-gray-900 dark:via-blue-900/5 dark:to-transparent pointer-events-none" />
+    <footer className="relative bg-slate-100 dark:bg-[#070b14] border-t border-slate-200 dark:border-slate-800 py-16 mt-20">
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-100 via-cyan-400/[0.03] to-transparent dark:from-[#070b14] dark:via-cyan-400/[0.03] dark:to-transparent pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center space-y-8">
           <div className="flex justify-center mb-6">
             <div className="text-3xl font-bold">
-              <span className="text-blue-500 dark:text-blue-400 code-font">{"<"}</span>
+              <span className="text-cyan-500 dark:text-cyan-400 code-font">{"<"}</span>
               <span className="text-gray-900 dark:text-white">ABI</span>
-              <span className="text-blue-500 dark:text-blue-400 code-font">{"/>"}</span>
+              <span className="text-cyan-500 dark:text-cyan-400 code-font">{"/>"}</span>
             </div>
           </div>
 

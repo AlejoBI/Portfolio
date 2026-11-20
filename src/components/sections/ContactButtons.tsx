@@ -29,7 +29,7 @@ const ContactButtons = () => {
           target={link.href.startsWith("mailto:") ? undefined : "_blank"}
           aria-label={"icon" in link ? link.icon : t(link.content)}
           rel="noopener noreferrer"
-          className="group relative px-4 py-3 bg-blue-600 dark:bg-gradient-tech hover:shadow-2xl hover:scale-105 rounded-xl font-semibold text-white flex items-center gap-2 overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+           className="group relative px-5 py-3 bg-cyan-400 hover:bg-cyan-300 dark:bg-cyan-400 dark:hover:bg-cyan-300 rounded-xl font-semibold text-slate-950 flex items-center gap-2 overflow-hidden transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950"
         >
           <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
           {"icon" in link && link.icon === "github" ? (

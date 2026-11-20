@@ -30,16 +30,18 @@ const App = () => {
   return (
     <>
       <MetaTags />
-      <div className="m-0 p-0 h-auto bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen relative overflow-x-hidden">
-        <div className="fixed inset-0 bg-gradient-to-br from-gray-100 via-blue-50/30 to-purple-50/30 dark:from-gray-900 dark:via-blue-900/10 dark:to-purple-900/10 pointer-events-none" />
+      <div className="m-0 p-0 h-auto bg-slate-50 dark:bg-[#070b14] text-slate-900 dark:text-white min-h-screen relative overflow-x-hidden">
+        <div className="fixed inset-0 tech-grid opacity-60 dark:opacity-80 pointer-events-none" />
+        <div className="fixed -top-40 right-0 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl pointer-events-none" />
+        <div className="fixed bottom-0 left-0 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl pointer-events-none" />
 
         <div className="relative z-10">
           <Layout dark={dark} toggleTheme={toggle}>
             <Hero />
-            <div id="experience" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20">
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-blue-200/50 dark:border-blue-500/20">
+              <div id="experience" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20">
+              <div className="premium-surface rounded-3xl p-7 md:p-12">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-1 h-12 bg-gradient-tech rounded-full" />
+                  <div className="w-1 h-10 bg-cyan-400 rounded-full" />
                   <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
                     {t("experience.title")}
                   </h2>
@@ -54,9 +56,9 @@ const App = () => {
               </div>
             </div>
             <div id="skills" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20">
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-purple-200/50 dark:border-purple-500/20">
+              <div className="premium-surface rounded-3xl p-7 md:p-12">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-1 h-12 bg-gradient-tech rounded-full" />
+                  <div className="w-1 h-10 bg-cyan-400 rounded-full" />
                   <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
                     {t("skills.title")}
                   </h2>
@@ -71,9 +73,9 @@ const App = () => {
               </div>
             </div>
             <div id="projects" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20">
-              <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-blue-200/50 dark:border-blue-500/20">
+              <div className="premium-surface rounded-3xl p-7 md:p-12">
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-1 h-12 bg-gradient-tech rounded-full" />
+                  <div className="w-1 h-10 bg-cyan-400 rounded-full" />
                   <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
                     {t("projects.title")}
                   </h2>

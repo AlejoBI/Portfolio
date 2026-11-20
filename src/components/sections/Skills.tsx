@@ -55,15 +55,15 @@ const SkillCard = memo(
 
     return (
       <div
-        className={`group relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-2xl p-6 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[transform,opacity,border-color] duration-500 card-hover ${
+        className={`group relative bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm border border-slate-200 dark:border-slate-700/70 rounded-2xl p-6 hover:border-cyan-400/60 dark:hover:border-cyan-400/50 transition-[transform,opacity,border-color] duration-500 card-hover ${
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
         style={{ transitionDelay: `${index * 100}ms` }}
       >
-        <div className="absolute inset-0 bg-gradient-tech opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500" />
+         <div className="absolute inset-0 bg-cyan-400 opacity-0 group-hover:opacity-[0.03] rounded-2xl transition-opacity duration-500" />
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-gradient-tech rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-cyan-400/15 border border-cyan-400/30 rounded-lg flex items-center justify-center">
               <CategoryIcon className="w-5 h-5 text-gray-900 dark:text-white" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">{category}</h3>
@@ -76,7 +76,7 @@ const SkillCard = memo(
                 style={{ animationDelay: `${skillIdx * 50}ms` }}
               >
                 <div className="relative">
-                  <div className="w-8 h-8 bg-gradient-tech rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-all duration-300 overflow-hidden">
+                  <div className="w-8 h-8 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-all duration-300 overflow-hidden">
                     {skill.icon.startsWith("http") ? (
                       <img
                         src={skill.icon}
@@ -102,7 +102,7 @@ const SkillCard = memo(
             ))}
           </ul>
         </div>
-        <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-tech opacity-10 blur-2xl rounded-full group-hover:opacity-20 transition-opacity duration-500" />
+         <div className="absolute top-0 right-0 w-20 h-20 bg-cyan-400 opacity-10 blur-2xl rounded-full group-hover:opacity-20 transition-opacity duration-500" />
       </div>
     );
   },

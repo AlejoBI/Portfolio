@@ -58,7 +58,7 @@ const ImageGallery = memo(
     if (images.length === 0) return PLACEHOLDER_IMG;
 
     return (
-      <div className="relative h-48 overflow-hidden group/gallery">
+        <div className="relative h-56 overflow-hidden group/gallery">
         {imgError[current] ? (
           PLACEHOLDER_IMG
         ) : (
@@ -137,7 +137,7 @@ const ProjectCard = memo(
 
     return (
       <div
-        className={`group relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-2xl overflow-hidden hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[transform,opacity,border-color] duration-500 card-hover ${
+        className={`group relative bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm border border-slate-200 dark:border-slate-700/70 rounded-2xl overflow-hidden hover:border-cyan-400/60 dark:hover:border-cyan-400/50 transition-[transform,opacity,border-color] duration-500 card-hover ${
           inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
         style={{ transitionDelay: `${index * 100}ms` }}
@@ -145,7 +145,7 @@ const ProjectCard = memo(
         <ImageGallery images={project.images || []} title={tData(project.title)} />
 
         {project.archived && (
-          <span className="absolute top-3 right-3 z-10 px-2.5 py-1 bg-amber-500/90 dark:bg-amber-600/90 text-white text-xs font-medium rounded-full backdrop-blur-sm">
+          <span className="absolute top-3 right-3 z-10 px-2.5 py-1 bg-cyan-400/90 text-slate-950 text-xs font-semibold rounded-full backdrop-blur-sm">
             {t("projects.university_project")}
           </span>
         )}
@@ -165,7 +165,7 @@ const ProjectCard = memo(
             <button
               type="button"
               onClick={() => setExpanded(!expanded)}
-              className="text-blue-600 dark:text-blue-400 text-xs font-medium hover:underline mb-4 -mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded"
+               className="text-cyan-700 dark:text-cyan-300 text-xs font-medium hover:underline mb-4 -mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded"
             >
               {expanded ? t("projects.buttons.show_less") : t("projects.buttons.show_more")}
             </button>
@@ -175,7 +175,7 @@ const ProjectCard = memo(
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="px-2 py-1 bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 text-xs rounded-full font-medium"
+                 className="px-2 py-1 bg-cyan-400/10 dark:bg-cyan-400/10 text-cyan-700 dark:text-cyan-300 text-xs rounded-full font-medium"
               >
                 {tag}
               </span>
@@ -188,7 +188,7 @@ const ProjectCard = memo(
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 sm:flex-none justify-center text-center text-xs sm:text-sm px-3 sm:px-4 py-2 leading-tight bg-blue-600 dark:bg-gradient-tech text-white rounded-lg hover:shadow-xl hover:scale-105"
+                className="flex-1 sm:flex-none justify-center text-center text-xs sm:text-sm px-3 sm:px-4 py-2 leading-tight bg-cyan-400 text-slate-950 font-semibold rounded-lg hover:bg-cyan-300"
               >
                 {t("projects.buttons.view_project")}
               </a>
@@ -198,7 +198,7 @@ const ProjectCard = memo(
                 href={project.deploy}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 sm:flex-none justify-center text-center text-xs sm:text-sm px-3 sm:px-4 py-2 leading-tight border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500"
+               className="flex-1 sm:flex-none justify-center text-center text-xs sm:text-sm px-3 sm:px-4 py-2 leading-tight border border-cyan-500/60 text-cyan-700 dark:text-cyan-300 rounded-lg hover:bg-cyan-400 hover:text-slate-950"
               >
                 {project.deployLabel
                   ? tData(project.deployLabel)

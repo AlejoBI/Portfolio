@@ -66,30 +66,31 @@ const Hero = () => {
 
   return (
     <div className="relative min-h-screen bg-transparent">
-      <div className="fixed inset-0 bg-pattern opacity-30 dark:opacity-50 pointer-events-none" />
+      <div className="fixed inset-0 bg-pattern opacity-10 dark:opacity-20 pointer-events-none" />
 
-      <div className="fixed top-20 left-10 w-20 h-20 bg-blue-500/20 dark:bg-blue-500/20 rounded-full blur-3xl particle" />
+      <div className="fixed top-20 left-10 w-20 h-20 bg-cyan-400/10 rounded-full blur-3xl particle" />
       <div
-        className="fixed top-40 right-20 w-32 h-32 bg-purple-500/20 dark:bg-purple-500/20 rounded-full blur-3xl particle"
+        className="fixed top-40 right-20 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl particle"
         style={{ animationDelay: "2s" }}
       />
       <div
-        className="fixed bottom-40 left-1/4 w-24 h-24 bg-pink-500/20 dark:bg-pink-500/20 rounded-full blur-3xl particle"
+        className="fixed bottom-40 left-1/4 w-24 h-24 bg-cyan-500/10 rounded-full blur-3xl particle"
         style={{ animationDelay: "4s" }}
       />
 
-      <div className="container mx-auto px-6 py-24 lg:px-20 relative z-10">
+      <div className="container mx-auto px-6 pt-28 pb-16 lg:px-20 relative z-10">
         {/* Hero */}
         <div className="min-h-[90vh] flex items-center justify-center mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full max-w-7xl">
             <div className="space-y-8 animate-slide-in-up">
               <div className="space-y-4">
-                <span className="inline-block px-4 py-2 bg-blue-500/10 dark:bg-blue-500/20 rounded-full text-blue-600 dark:text-blue-400 text-sm font-medium code-font">
-                  👋 {t("presentation.greeting")}
+                 <span className="section-kicker inline-flex items-center gap-2">
+                   <span className="h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.8)]" />
+                   {t("presentation.greeting")}
                 </span>
-                <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                 <h1 className="text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight">
                   <span className="block text-gray-900 dark:text-white">Alejandro</span>
-                  <span className="block text-gradient-tech">Bravo Isajar</span>
+                   <span className="block text-cyan-400">Bravo Isajar<span className="text-blue-500">.</span></span>
                 </h1>
                 <div className="flex items-center gap-2 text-xl md:text-2xl text-gray-600 dark:text-gray-400 code-font">
                   <span className="text-blue-500">{"<"}</span>
@@ -98,7 +99,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
+               <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
                 {tData(profile.shortBio)}
               </p>
 
@@ -114,10 +115,10 @@ const Hero = () => {
               style={{ animationDelay: "0.3s" }}
             >
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-tech rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition duration-1000 animate-glow" />
+                 <div className="absolute -inset-1 bg-cyan-400 rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition duration-1000 animate-glow" />
 
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-tech rounded-full animate-gradient" />
+                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-300 to-blue-600 rounded-full opacity-90" />
                   <img
                     src={ImagePortfolio}
                     alt="Alejandro Bravo Isajar"
@@ -125,12 +126,12 @@ const Hero = () => {
                     fetchPriority="high"
                     width={384}
                     height={384}
-                    className="relative rounded-full w-72 h-72 md:w-96 md:h-96 object-cover border-4 border-white dark:border-gray-800 shadow-2xl animate-float"
+                    className="relative rounded-full w-72 h-72 md:w-96 md:h-96 object-cover border-8 border-slate-950/90 dark:border-slate-900 shadow-2xl animate-float"
                   />
                 </div>
 
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full blur-xl opacity-40" />
-                <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-purple-500 rounded-full blur-xl opacity-40" />
+                 <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-cyan-400 rounded-full blur-xl opacity-30" />
               </div>
             </div>
           </div>
@@ -140,9 +141,9 @@ const Hero = () => {
 
         {/* About + CV */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          <AnimatedSection className="lg:col-span-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-blue-200/50 dark:border-blue-500/20">
+          <AnimatedSection className="lg:col-span-2 premium-surface rounded-3xl p-8 card-hover">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-12 bg-gradient-tech rounded-full" />
+              <div className="w-1 h-10 bg-cyan-400 rounded-full" />
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
                 {t("about.title")}
               </h2>
@@ -154,9 +155,9 @@ const Hero = () => {
 
           <AnimatedSection
             delay="0.2s"
-            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-purple-200/50 dark:border-purple-500/20 flex flex-col justify-center items-center text-center"
+            className="premium-surface rounded-3xl p-8 card-hover flex flex-col justify-center items-center text-center"
           >
-            <div className="w-20 h-20 bg-blue-600 dark:bg-gradient-tech rounded-2xl flex items-center justify-center mb-6 animate-glow">
+             <div className="w-20 h-20 bg-cyan-400/15 border border-cyan-400/30 rounded-2xl flex items-center justify-center mb-6">
               <svg
                 className="w-10 h-10 text-white"
                 fill="none"
@@ -182,7 +183,7 @@ const Hero = () => {
                 isEn ? "/cv/AlejandroBravoIsajarCV_EN.pdf" : "/cv/AlejandroBravoIsajarCV_ES.pdf"
               }
               download={isEn ? "AlejandroBravoIsajarCV_EN.pdf" : "AlejandroBravoIsajarCV_ES.pdf"}
-              className="w-full bg-blue-600 dark:bg-gradient-tech text-white px-6 py-4 rounded-xl shadow-lg hover:shadow-2xl font-semibold hover:scale-105 flex items-center justify-center gap-2"
+               className="w-full bg-cyan-400 hover:bg-cyan-300 text-slate-950 px-6 py-4 rounded-xl shadow-lg shadow-cyan-400/10 font-semibold transition-colors flex items-center justify-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -199,9 +200,9 @@ const Hero = () => {
 
         {/* Education + Roles */}
         <div id="education" className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-          <AnimatedSection className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-cyan-200/50 dark:border-cyan-500/20">
+          <AnimatedSection className="premium-surface rounded-3xl p-8 card-hover">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-cyber rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-cyan-400/15 border border-cyan-400/30 rounded-xl flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-gray-900 dark:text-white"
                   fill="none"
@@ -251,10 +252,10 @@ const Hero = () => {
 
           <AnimatedSection
             delay="0.2s"
-            className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl card-hover border border-pink-200/50 dark:border-pink-500/20"
+            className="premium-surface rounded-3xl p-8 card-hover"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-tech rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-cyan-400/15 border border-cyan-400/30 rounded-xl flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-gray-900 dark:text-white"
                   fill="none"
@@ -280,9 +281,9 @@ const Hero = () => {
         </div>
 
         {/* Certifications */}
-        <AnimatedSection className="mb-20 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-green-200/50 dark:border-green-500/20">
+        <AnimatedSection className="mb-20 premium-surface rounded-3xl p-8 md:p-12">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-gradient-tech rounded-xl flex items-center justify-center">
+            <div className="w-12 h-12 bg-cyan-400/15 border border-cyan-400/30 rounded-xl flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-gray-900 dark:text-white"
                 fill="none"
@@ -308,9 +309,9 @@ const Hero = () => {
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-300/50 dark:border-gray-700/50 rounded-2xl p-6 hover:border-green-400/50 dark:hover:border-green-500/50 transition-[transform,opacity,border-color] duration-500 card-hover"
+                className="group relative bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm border border-slate-200 dark:border-slate-700/70 rounded-2xl p-6 hover:border-cyan-400/60 dark:hover:border-cyan-400/50 transition-[transform,opacity,border-color] duration-500 card-hover"
               >
-                <div className="absolute inset-0 bg-gradient-tech opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500" />
+                 <div className="absolute inset-0 bg-cyan-400 opacity-0 group-hover:opacity-[0.03] rounded-2xl transition-opacity duration-500" />
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">

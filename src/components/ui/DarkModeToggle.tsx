@@ -9,14 +9,14 @@ const DarkModeToggle = ({ dark, toggle }: DarkModeToggleProps) => (
   <button
     type="button"
     onClick={toggle}
-    className="group fixed bottom-4 right-4 z-50 p-4 bg-gray-800 dark:bg-gradient-tech hover:shadow-2xl rounded-2xl shadow-xl hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+    className="group fixed bottom-4 right-4 z-50 p-4 bg-slate-900 dark:bg-cyan-400 hover:shadow-2xl rounded-2xl shadow-xl hover:scale-110 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
     aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
     aria-pressed={dark}
   >
     <div className="relative w-6 h-6">
       {dark ? (
         <svg
-          className="w-6 h-6 text-white transition-all duration-300 group-hover:rotate-12"
+          className="w-6 h-6 text-slate-950 transition-all duration-300 group-hover:rotate-12"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
