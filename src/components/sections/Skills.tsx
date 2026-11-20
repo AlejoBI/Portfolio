@@ -1,9 +1,9 @@
-import { memo, type ComponentType } from "react";
+import { memo, useState, type ComponentType } from "react";
 import { useTranslation } from "react-i18next";
 import useInView from "../../hooks/useInView";
 import { tData } from "../../utils/tData";
 import skillsData from "../../data/skills.json";
-import type { SkillCategory } from "../../types";
+import type { SkillCategory, Translatable } from "../../types";
 import {
   Code2,
   Monitor,
@@ -115,13 +115,60 @@ const Skills = () => {
   // Every label here comes from tData(), which reads i18next imperatively and so
   // does not subscribe on its own. Without this hook the memoized cards keep the
   // labels resolved on first render and never follow a language switch.
-  useTranslation();
+  const { i18n } = useTranslation();
+  const [activeFilter, setActiveFilter] = useState("all");
 
   const skills: SkillCategory[] = skillsData as SkillCategory[];
+  const filters = i18n.language === "en"
+    ? [
+        ["all", "All skills"],
+        ["frontend", "Frontend"],
+        ["backend", "Backend & APIs"],
+        ["infra", "Data & DevOps"],
+        ["other", "Methods & AI"],
+      ]
+    : [
+        ["all", "Todas"],
+        ["frontend", "Frontend"],
+        ["backend", "Backend y APIs"],
+        ["infra", "Datos y DevOps"],
+        ["other", "Métodos e IA"],
+      ];
+
+  const getFilter = (category: Translatable) => {
+    const name = tData(category).toLowerCase();
+    if (name.includes("frontend")) return "frontend";
+    if (name.includes("backend") || name.includes("api") || name.includes("architecture") || name.includes("arquitectura")) return "backend";
+    if (name.includes("database") || name.includes("base de datos") || name.includes("devops")) return "infra";
+    return "other";
+  };
+
+  const visibleSkills = skills.filter(
+    (category) => activeFilter === "all" || getFilter(category.category) === activeFilter,
+  );
 
   return (
-    <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {skills.map((skillCategory, idx) => (
+    <div ref={ref}>
+      <div className="mb-8 flex flex-wrap gap-2" role="tablist" aria-label="Skill categories">
+        {filters.map(([value, label]) => (
+          <button
+            key={value}
+            type="button"
+            role="tab"
+            aria-selected={activeFilter === value}
+            onClick={() => setActiveFilter(value)}
+            className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
+              activeFilter === value
+                ? "border-cyan-400 bg-cyan-400 text-slate-950"
+                : "border-slate-300 text-slate-600 hover:border-cyan-400 hover:text-cyan-700 dark:border-slate-700 dark:text-slate-300 dark:hover:text-cyan-300"
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {visibleSkills.map((skillCategory, idx) => (
         <SkillCard
           key={tData(skillCategory.category)}
           category={tData(skillCategory.category)}
@@ -133,6 +180,7 @@ const Skills = () => {
           inView={inView}
         />
       ))}
+      </div>
     </div>
   );
 };

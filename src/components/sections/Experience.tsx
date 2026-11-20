@@ -30,6 +30,7 @@ const FormalCard = memo(
       >
         <div className="absolute inset-0 bg-cyan-400 opacity-0 group-hover:opacity-[0.03] rounded-2xl transition-opacity duration-500" />
         <div className="relative z-10">
+          <div className="absolute -left-[3.15rem] top-2 h-4 w-4 rounded-full border-4 border-slate-50 bg-cyan-400 dark:border-slate-900" />
           <div className="flex items-start gap-4 mb-4">
             <div className="flex-shrink-0 w-12 h-12 bg-cyan-400/15 border border-cyan-400/30 rounded-xl flex items-center justify-center">
               <Briefcase className="w-6 h-6 text-gray-900 dark:text-white" />
@@ -107,11 +108,12 @@ const UniversityCard = memo(
     readonly inView: boolean;
   }) => (
     <div
-      className={`group relative bg-gray-100/50 dark:bg-gray-800/30 border border-gray-300/50 dark:border-gray-700/50 rounded-xl p-5 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-[transform,opacity,border-color] duration-300 ${
+      className={`group relative bg-slate-50/70 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/70 rounded-xl p-5 hover:border-cyan-400/50 transition-[transform,opacity,border-color] duration-300 ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
+       <div className="absolute -left-[2.15rem] top-6 h-3 w-3 rounded-full border-2 border-slate-50 bg-cyan-400 dark:border-slate-900" />
       <div className="flex items-start gap-4">
         <div className="flex-shrink-0 w-8 h-8 bg-cyan-400/15 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-700 dark:text-cyan-300 font-bold code-font text-sm">
           {index + 1}
@@ -155,7 +157,7 @@ const Experience = () => {
               {t("experience.formal")}
             </h3>
           </div>
-          <div className="space-y-4">
+           <div className="relative ml-3 space-y-5 border-l border-cyan-400/30 pl-8">
             {formal.map((project) => (
               <FormalCard key={tData(project.name)} project={project} inView={inView} />
             ))}
@@ -173,7 +175,7 @@ const Experience = () => {
               {t("experience.university")}
             </h3>
           </div>
-          <div className="space-y-4">
+           <div className="relative ml-3 space-y-4 border-l border-cyan-400/20 pl-8">
             {uniVisible.map((project, index) => (
               <UniversityCard
                 key={tData(project.name)}
