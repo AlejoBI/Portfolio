@@ -9,7 +9,7 @@ const DarkModeToggle = ({ dark, toggle }: DarkModeToggleProps) => (
   <button
     type="button"
     onClick={toggle}
-    className="group fixed bottom-4 right-4 z-50 p-4 bg-slate-900 dark:bg-cyan-400 hover:shadow-2xl rounded-2xl shadow-xl hover:scale-110 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
+    className="group fixed bottom-4 right-4 z-50 p-4 max-sm:bottom-3 max-sm:right-3 max-sm:p-3 bg-slate-900 dark:bg-cyan-400 hover:shadow-2xl rounded-2xl shadow-xl hover:scale-110 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900"
     aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
     aria-pressed={dark}
   >

@@ -65,6 +65,7 @@
   "footer": {
     "builtWith": "Built with",
     "copyright": "All rights reserved.",
-    "email": "Email"
+    "email": "Email",
+    "backToTop": "Back to top"
   }
 }
