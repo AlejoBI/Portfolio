@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, memo, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import { useTranslation } from "react-i18next";
 
-const NAV_IDS = ["about", "featured-projects", "skills", "projects", "experience"];
+const NAV_IDS = ["about", "featured-projects", "skills", "projects", "experience", "contact"];
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -10,6 +10,7 @@ const scrollToTop = () => {
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [scrollProgress, setScrollProgress] = useState(0);
   const { t } = useTranslation();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
@@ -21,6 +22,7 @@ const Header = () => {
     { name: t("header.navigation.skills"), href: "#skills" },
     { name: t("header.navigation.projects"), href: "#projects" },
     { name: t("header.navigation.experience"), href: "#experience" },
+    { name: t("footer.email"), href: "#contact" },
   ];
 
   useEffect(() => {
@@ -42,6 +44,16 @@ const Header = () => {
     });
 
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const updateProgress = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0);
+    };
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    return () => window.removeEventListener("scroll", updateProgress);
   }, []);
 
   useEffect(() => {
@@ -94,6 +106,7 @@ const Header = () => {
 
   return (
     <header className="bg-white/80 dark:bg-[#070b14]/80 backdrop-blur-xl transition-[transform,opacity] duration-500 fixed top-0 w-full z-50 border-b border-slate-200/70 dark:border-slate-800/80 shadow-sm dark:shadow-black/20">
+      <div className="absolute bottom-0 left-0 h-0.5 bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)] transition-[width] duration-150" style={{ width: `${scrollProgress}%` }} />
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center space-x-3">
           <button

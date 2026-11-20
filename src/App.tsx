@@ -7,6 +7,7 @@ import MetaTags from "./components/seo/MetaTags";
 import Hero from "./components/sections/Hero";
 import FeaturedProjects from "./components/sections/FeaturedProjects";
 import Services from "./components/sections/Services";
+import ContactCTA from "./components/sections/ContactCTA";
 
 const Experience = lazy(() => import("./components/sections/Experience"));
 const Skills = lazy(() => import("./components/sections/Skills"));
@@ -93,6 +94,7 @@ const App = () => {
                 </DeferredSection>
               </div>
             </div>
+            <ContactCTA />
           </Layout>
         </div>
       </div>
