@@ -6,6 +6,7 @@ import Layout from "./components/layout/Layout";
 import MetaTags from "./components/seo/MetaTags";
 import Hero from "./components/sections/Hero";
 import FeaturedProjects from "./components/sections/FeaturedProjects";
+import Services from "./components/sections/Services";
 
 const Experience = lazy(() => import("./components/sections/Experience"));
 const Skills = lazy(() => import("./components/sections/Skills"));
@@ -40,6 +41,7 @@ const App = () => {
           <Layout dark={dark} toggleTheme={toggle}>
              <Hero />
             <FeaturedProjects />
+            <Services />
             <div id="experience" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20">
               <div className="premium-surface rounded-3xl p-7 md:p-12">
                 <div className="flex items-center gap-3 mb-8">

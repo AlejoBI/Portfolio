@@ -100,14 +100,36 @@ const Hero = () => {
               </div>
 
                <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
-                {tData(profile.shortBio)}
-              </p>
+                 {tData(profile.shortBio)}
+               </p>
 
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Suspense fallback={null}>
-                  <ContactButtons />
-                </Suspense>
-              </div>
+               <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
+                 <span className="inline-flex items-center gap-2">
+                   <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
+                   {i18n.language === "en" ? "Available for opportunities" : "Disponible para oportunidades"}
+                 </span>
+                 <span className="text-slate-300 dark:text-slate-700">/</span>
+                 <span>{i18n.language === "en" ? "Based in Colombia" : "Ubicado en Colombia"}</span>
+               </div>
+
+               <div className="flex flex-wrap gap-4 pt-4">
+                 <Suspense fallback={null}>
+                   <ContactButtons />
+                 </Suspense>
+               </div>
+
+               <div className="grid max-w-xl grid-cols-3 gap-3 border-t border-slate-200 pt-6 dark:border-slate-800">
+                 {[
+                   ["React", "Frontend"],
+                   ["Node / Java", "Backend"],
+                   ["ES / EN", i18n.language === "en" ? "Languages" : "Idiomas"],
+                 ].map(([value, label]) => (
+                   <div key={value}>
+                     <p className="font-mono text-sm font-bold text-cyan-600 dark:text-cyan-300">{value}</p>
+                     <p className="mt-1 text-xs uppercase tracking-wider text-slate-500 dark:text-slate-500">{label}</p>
+                   </div>
+                 ))}
+               </div>
             </div>
 
             <div
