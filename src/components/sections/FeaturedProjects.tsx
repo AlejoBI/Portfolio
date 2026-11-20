@@ -48,7 +48,7 @@ const FeaturedProjects = () => {
 
   return (
     <section
-      id="featured-projects"
+      id="projects"
       className="container mx-auto mb-24 scroll-mt-24 px-6 lg:px-20"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}

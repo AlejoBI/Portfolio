@@ -32,11 +32,11 @@ const Footer = () => {
 
           <div className="grid gap-8 border-y border-slate-200 py-8 dark:border-slate-800 md:grid-cols-[1fr_auto] md:items-center">
             <p className="max-w-md text-sm leading-6 text-slate-600 dark:text-slate-400">
-              {t("footer.builtWith")} React &amp; Tailwind CSS. {t("footer.copyright")}
+              {t("footer.builtWith")} React &amp; Tailwind CSS.
             </p>
             <nav className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-slate-600 dark:text-slate-400" aria-label="Footer navigation">
               <a className="transition hover:text-cyan-600 dark:hover:text-cyan-300" href="#about">{t("header.navigation.about")}</a>
-              <a className="transition hover:text-cyan-600 dark:hover:text-cyan-300" href="#featured-projects">{t("projects.title")}</a>
+              <a className="transition hover:text-cyan-600 dark:hover:text-cyan-300" href="#projects">{t("projects.title")}</a>
               <a className="transition hover:text-cyan-600 dark:hover:text-cyan-300" href="#experience">{t("header.navigation.experience")}</a>
               <a className="transition hover:text-cyan-600 dark:hover:text-cyan-300" href="#contact">{t("footer.email")}</a>
             </nav>

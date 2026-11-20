@@ -145,7 +145,6 @@ const Hero = () => {
                     src={ImagePortfolio}
                     alt="Alejandro Bravo Isajar"
                     loading="eager"
-                    fetchPriority="high"
                     width={384}
                     height={384}
                     className="relative rounded-full w-72 h-72 md:w-96 md:h-96 object-cover border-8 border-slate-950/90 dark:border-slate-900 shadow-2xl animate-float"

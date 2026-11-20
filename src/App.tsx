@@ -11,7 +11,6 @@ import ContactCTA from "./components/sections/ContactCTA";
 
 const Experience = lazy(() => import("./components/sections/Experience"));
 const Skills = lazy(() => import("./components/sections/Skills"));
-const Projects = lazy(() => import("./components/sections/Projects"));
 
 interface DeferredSectionProps {
   readonly children: ReactNode;
@@ -74,23 +73,6 @@ const App = () => {
                   }
                 >
                   <Skills />
-                </DeferredSection>
-              </div>
-            </div>
-            <div id="projects" className="container mx-auto px-6 lg:px-20 mb-20 scroll-mt-20">
-              <div className="premium-surface rounded-3xl p-7 md:p-12">
-                <div className="flex items-center gap-3 mb-8">
-                  <div className="w-1 h-10 bg-cyan-400 rounded-full" />
-                  <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-                    {t("projects.title")}
-                  </h2>
-                </div>
-                <DeferredSection
-                  fallback={
-                    <div className="h-64 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-lg" />
-                  }
-                >
-                  <Projects />
                 </DeferredSection>
               </div>
             </div>
