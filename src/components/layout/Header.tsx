@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, memo, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import { useTranslation } from "react-i18next";
 
-const NAV_IDS = ["about", "skills", "projects", "experience"];
+const NAV_IDS = ["about", "featured-projects", "skills", "projects", "experience"];
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -17,6 +17,7 @@ const Header = () => {
 
   const navigation = [
     { name: t("header.navigation.about"), href: "#about" },
+    { name: t("projects.title"), href: "#featured-projects" },
     { name: t("header.navigation.skills"), href: "#skills" },
     { name: t("header.navigation.projects"), href: "#projects" },
     { name: t("header.navigation.experience"), href: "#experience" },
