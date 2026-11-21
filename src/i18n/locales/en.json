@@ -29,6 +29,14 @@
   },
   "projects": {
     "title": "Projects",
+    "selected_work": "01 / Selected work",
+    "featured_project": "Featured project",
+    "case_study": "Case study",
+    "previous_featured": "Previous featured project",
+    "next_featured": "Next featured project",
+    "show_featured": "Show featured project",
+    "close_details": "Close project details",
+    "github": "GitHub",
     "buttons": {
       "view_project": "View Project",
       "deployed_link": "Live Demo",

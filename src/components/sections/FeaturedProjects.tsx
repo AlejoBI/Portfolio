@@ -73,17 +73,17 @@ const FeaturedProjects = () => {
     >
       <div className="mb-8 flex flex-wrap items-end justify-between gap-5">
         <div>
-          <p className="section-kicker mb-3">01 / Selected work</p>
+          <p className="section-kicker mb-3">{t("projects.selected_work")}</p>
           <h2 id="featured-projects-title" className="text-4xl font-bold tracking-tight md:text-5xl">
             {t("projects.title")}
           </h2>
         </div>
-        <div className="flex items-center gap-2" aria-label="Project carousel controls">
+        <div className="flex items-center gap-2" aria-label={t("projects.title")}>
           <button
             type="button"
             onClick={() => goTo(current - 1)}
             className="rounded-full border border-slate-300 bg-white/70 p-3 text-slate-700 transition hover:border-cyan-400 hover:text-cyan-600 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-300 dark:hover:text-cyan-300"
-            aria-label="Previous featured project"
+            aria-label={t("projects.previous_featured")}
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -91,7 +91,7 @@ const FeaturedProjects = () => {
             type="button"
             onClick={() => goTo(current + 1)}
             className="rounded-full bg-cyan-400 p-3 text-slate-950 transition hover:bg-cyan-300"
-            aria-label="Next featured project"
+            aria-label={t("projects.next_featured")}
           >
             <ChevronRight className="h-5 w-5" />
           </button>
@@ -122,7 +122,7 @@ const FeaturedProjects = () => {
           <div className="relative flex flex-col justify-between p-7 text-white md:p-10">
             <div>
               <p className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-cyan-300">
-                Featured project
+                {t("projects.featured_project")}
               </p>
               <h3 className="mb-5 text-3xl font-bold leading-tight md:text-4xl">
                 {tData(project.title)}
@@ -166,21 +166,21 @@ const FeaturedProjects = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl border border-slate-600 px-4 py-3 text-sm font-semibold text-slate-200 transition hover:border-cyan-300 hover:text-cyan-300"
                 >
-                  GitHub <ExternalLink className="h-4 w-4" />
+                  {t("projects.github")} <ExternalLink className="h-4 w-4" />
                 </a>
               )}
             </div>
           </div>
         </div>
 
-        <div className="flex justify-center gap-2 pt-5" aria-label="Select featured project">
+        <div className="flex justify-center gap-2 pt-5" aria-label={t("projects.show_featured")}>
         {featuredProjects.map((item, index) => (
             <button
               key={`${item.imageKey}-${index}`}
               type="button"
               onClick={() => goTo(index)}
               className={`h-1.5 rounded-full transition-all ${index === current ? "w-10 bg-cyan-400" : "w-5 bg-slate-300 dark:bg-slate-700"}`}
-              aria-label={`Show featured project ${index + 1}`}
+              aria-label={`${t("projects.show_featured")} ${index + 1}`}
               aria-current={index === current ? "true" : undefined}
             />
           ))}
@@ -190,10 +190,10 @@ const FeaturedProjects = () => {
       {detailsOpen && (
         <div className="fixed inset-0 z-[80] flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="case-study-title">
           <div className="relative max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-3xl border border-cyan-400/30 bg-slate-900 p-6 text-white shadow-2xl md:p-9">
-            <button type="button" onClick={() => setDetailsOpen(false)} className="absolute right-5 top-5 rounded-full border border-slate-700 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300" aria-label="Close project details">
+            <button type="button" onClick={() => setDetailsOpen(false)} className="absolute right-5 top-5 rounded-full border border-slate-700 p-2 text-slate-300 transition hover:border-cyan-300 hover:text-cyan-300" aria-label={t("projects.close_details")}>
               <X className="h-5 w-5" />
             </button>
-            <p className="mb-3 font-mono text-xs uppercase tracking-[0.18em] text-cyan-300">Case study</p>
+            <p className="mb-3 font-mono text-xs uppercase tracking-[0.18em] text-cyan-300">{t("projects.case_study")}</p>
             <h3 id="case-study-title" className="pr-12 text-3xl font-bold md:text-5xl">{tData(project.title)}</h3>
             <p className="mt-6 max-w-3xl leading-8 text-slate-300">{tData(project.description)}</p>
             <div className="mt-7 flex flex-wrap gap-2">
@@ -206,7 +206,7 @@ const FeaturedProjects = () => {
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
               {project.deploy && <a href={project.deploy} target="_blank" rel="noopener noreferrer" className="rounded-xl bg-cyan-400 px-4 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-300">{project.deployLabel ? tData(project.deployLabel) : t("projects.buttons.deployed_link")}</a>}
-              {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-slate-600 px-4 py-3 text-sm font-semibold text-slate-200 hover:border-cyan-300 hover:text-cyan-300">GitHub</a>}
+              {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-slate-600 px-4 py-3 text-sm font-semibold text-slate-200 hover:border-cyan-300 hover:text-cyan-300">{t("projects.github")}</a>}
             </div>
           </div>
         </div>

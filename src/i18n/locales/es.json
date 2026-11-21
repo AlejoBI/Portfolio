@@ -29,6 +29,14 @@
   },
   "projects": {
     "title": "Proyectos",
+    "selected_work": "01 / Proyectos destacados",
+    "featured_project": "Proyecto destacado",
+    "case_study": "Caso de estudio",
+    "previous_featured": "Proyecto destacado anterior",
+    "next_featured": "Siguiente proyecto destacado",
+    "show_featured": "Mostrar proyecto destacado",
+    "close_details": "Cerrar detalles del proyecto",
+    "github": "GitHub",
     "buttons": {
       "view_project": "Ver Proyecto",
       "deployed_link": "Demo",
