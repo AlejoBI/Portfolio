@@ -8,7 +8,9 @@
     "cv_description": "Descarga mi currículum en formato PDF"
   },
   "about": {
-    "title": "Sobre mí"
+    "title": "Sobre mí",
+    "show_more": "Leer más",
+    "show_less": "Mostrar menos"
   },
   "experience": {
     "title": "Experiencia",

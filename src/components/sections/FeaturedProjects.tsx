@@ -127,7 +127,7 @@ const FeaturedProjects = () => {
               <h3 className="mb-5 text-3xl font-bold leading-tight md:text-4xl">
                 {tData(project.title)}
               </h3>
-              <p className="max-w-xl text-sm leading-7 text-slate-300 md:text-base">
+              <p className="line-clamp-5 max-w-xl text-sm leading-7 text-slate-300 md:line-clamp-none md:text-base">
                 {tData(project.description)}
               </p>
               <div className="mt-7 flex flex-wrap gap-2">

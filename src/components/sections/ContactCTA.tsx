@@ -39,7 +39,7 @@ const ContactCTA = () => {
             </p>
             <div className="mt-8 flex flex-wrap gap-5 text-sm text-slate-300">
               <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-cyan-300" /> Colombia</span>
-              <span className="inline-flex items-center gap-2"><Mail className="h-4 w-4 text-cyan-300" /> {contact.email}</span>
+              <span className="inline-flex min-w-0 items-center gap-2 break-all"><Mail className="h-4 w-4 shrink-0 text-cyan-300" /> {contact.email}</span>
             </div>
           </div>
           <div className="flex flex-wrap gap-3 lg:max-w-xs lg:justify-end">

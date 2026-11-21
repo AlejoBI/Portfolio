@@ -1,4 +1,4 @@
-import { memo, lazy, Suspense } from "react";
+import { memo, lazy, Suspense, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { tData } from "../../utils/tData";
 import profile from "../../data/profile.json";
@@ -63,6 +63,7 @@ const Hero = () => {
   const edu = education as EducationData;
   const certs = certifications as Certification[];
   const isEn = i18n.language === "en";
+  const [bioExpanded, setBioExpanded] = useState(false);
 
   return (
     <div className="relative min-h-screen bg-transparent">
@@ -169,9 +170,18 @@ const Hero = () => {
                 {t("about.title")}
               </h2>
             </div>
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+            <p className={`text-gray-700 dark:text-gray-300 text-lg leading-relaxed ${bioExpanded ? "" : "line-clamp-6 md:line-clamp-none"}`}>
               {tData(profile.bio)}
             </p>
+            {tData(profile.bio).length > 500 && (
+              <button
+                type="button"
+                onClick={() => setBioExpanded((expanded) => !expanded)}
+                className="mt-4 text-sm font-semibold text-cyan-700 hover:underline dark:text-cyan-300 md:hidden"
+              >
+                {bioExpanded ? t("about.show_less") : t("about.show_more")}
+              </button>
+            )}
           </AnimatedSection>
 
           <AnimatedSection

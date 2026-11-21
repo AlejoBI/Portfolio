@@ -8,7 +8,9 @@
     "cv_description": "Download my resume in PDF format"
   },
   "about": {
-    "title": "About Me"
+    "title": "About Me",
+    "show_more": "Read more",
+    "show_less": "Show less"
   },
   "experience": {
     "title": "Experience",
