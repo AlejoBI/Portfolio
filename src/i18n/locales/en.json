@@ -2,21 +2,31 @@
   "presentation": {
     "greeting": "Hi, I'm",
     "contact": "Contact Me",
+    "view_projects": "View projects",
     "download_cv": "Download CV",
     "download_cv_es": "Descargar CV (ES)",
     "download_cv_en": "Download CV (EN)",
     "cv_description": "Download my resume in PDF format"
   },
   "about": {
-    "title": "About Me"
+    "title": "About Me",
+    "kicker": "01 / About me",
+    "show_more": "Read more",
+    "show_less": "Show less"
   },
   "experience": {
     "title": "Experience",
+    "kicker": "04 / Journey",
     "formal": "Professional Experience",
-    "university": "University Projects"
+    "university": "University Projects",
+    "show_more": "Read more",
+    "show_less": "Show less",
+    "university_more": "See more",
+    "university_less": "See less"
   },
   "skills": {
-    "title": "Skills"
+    "title": "Skills",
+    "kicker": "05 / Capabilities"
   },
   "education": {
     "title": "Education"
@@ -29,6 +39,14 @@
   },
   "projects": {
     "title": "Projects",
+    "selected_work": "02 / Selected work",
+    "featured_project": "Featured project",
+    "case_study": "Case study",
+    "previous_featured": "Previous featured project",
+    "next_featured": "Next featured project",
+    "show_featured": "Show featured project",
+    "close_details": "Close project details",
+    "github": "GitHub",
     "buttons": {
       "view_project": "View Project",
       "deployed_link": "Live Demo",
@@ -43,7 +61,7 @@
   "skip_to_content": "Skip to content",
   "meta": {
     "title": "Alejandro Bravo Isajar | Software Developer",
-    "description": "Full-stack developer specializing in React, TypeScript, and modern web technologies. Explore my projects, skills, and professional experience."
+    "description": "Computer Engineer focused on designing clear, efficient, and sustainable digital solutions. Explore my projects, skills, and professional experience."
   },
   "not_found": {
     "title": "404",
@@ -65,6 +83,7 @@
   "footer": {
     "builtWith": "Built with",
     "copyright": "All rights reserved.",
-    "email": "Email"
+    "email": "Email",
+    "backToTop": "Back to top"
   }
 }

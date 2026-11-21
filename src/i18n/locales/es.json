@@ -2,21 +2,31 @@
   "presentation": {
     "greeting": "Hola, soy",
     "contact": "Contáctame",
+    "view_projects": "Ver proyectos",
     "download_cv": "Descargar CV",
     "download_cv_es": "Descargar CV (ES)",
     "download_cv_en": "Download CV (EN)",
     "cv_description": "Descarga mi currículum en formato PDF"
   },
   "about": {
-    "title": "Sobre mí"
+    "title": "Sobre mí",
+    "kicker": "01 / Sobre mí",
+    "show_more": "Leer más",
+    "show_less": "Mostrar menos"
   },
   "experience": {
     "title": "Experiencia",
+    "kicker": "04 / Trayectoria",
     "formal": "Experiencia Profesional",
-    "university": "Proyectos Universitarios"
+    "university": "Proyectos Universitarios",
+    "show_more": "Leer más",
+    "show_less": "Mostrar menos",
+    "university_more": "Ver más",
+    "university_less": "Ver menos"
   },
   "skills": {
-    "title": "Habilidades"
+    "title": "Habilidades",
+    "kicker": "05 / Capacidades"
   },
   "education": {
     "title": "Educación"
@@ -29,6 +39,14 @@
   },
   "projects": {
     "title": "Proyectos",
+    "selected_work": "02 / Proyectos destacados",
+    "featured_project": "Proyecto destacado",
+    "case_study": "Caso de estudio",
+    "previous_featured": "Proyecto destacado anterior",
+    "next_featured": "Siguiente proyecto destacado",
+    "show_featured": "Mostrar proyecto destacado",
+    "close_details": "Cerrar detalles del proyecto",
+    "github": "GitHub",
     "buttons": {
       "view_project": "Ver Proyecto",
       "deployed_link": "Demo",
@@ -43,7 +61,7 @@
   "skip_to_content": "Saltar al contenido",
   "meta": {
     "title": "Alejandro Bravo Isajar | Desarrollador de Software",
-    "description": "Desarrollador full-stack especializado en React, TypeScript y tecnologías web modernas. Explora mis proyectos, habilidades y experiencia profesional."
+    "description": "Ingeniero Informático enfocado en diseñar soluciones digitales claras, eficientes y sostenibles. Explora mis proyectos, habilidades y experiencia profesional."
   },
   "not_found": {
     "title": "404",
@@ -65,6 +83,7 @@
   "footer": {
     "builtWith": "Construido con",
     "copyright": "Todos los derechos reservados.",
-    "email": "Correo electrónico"
+    "email": "Correo electrónico",
+    "backToTop": "Volver arriba"
   }
 }

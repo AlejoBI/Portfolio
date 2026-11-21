@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, memo, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import { useTranslation } from "react-i18next";
 
-const NAV_IDS = ["about", "skills", "projects", "experience"];
+const NAV_IDS = ["about", "projects", "experience", "skills"];
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -10,6 +10,7 @@ const scrollToTop = () => {
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [scrollProgress, setScrollProgress] = useState(0);
   const { t } = useTranslation();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
@@ -17,9 +18,9 @@ const Header = () => {
 
   const navigation = [
     { name: t("header.navigation.about"), href: "#about" },
-    { name: t("header.navigation.skills"), href: "#skills" },
-    { name: t("header.navigation.projects"), href: "#projects" },
+    { name: t("projects.title"), href: "#projects" },
     { name: t("header.navigation.experience"), href: "#experience" },
+    { name: t("header.navigation.skills"), href: "#skills" },
   ];
 
   useEffect(() => {
@@ -41,6 +42,16 @@ const Header = () => {
     });
 
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const updateProgress = () => {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0);
+    };
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    return () => window.removeEventListener("scroll", updateProgress);
   }, []);
 
   useEffect(() => {
@@ -92,7 +103,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-[transform,opacity] duration-500 fixed top-0 w-full z-50 border-b border-gray-200/50 dark:border-white/10 shadow-lg">
+    <header className="bg-white/80 dark:bg-[#070b14]/80 backdrop-blur-xl transition-[transform,opacity] duration-500 fixed top-0 w-full z-50 border-b border-slate-200/70 dark:border-slate-800/80 shadow-sm dark:shadow-black/20">
+      <div className="absolute bottom-0 left-0 h-0.5 bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)] transition-[width] duration-150" style={{ width: `${scrollProgress}%` }} />
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center space-x-3">
           <button
@@ -102,17 +114,17 @@ const Header = () => {
             aria-label="Go to homepage"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-tech rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
-              <div className="relative h-10 w-10 rounded-full ring-2 ring-blue-500/50 group-hover:ring-blue-400 bg-blue-600 dark:bg-gradient-tech flex items-center justify-center">
+               <div className="absolute inset-0 bg-cyan-400 rounded-xl blur-md opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
+              <div className="relative h-10 w-10 rounded-xl ring-1 ring-cyan-400/50 group-hover:ring-cyan-300 bg-slate-950 dark:bg-slate-900 flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
                 </svg>
               </div>
             </div>
             <span className="ml-3 code-font">
-              <span className="text-blue-600 dark:text-blue-400">{"<"}</span>
+              <span className="text-cyan-600 dark:text-cyan-400">{"<"}</span>
               Alejandro
-              <span className="text-blue-600 dark:text-blue-400">{"/>"}</span>
+              <span className="text-cyan-600 dark:text-cyan-400">{"/>"}</span>
             </span>
           </button>
         </div>
@@ -157,8 +169,8 @@ const Header = () => {
               aria-current={activeSection === item.href.slice(1) ? "page" : undefined}
             >
               <span className="relative z-10">{item.name}</span>
-              <span className="absolute inset-0 bg-gradient-tech rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-tech group-hover:w-full group-hover:left-0 transition-all duration-300" />
+               <span className="absolute inset-0 bg-cyan-400 rounded-lg opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+               <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-cyan-400 group-hover:w-full group-hover:left-0 transition-all duration-300" />
             </a>
           ))}
         </nav>
@@ -184,7 +196,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 ref={index === 0 ? firstMobileLinkRef : undefined}
-                className="text-3xl font-bold text-gray-900 dark:text-white hover:text-transparent hover:bg-clip-text hover:bg-gradient-tech focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded-lg"
+                 className="text-3xl font-bold text-gray-900 dark:text-white hover:text-cyan-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg"
                 tabIndex={menuOpen ? 0 : -1}
                 style={{
                   transitionDelay: menuOpen ? `${index * 100}ms` : "0ms",
