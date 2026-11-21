@@ -15,7 +15,9 @@
   "experience": {
     "title": "Experiencia",
     "formal": "Experiencia Profesional",
-    "university": "Proyectos Universitarios"
+    "university": "Proyectos Universitarios",
+    "show_more": "Leer descripción completa",
+    "show_less": "Mostrar menos"
   },
   "skills": {
     "title": "Habilidades"

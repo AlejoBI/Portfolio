@@ -15,7 +15,9 @@
   "experience": {
     "title": "Experience",
     "formal": "Professional Experience",
-    "university": "University Projects"
+    "university": "University Projects",
+    "show_more": "Read full description",
+    "show_less": "Show less"
   },
   "skills": {
     "title": "Skills"

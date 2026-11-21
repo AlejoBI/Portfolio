@@ -23,6 +23,12 @@ const featuredProjects = (projectsData as Project[])
   .slice(0, 5)
   .map((project) => ({ ...project, images: imageMap[project.imageKey] ?? [] }));
 
+const getProjectSummary = (project: Project) => {
+  const description = tData(project.description);
+  const firstSentence = description.split(/(?<=[.!?])\s+/)[0];
+  return firstSentence.length > 190 ? `${firstSentence.slice(0, 187)}...` : firstSentence;
+};
+
 const FeaturedProjects = () => {
   const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
@@ -127,8 +133,8 @@ const FeaturedProjects = () => {
               <h3 className="mb-5 text-3xl font-bold leading-tight md:text-4xl">
                 {tData(project.title)}
               </h3>
-              <p className="line-clamp-5 max-w-xl text-sm leading-7 text-slate-300 md:line-clamp-none md:text-base">
-                {tData(project.description)}
+              <p className="max-w-xl text-sm leading-7 text-slate-300 md:text-base">
+                {getProjectSummary(project)}
               </p>
               <div className="mt-7 flex flex-wrap gap-2">
                 {project.tags.slice(0, 6).map((tag) => (

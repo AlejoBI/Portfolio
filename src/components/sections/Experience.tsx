@@ -106,13 +106,17 @@ const UniversityCard = memo(
     readonly project: ExperienceProject;
     readonly index: number;
     readonly inView: boolean;
-  }) => (
-    <div
+  }) => {
+    const { t } = useTranslation();
+    const [showAll, setShowAll] = useState(false);
+
+    return (
+      <div
       className={`group relative bg-slate-50/70 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/70 rounded-xl p-5 hover:border-cyan-400/50 transition-[transform,opacity,border-color] duration-300 ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
-    >
+      >
        <div className="absolute -left-[2.15rem] top-6 h-3 w-3 rounded-full border-2 border-slate-50 bg-cyan-400 dark:border-slate-900" />
       <div className="flex items-start gap-4">
         <div className="flex-shrink-0 w-8 h-8 bg-cyan-400/15 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-700 dark:text-cyan-300 font-bold code-font text-sm">
@@ -122,13 +126,21 @@ const UniversityCard = memo(
           <h4 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
             {tData(project.name)}
           </h4>
-          <p className="text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">
+          <p className={`text-gray-600 dark:text-gray-400 mt-2 leading-relaxed ${showAll ? "" : "line-clamp-3"}`}>
             {tData(project.description)}
           </p>
+          <button
+            type="button"
+            onClick={() => setShowAll(!showAll)}
+            className="mt-3 text-sm font-medium text-cyan-700 hover:underline dark:text-cyan-300"
+          >
+            {showAll ? t("experience.show_less") : t("experience.show_more")}
+          </button>
         </div>
       </div>
-    </div>
-  ),
+      </div>
+    );
+  },
 );
 UniversityCard.displayName = "UniversityCard";
 
