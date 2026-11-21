@@ -79,9 +79,9 @@ const Hero = () => {
         style={{ animationDelay: "4s" }}
       />
 
-      <div className="container mx-auto px-6 pt-28 pb-16 lg:px-20 relative z-10">
+      <div className="container relative z-10 mx-auto px-6 pb-10 pt-20 lg:px-20 lg:pt-24">
         {/* Hero */}
-        <div className="min-h-[90vh] flex items-center justify-center mb-20">
+        <div className="mb-16 flex min-h-[78vh] items-center justify-center lg:mb-20 lg:min-h-[calc(100vh-8rem)]">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] w-full max-w-7xl">
             <div className="space-y-8 animate-slide-in-up lg:pr-10">
               <div className="space-y-4">
@@ -113,10 +113,7 @@ const Hero = () => {
                  <span>{i18n.language === "en" ? "Based in Colombia" : "Ubicado en Colombia"}</span>
                </div>
 
-               <div className="flex flex-wrap gap-3 pt-4">
-                 <a href="#projects" className="inline-flex items-center justify-center rounded-xl bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300">
-                   {t("presentation.view_projects")}
-                 </a>
+                <div className="flex flex-wrap items-center gap-3 pt-4">
                  <a
                    href={isEn ? "/cv/AlejandroBravoIsajarCV_EN.pdf" : "/cv/AlejandroBravoIsajarCV_ES.pdf"}
                    download={isEn ? "AlejandroBravoIsajarCV_EN.pdf" : "AlejandroBravoIsajarCV_ES.pdf"}
@@ -124,25 +121,11 @@ const Hero = () => {
                  >
                    {t("presentation.download_cv")}
                  </a>
-               </div>
-               <div className="flex flex-wrap gap-4">
-                 <Suspense fallback={null}>
-                   <ContactButtons />
-                 </Suspense>
+                  <Suspense fallback={null}>
+                    <ContactButtons />
+                  </Suspense>
                </div>
 
-               <div className="grid max-w-xl grid-cols-3 gap-3 border-t border-slate-200 pt-6 dark:border-slate-800">
-                 {[
-                   ["React", "Frontend"],
-                   ["Node / Java", "Backend"],
-                   ["ES / EN", i18n.language === "en" ? "Languages" : "Idiomas"],
-                 ].map(([value, label]) => (
-                   <div key={value}>
-                     <p className="font-mono text-sm font-bold text-cyan-600 dark:text-cyan-300">{value}</p>
-                     <p className="mt-1 text-xs uppercase tracking-wider text-slate-500 dark:text-slate-500">{label}</p>
-                   </div>
-                 ))}
-               </div>
             </div>
 
             <div
@@ -165,9 +148,6 @@ const Hero = () => {
                 </div>
 
                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full blur-xl opacity-40" />
-                 <div className="absolute -bottom-8 -right-8 rounded-2xl border border-cyan-300/30 bg-slate-950/90 px-4 py-3 text-xs font-semibold text-cyan-200 shadow-xl backdrop-blur-md">
-                   {isEn ? "Full Stack Developer" : "Desarrollador Full Stack"}
-                 </div>
                  <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-cyan-400 rounded-full blur-xl opacity-30" />
               </div>
             </div>
@@ -176,18 +156,16 @@ const Hero = () => {
 
         <div id="about" className="scroll-mt-20" />
 
-        {/* About + CV */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          <AnimatedSection className="lg:col-span-2 premium-surface rounded-3xl p-8 card-hover">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-1 h-10 bg-cyan-400 rounded-full" />
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-                {t("about.title")}
-              </h2>
+          {/* About */}
+          <div className="mb-12 scroll-mt-20">
+            <div className="mb-8">
+              <p className="section-kicker mb-3">{t("about.kicker")}</p>
+              <h2 className="text-4xl font-bold tracking-tight md:text-5xl">{t("about.title")}</h2>
             </div>
-            <p className={`text-gray-700 dark:text-gray-300 text-lg leading-relaxed ${bioExpanded ? "" : "line-clamp-6 md:line-clamp-none"}`}>
-              {tData(profile.bio)}
-            </p>
+            <AnimatedSection className="premium-surface rounded-3xl p-8 card-hover md:p-10">
+             <p className={`text-gray-700 dark:text-gray-300 text-lg leading-relaxed ${bioExpanded ? "" : "line-clamp-6 md:line-clamp-none"}`}>
+               {tData(profile.bio)}
+             </p>
             {tData(profile.bio).length > 500 && (
               <button
                 type="button"
@@ -197,55 +175,12 @@ const Hero = () => {
                 {bioExpanded ? t("about.show_less") : t("about.show_more")}
               </button>
             )}
-          </AnimatedSection>
+            </AnimatedSection>
 
-          <AnimatedSection
-            delay="0.2s"
-            className="premium-surface rounded-3xl p-8 card-hover flex flex-col justify-center items-center text-center"
-          >
-             <div className="w-20 h-20 bg-cyan-400/15 border border-cyan-400/30 rounded-2xl flex items-center justify-center mb-6">
-              <svg
-                className="w-10 h-10 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              {t("presentation.download_cv")}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm mb-6">
-              {t("presentation.cv_description")}
-            </p>
-            <a
-              href={
-                isEn ? "/cv/AlejandroBravoIsajarCV_EN.pdf" : "/cv/AlejandroBravoIsajarCV_ES.pdf"
-              }
-              download={isEn ? "AlejandroBravoIsajarCV_EN.pdf" : "AlejandroBravoIsajarCV_ES.pdf"}
-               className="w-full bg-cyan-400 hover:bg-cyan-300 text-slate-950 px-6 py-4 rounded-xl shadow-lg shadow-cyan-400/10 font-semibold transition-colors flex items-center justify-center gap-2"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                />
-              </svg>
-              {t("presentation.download_cv")}
-            </a>
-          </AnimatedSection>
         </div>
 
         {/* Education + Roles */}
-        <div id="education" className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+        <div id="education" className="grid grid-cols-1 gap-8 mb-14 lg:grid-cols-2">
           <AnimatedSection className="premium-surface rounded-3xl p-8 card-hover">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-cyan-400/15 border border-cyan-400/30 rounded-xl flex items-center justify-center">
@@ -327,7 +262,7 @@ const Hero = () => {
         </div>
 
         {/* Certifications */}
-        <AnimatedSection className="mb-20 premium-surface rounded-3xl p-8 md:p-12">
+        <AnimatedSection className="mb-14 premium-surface rounded-3xl p-8 md:p-12">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 bg-cyan-400/15 border border-cyan-400/30 rounded-xl flex items-center justify-center">
               <svg

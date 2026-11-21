@@ -25,25 +25,25 @@ const ContactCTA = () => {
 
   return (
     <section id="contact" className="container mx-auto mb-24 scroll-mt-24 px-6 lg:px-20" aria-labelledby="contact-title">
-      <div className="relative overflow-hidden rounded-[2rem] border border-cyan-400/30 bg-slate-950 p-8 text-white shadow-2xl shadow-cyan-950/20 md:p-14">
-        <div className="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl" />
-        <div className="absolute -bottom-32 left-1/3 h-80 w-80 rounded-full bg-blue-600/20 blur-3xl" />
+      <div className="relative overflow-hidden rounded-[2rem] border border-cyan-400/30 bg-white p-8 text-slate-900 shadow-2xl shadow-cyan-950/10 dark:bg-slate-950 dark:text-white dark:shadow-cyan-950/20 md:p-14">
+        <div className="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-cyan-400/15 blur-3xl dark:bg-cyan-400/20" />
+        <div className="absolute -bottom-32 left-1/3 h-80 w-80 rounded-full bg-blue-600/10 blur-3xl dark:bg-blue-600/20" />
         <div className="relative z-10 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-2xl">
-            <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-cyan-300">05 / Let&apos;s connect</p>
+            <p className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-cyan-700 dark:text-cyan-300">06 / Let&apos;s connect</p>
             <h2 id="contact-title" className="text-4xl font-bold leading-tight tracking-tight md:text-6xl">
               {isEnglish ? "Have a project in mind?" : "¿Tienes un proyecto en mente?"}
             </h2>
-            <p className="mt-5 max-w-xl text-lg leading-8 text-slate-300">
+            <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600 dark:text-slate-300">
               {isEnglish ? "Let&apos;s turn an idea into something useful, clear and ready to grow." : "Convirtamos una idea en algo útil, claro y preparado para crecer."}
             </p>
-            <div className="mt-8 flex flex-wrap gap-5 text-sm text-slate-300">
-              <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-cyan-300" /> Colombia</span>
-              <span className="inline-flex min-w-0 items-center gap-2 break-all"><Mail className="h-4 w-4 shrink-0 text-cyan-300" /> {contact.email}</span>
+            <div className="mt-8 flex flex-wrap gap-5 text-sm text-slate-600 dark:text-slate-300">
+              <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-cyan-700 dark:text-cyan-300" /> Colombia</span>
+              <span className="inline-flex min-w-0 items-center gap-2 break-all"><Mail className="h-4 w-4 shrink-0 text-cyan-700 dark:text-cyan-300" /> {contact.email}</span>
             </div>
             <div className="mt-6 flex flex-wrap gap-4 text-sm font-medium">
-              <a href="https://github.com/AlejoBI" target="_blank" rel="noopener noreferrer" className="text-cyan-300 transition hover:text-cyan-200">GitHub ↗</a>
-              <a href="https://www.linkedin.com/in/alejandrobi" target="_blank" rel="noopener noreferrer" className="text-cyan-300 transition hover:text-cyan-200">LinkedIn ↗</a>
+              <a href="https://github.com/AlejoBI" target="_blank" rel="noopener noreferrer" className="text-cyan-700 transition hover:text-cyan-500 dark:text-cyan-300 dark:hover:text-cyan-200">GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/alejandrobi" target="_blank" rel="noopener noreferrer" className="text-cyan-700 transition hover:text-cyan-500 dark:text-cyan-300 dark:hover:text-cyan-200">LinkedIn ↗</a>
             </div>
           </div>
           <div className="flex flex-wrap gap-3 lg:max-w-xs lg:justify-end">
@@ -51,7 +51,7 @@ const ContactCTA = () => {
               {copied ? (isEnglish ? "Email copied" : "Correo copiado") : isEnglish ? "Copy email" : "Copiar correo"}
               <Mail className="h-4 w-4" />
             </button>
-            <a href={contact.emailUrl} className="inline-flex items-center gap-2 rounded-xl border border-slate-600 px-5 py-3 font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-300">
+              <a href={contact.emailUrl} className="inline-flex items-center gap-2 rounded-xl border border-slate-300 px-5 py-3 font-semibold text-slate-700 transition hover:border-cyan-500 hover:text-cyan-700 dark:border-slate-600 dark:text-white dark:hover:border-cyan-300 dark:hover:text-cyan-300">
               {isEnglish ? "Send email" : "Enviar correo"}<ArrowUpRight className="h-4 w-4" />
             </a>
           </div>

@@ -189,8 +189,8 @@
   },
   {
     "category": {
-      "en": "AI Productivity",
-      "es": "Productividad con IA"
+        "en": "Tools",
+        "es": "Herramientas"
     },
     "items": [
       {
@@ -199,8 +199,8 @@
       },
       {
         "name": {
-          "en": "AI-Assisted Coding",
-          "es": "Asistencia de código con IA"
+          "en": "Assisted Coding",
+          "es": "Asistencia para programar"
         },
         "icon": ""
       },

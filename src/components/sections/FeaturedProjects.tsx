@@ -20,7 +20,6 @@ for (const [path, module] of Object.entries(imageModules)) {
 
 const featuredProjects = (projectsData as Project[])
   .filter((project) => !project.disabled)
-  .slice(0, 5)
   .map((project) => ({ ...project, images: imageMap[project.imageKey] ?? [] }));
 
 const getProjectSummary = (project: Project) => {

@@ -7,27 +7,27 @@ const Services = () => {
   const isEnglish = i18n.language === "en";
   const services = isEnglish
     ? [
-        { icon: Code2, number: "01", title: "Frontend experiences", description: "Interfaces that feel clear, fast and intentional across every screen." },
-        { icon: Server, number: "02", title: "Backend & APIs", description: "Reliable services, integrations and data flows built to scale with the product." },
-        { icon: Layers3, number: "03", title: "Product architecture", description: "A practical bridge between design, code and the technical decisions behind it." },
+        { icon: Code2, number: "01", title: "Understand the challenge", description: "I start by understanding the need, the people involved, and the information that gives the problem its shape." },
+        { icon: Server, number: "02", title: "Design the solution", description: "I organize ideas, flows, technology, and information into a clear path from concept to delivery." },
+        { icon: Layers3, number: "03", title: "Build meaningful change", description: "I turn the solution into something useful, maintainable, and ready to improve as new needs appear." },
       ]
     : [
-        { icon: Code2, number: "01", title: "Experiencias frontend", description: "Interfaces claras, rápidas e intencionales en cualquier pantalla." },
-        { icon: Server, number: "02", title: "Backend y APIs", description: "Servicios, integraciones y flujos de datos confiables que pueden crecer con el producto." },
-        { icon: Layers3, number: "03", title: "Arquitectura de producto", description: "Un puente práctico entre diseño, código y las decisiones técnicas que lo hacen posible." },
+        { icon: Code2, number: "01", title: "Entender el reto", description: "Parto de comprender la necesidad, las personas involucradas y la información que da forma al problema." },
+        { icon: Server, number: "02", title: "Diseñar la solución", description: "Organizo ideas, flujos, tecnología e información en un camino claro desde el concepto hasta la entrega." },
+        { icon: Layers3, number: "03", title: "Construir cambios significativos", description: "Convierto la solución en algo útil, mantenible y preparado para mejorar cuando aparezcan nuevas necesidades." },
       ];
 
   return (
     <section className="container mx-auto mb-24 px-6 lg:px-20" aria-labelledby="services-title">
       <div className="mb-8 flex items-end justify-between gap-5">
         <div>
-          <p className="section-kicker mb-3">02 / Capabilities</p>
+          <p className="section-kicker mb-3">{isEnglish ? "03 / Approach" : "03 / Enfoque"}</p>
           <h2 id="services-title" className="text-4xl font-bold tracking-tight md:text-5xl">
-            {isEnglish ? "What I build" : "Lo que construyo"}
+            {isEnglish ? "How I create value" : "Cómo creo valor"}
           </h2>
         </div>
         <span className="hidden font-mono text-xs uppercase tracking-[0.18em] text-slate-400 md:block dark:text-slate-600">
-          {isEnglish ? "From idea to interface" : "De la idea a la interfaz"}
+          {isEnglish ? "Engineering with purpose" : "Ingeniería con propósito"}
         </span>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
