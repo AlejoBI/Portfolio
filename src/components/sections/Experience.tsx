@@ -40,7 +40,7 @@ const FormalCard = memo(
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
                   {tData(project.name)}
                 </h4>
-                <span className="px-2 py-0.5 bg-blue-500/15 dark:bg-blue-500/25 text-blue-600 dark:text-blue-400 text-xs rounded-full font-semibold whitespace-nowrap">
+                <span className="px-2 py-0.5 bg-blue-500/15 dark:bg-blue-500/25 text-blue-600 dark:text-blue-400 text-xs rounded-full font-semibold whitespace-nowrap md:absolute md:-left-32 md:top-1 md:w-24 md:text-right">
                   {project.period}
                 </span>
               </div>

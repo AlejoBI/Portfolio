@@ -41,6 +41,10 @@ const ContactCTA = () => {
               <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-cyan-300" /> Colombia</span>
               <span className="inline-flex min-w-0 items-center gap-2 break-all"><Mail className="h-4 w-4 shrink-0 text-cyan-300" /> {contact.email}</span>
             </div>
+            <div className="mt-6 flex flex-wrap gap-4 text-sm font-medium">
+              <a href="https://github.com/AlejoBI" target="_blank" rel="noopener noreferrer" className="text-cyan-300 transition hover:text-cyan-200">GitHub ↗</a>
+              <a href="https://www.linkedin.com/in/alejandrobi" target="_blank" rel="noopener noreferrer" className="text-cyan-300 transition hover:text-cyan-200">LinkedIn ↗</a>
+            </div>
           </div>
           <div className="flex flex-wrap gap-3 lg:max-w-xs lg:justify-end">
             <button type="button" onClick={copyEmail} className="inline-flex items-center gap-2 rounded-xl bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300">

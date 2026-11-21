@@ -82,8 +82,8 @@ const Hero = () => {
       <div className="container mx-auto px-6 pt-28 pb-16 lg:px-20 relative z-10">
         {/* Hero */}
         <div className="min-h-[90vh] flex items-center justify-center mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full max-w-7xl">
-            <div className="space-y-8 animate-slide-in-up">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.2fr_0.8fr] w-full max-w-7xl">
+            <div className="space-y-8 animate-slide-in-up lg:pr-10">
               <div className="space-y-4">
                  <span className="section-kicker inline-flex items-center gap-2">
                    <span className="h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.8)]" />
@@ -113,7 +113,19 @@ const Hero = () => {
                  <span>{i18n.language === "en" ? "Based in Colombia" : "Ubicado en Colombia"}</span>
                </div>
 
-               <div className="flex flex-wrap gap-4 pt-4">
+               <div className="flex flex-wrap gap-3 pt-4">
+                 <a href="#projects" className="inline-flex items-center justify-center rounded-xl bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300">
+                   {t("presentation.view_projects")}
+                 </a>
+                 <a
+                   href={isEn ? "/cv/AlejandroBravoIsajarCV_EN.pdf" : "/cv/AlejandroBravoIsajarCV_ES.pdf"}
+                   download={isEn ? "AlejandroBravoIsajarCV_EN.pdf" : "AlejandroBravoIsajarCV_ES.pdf"}
+                   className="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold text-slate-700 transition hover:border-cyan-400 hover:text-cyan-700 dark:border-slate-700 dark:text-slate-200 dark:hover:text-cyan-300"
+                 >
+                   {t("presentation.download_cv")}
+                 </a>
+               </div>
+               <div className="flex flex-wrap gap-4">
                  <Suspense fallback={null}>
                    <ContactButtons />
                  </Suspense>
@@ -134,7 +146,7 @@ const Hero = () => {
             </div>
 
             <div
-              className="flex justify-center lg:justify-end animate-fade-in"
+              className="flex justify-center lg:justify-end lg:translate-x-8 animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
               <div className="relative group">
@@ -152,7 +164,10 @@ const Hero = () => {
                   />
                 </div>
 
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full blur-xl opacity-40" />
+                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full blur-xl opacity-40" />
+                 <div className="absolute -bottom-8 -right-8 rounded-2xl border border-cyan-300/30 bg-slate-950/90 px-4 py-3 text-xs font-semibold text-cyan-200 shadow-xl backdrop-blur-md">
+                   {isEn ? "Full Stack Developer" : "Desarrollador Full Stack"}
+                 </div>
                  <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-cyan-400 rounded-full blur-xl opacity-30" />
               </div>
             </div>
